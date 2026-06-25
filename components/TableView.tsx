@@ -5,6 +5,7 @@ import { Place, SearchProfile, UserMetaStore } from "@/lib/types";
 import { computeFit, fitTier, lowestPrice } from "@/lib/scoring";
 import { bestCommuteMinutes } from "@/lib/filters";
 import { getMetaForPlace } from "@/lib/storage";
+import { Spinner } from "@/components/ui";
 
 interface Props {
   places: Place[];
@@ -12,6 +13,11 @@ interface Props {
   profile: SearchProfile | null;
   selectedId: string | null;
   onSelect: (id: string) => void;
+  totalCount: number;
+  hasAnchors: boolean;
+  onComputeCommutes: () => void;
+  computing: boolean;
+  onResetFilters: () => void;
 }
 
 type SortKey = "name" | "city" | "commute" | "price" | "rating" | "walk" | "gym" | "bball" | "fit";
@@ -22,7 +28,18 @@ const TIER_DOT: Record<string, string> = {
   red: "bg-fit-red",
 };
 
-export default function TableView({ places, meta, profile, selectedId, onSelect }: Props) {
+export default function TableView({
+  places,
+  meta,
+  profile,
+  selectedId,
+  onSelect,
+  totalCount,
+  hasAnchors,
+  onComputeCommutes,
+  computing,
+  onResetFilters,
+}: Props) {
   const [sortKey, setSortKey] = useState<SortKey>("fit");
   const [asc, setAsc] = useState(false);
 
@@ -34,71 +51,138 @@ export default function TableView({ places, meta, profile, selectedId, onSelect 
     return String(av).localeCompare(String(bv)) * dir;
   });
 
-  function header(key: SortKey, label: string) {
+  const missingCommute =
+    hasAnchors && places.some((p) => p.latitude != null && p.longitude != null && bestCommuteMinutes(p, profile!) === null);
+
+  function header(key: SortKey, label: string, srLabel?: string) {
+    const active = sortKey === key;
     return (
       <th
-        onClick={() => {
-          if (sortKey === key) setAsc(!asc);
-          else {
-            setSortKey(key);
-            setAsc(false);
-          }
-        }}
-        className="cursor-pointer select-none px-3 py-2 text-left font-semibold text-slate-600 hover:text-slate-900"
+        aria-sort={active ? (asc ? "ascending" : "descending") : "none"}
+        className="bg-cream px-3 py-2 text-left font-semibold"
       >
-        {label} {sortKey === key ? (asc ? "▲" : "▼") : ""}
+        <button
+          onClick={() => {
+            if (active) setAsc(!asc);
+            else {
+              setSortKey(key);
+              setAsc(false);
+            }
+          }}
+          aria-label={`Sort by ${srLabel ?? label}`}
+          className={`flex items-center gap-0.5 ${active ? "text-blue-700" : "text-ink/70 hover:text-ink"}`}
+        >
+          {srLabel && <span className="sr-only">{srLabel}</span>}
+          <span aria-hidden={srLabel ? "true" : undefined}>{label}</span>
+          <span aria-hidden="true" className="w-2 text-[9px]">
+            {active ? (asc ? "▲" : "▼") : ""}
+          </span>
+        </button>
       </th>
     );
   }
 
+  if (totalCount === 0) return null;
+
   return (
-    <div className="overflow-x-auto rounded-xl border border-slate-200 bg-white">
+    <div className="overflow-x-auto rounded-xl border border-warm bg-white lg:h-full lg:overflow-auto">
+      {missingCommute && (
+        <div className="flex items-center justify-between gap-2 border-b border-warm bg-blue-50 px-3 py-1.5 text-[11px] text-blue-800">
+          <span>Some commute times aren&apos;t computed yet.</span>
+          <button
+            onClick={onComputeCommutes}
+            disabled={computing}
+            className="inline-flex items-center gap-1.5 rounded-md border border-blue-300 bg-white px-2 py-0.5 font-semibold text-blue-700 hover:bg-blue-100 disabled:opacity-50"
+          >
+            {computing && <Spinner />}
+            {computing ? "Computing…" : "Compute commutes"}
+          </button>
+        </div>
+      )}
       <table className="w-full border-collapse text-xs">
-        <thead className="border-b border-slate-200 bg-slate-50">
+        <thead className="sticky top-0 z-10 border-b border-warm">
           <tr>
             {header("name", "Name")}
             {header("city", "Area")}
             {header("price", "Rent")}
-            {header("rating", "★")}
+            {header("rating", "★", "Rating")}
             {header("walk", "Metro")}
             {header("commute", "Commute")}
             {header("gym", "Gym")}
-            {header("bball", "🏀")}
-            <th className="px-3 py-2 text-left font-semibold text-slate-600">Avail</th>
+            {header("bball", "🏀", "Basketball")}
+            <th className="bg-cream px-3 py-2 text-left font-semibold text-ink/70">Avail</th>
             {header("fit", "Fit")}
-            <th className="px-3 py-2 text-left font-semibold text-slate-600">Status</th>
+            <th className="bg-cream px-3 py-2 text-left font-semibold text-ink/70">Status</th>
           </tr>
         </thead>
         <tbody>
+          {sorted.length === 0 && (
+            <tr>
+              <td colSpan={11} className="px-3 py-10 text-center">
+                <p className="text-sm font-medium text-ink">No places match these filters.</p>
+                <p className="mt-1 text-xs text-tan-ink">Try widening your filters to see more options.</p>
+                <button
+                  onClick={onResetFilters}
+                  className="mt-3 rounded-lg border border-warm px-3 py-1.5 text-xs font-medium text-ink hover:border-tan"
+                >
+                  Reset filters
+                </button>
+              </td>
+            </tr>
+          )}
           {sorted.map((p) => {
             const d = p.apartmentDetails;
             const fit = computeFit(p, profile ?? undefined).score;
             const price = lowestPrice(p);
             const m = getMetaForPlace(meta, p.id);
             const avail = m.availableDateManual || d?.availabilityStatus || "—";
-            const commute = profile ? bestCommuteMinutes(p, profile) : null;
+            const commute = hasAnchors ? bestCommuteMinutes(p, profile!) : null;
+            const isSelected = selectedId === p.id;
             return (
               <tr
                 key={p.id}
                 onClick={() => onSelect(p.id)}
-                className={`cursor-pointer border-b border-slate-100 transition hover:bg-brand-50 ${
-                  selectedId === p.id ? "bg-brand-50" : ""
+                aria-selected={isSelected}
+                className={`cursor-pointer border-b border-warm/60 border-l-2 transition ${
+                  isSelected
+                    ? "border-l-blue-600 bg-blue-100"
+                    : "border-l-transparent hover:bg-blue-50"
                 }`}
               >
-                <td className="px-3 py-2 font-medium text-slate-900">
+                <td className="px-3 py-2 font-medium text-ink">
                   {p.name}
-                  {d?.needsPriceConfirmation && <span title="Price/2BA needs confirmation" className="ml-1 text-amber-500">⚠︎</span>}
+                  {d?.needsPriceConfirmation && (
+                    <span title="Price/2BA needs confirmation" className="ml-1 text-amber-500">
+                      ⚠︎
+                    </span>
+                  )}
                 </td>
-                <td className="px-3 py-2 text-slate-600">{p.neighborhood || p.city}</td>
-                <td className="px-3 py-2 text-slate-900">{price ? "$" + price.toLocaleString() : "confirm"}</td>
-                <td className="px-3 py-2 text-slate-600">{p.rating != null ? `${p.rating}★` : "—"}</td>
-                <td className="px-3 py-2 text-slate-600">{d?.walkingMinutesToMetro != null ? `${d.walkingMinutesToMetro}m` : "—"}</td>
-                <td className="px-3 py-2 text-slate-600">{commute != null ? `${commute}m` : "—"}</td>
+                <td className="px-3 py-2 text-ink/70">{p.neighborhood || p.city}</td>
+                <td className="px-3 py-2 text-ink">{price ? "$" + price.toLocaleString() : "confirm"}</td>
+                <td className="px-3 py-2 text-ink/70">{p.rating != null ? `${p.rating}★` : "—"}</td>
+                <td className="px-3 py-2 text-ink/70">
+                  {d?.walkingMinutesToMetro != null ? `${d.walkingMinutesToMetro}m` : "—"}
+                </td>
+                <td className="px-3 py-2 text-ink/70">
+                  {commute != null ? (
+                    `${commute}m`
+                  ) : hasAnchors ? (
+                    <span className="text-tan">Not computed</span>
+                  ) : (
+                    "—"
+                  )}
+                </td>
                 <td className="px-3 py-2">{d?.hasGym ? "✓" : "—"}</td>
                 <td className="px-3 py-2">
-                  {d?.hasBasketballCourt ? (d.basketballCourtType === "indoor" ? "indoor" : d.basketballCourtType === "nearby public court" ? "park" : "yes") : "—"}
+                  {d?.hasBasketballCourt
+                    ? d.basketballCourtType === "indoor"
+                      ? "indoor"
+                      : d.basketballCourtType === "nearby public court"
+                      ? "park"
+                      : "yes"
+                    : "—"}
                 </td>
-                <td className="max-w-[140px] truncate px-3 py-2 text-slate-500" title={String(avail)}>
+                <td className="max-w-[140px] truncate px-3 py-2 text-tan-ink" title={String(avail)}>
                   {String(avail)}
                 </td>
                 <td className="px-3 py-2">
@@ -108,21 +192,7 @@ export default function TableView({ places, meta, profile, selectedId, onSelect 
                   </span>
                 </td>
                 <td className="px-3 py-2">
-                  {m.decision && m.decision !== "unset" ? (
-                    <span
-                      className={`rounded px-1.5 py-0.5 text-[10px] font-semibold ${
-                        m.decision === "keep"
-                          ? "bg-green-100 text-green-700"
-                          : m.decision === "maybe"
-                          ? "bg-yellow-100 text-yellow-700"
-                          : "bg-red-100 text-red-700"
-                      }`}
-                    >
-                      {m.decision}
-                    </span>
-                  ) : (
-                    <span className="text-slate-300">—</span>
-                  )}
+                  <StatusBadges meta={m} needsPrice={!!d?.needsPriceConfirmation} />
                 </td>
               </tr>
             );
@@ -133,17 +203,71 @@ export default function TableView({ places, meta, profile, selectedId, onSelect 
   );
 }
 
+function StatusBadges({
+  meta,
+  needsPrice,
+}: {
+  meta: ReturnType<typeof getMetaForPlace>;
+  needsPrice: boolean;
+}) {
+  const hasDecision = meta.decision && meta.decision !== "unset";
+  if (!hasDecision && !meta.contactedLeasing && !meta.tourScheduled && !needsPrice) {
+    return <span className="text-warm">—</span>;
+  }
+  return (
+    <div className="flex flex-wrap items-center gap-1">
+      {hasDecision && (
+        <span
+          className={`rounded px-1.5 py-0.5 text-[10px] font-semibold ${
+            meta.decision === "keep"
+              ? "bg-green-100 text-green-700"
+              : meta.decision === "maybe"
+              ? "bg-amber-100 text-amber-700"
+              : "bg-red-100 text-red-700"
+          }`}
+        >
+          {meta.decision}
+        </span>
+      )}
+      {meta.contactedLeasing && (
+        <span title="Contacted leasing" className="rounded bg-blue-100 px-1.5 py-0.5 text-[10px] font-semibold text-blue-700">
+          contacted
+        </span>
+      )}
+      {meta.tourScheduled && (
+        <span title="Tour scheduled" className="rounded bg-blue-100 px-1.5 py-0.5 text-[10px] font-semibold text-blue-700">
+          tour
+        </span>
+      )}
+      {needsPrice && (
+        <span title="Price/2BA needs confirmation" className="rounded bg-amber-100 px-1.5 py-0.5 text-[10px] font-semibold text-amber-700">
+          price?
+        </span>
+      )}
+    </div>
+  );
+}
+
 function sortVal(p: Place, key: SortKey, profile: SearchProfile | null): string | number {
   const d = p.apartmentDetails;
   switch (key) {
-    case "name": return p.name;
-    case "city": return p.neighborhood || p.city;
-    case "commute": return (profile ? bestCommuteMinutes(p, profile) : null) ?? 9999;
-    case "price": return lowestPrice(p) ?? 999999;
-    case "rating": return p.rating ?? -1;
-    case "walk": return d?.walkingMinutesToMetro ?? 9999;
-    case "gym": return d?.hasGym ? 1 : 0;
-    case "bball": return d?.hasBasketballCourt ? (d.basketballCourtType === "indoor" ? 2 : 1) : 0;
-    case "fit": return computeFit(p, profile ?? undefined).score;
+    case "name":
+      return p.name;
+    case "city":
+      return p.neighborhood || p.city;
+    case "commute":
+      return (profile ? bestCommuteMinutes(p, profile) : null) ?? 9999;
+    case "price":
+      return lowestPrice(p) ?? 999999;
+    case "rating":
+      return p.rating ?? -1;
+    case "walk":
+      return d?.walkingMinutesToMetro ?? 9999;
+    case "gym":
+      return d?.hasGym ? 1 : 0;
+    case "bball":
+      return d?.hasBasketballCourt ? (d.basketballCourtType === "indoor" ? 2 : 1) : 0;
+    case "fit":
+      return computeFit(p, profile ?? undefined).score;
   }
 }

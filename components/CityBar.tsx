@@ -46,13 +46,13 @@ export default function CityBar({
   autofillCount,
   cloud,
 }: Props) {
-  const select = "rounded-lg border border-slate-300 bg-white px-3 py-1.5 text-sm focus:border-brand-400 focus:outline-none";
-  const btn = "rounded-lg border border-slate-300 bg-white px-3 py-1.5 text-xs font-medium text-slate-700 hover:border-brand-400 hover:text-brand-700 disabled:opacity-50";
-  const primary = "rounded-lg bg-brand-600 px-3 py-1.5 text-xs font-semibold text-white hover:bg-brand-500 disabled:opacity-50";
+  const select = "rounded-lg border border-warm bg-white px-3 py-1.5 text-sm focus:border-blue-500 focus:outline-none";
+  const btn = "rounded-lg border border-warm bg-white px-3 py-1.5 text-xs font-medium text-ink hover:border-blue-400 hover:text-blue-700 disabled:opacity-50";
+  const primary = "rounded-lg bg-red-500 px-3 py-1.5 text-xs font-semibold text-white hover:bg-red-600 disabled:opacity-50";
 
   return (
-    <div className="no-print flex flex-wrap items-center gap-2 rounded-xl border border-brand-100 bg-white p-3">
-      <label className="flex items-center gap-1.5 text-xs text-slate-500">
+    <div className="no-print flex flex-wrap items-center gap-2 rounded-xl border border-warm bg-white p-3">
+      <label className="flex items-center gap-1.5 text-xs text-tan-ink">
         City
         <select value={activeCityId} onChange={(e) => onCityChange(e.target.value)} className={select}>
           {cities.map((c) => (
@@ -64,9 +64,9 @@ export default function CityBar({
       </label>
       <button onClick={onAddCity} className={btn}>+ Add city</button>
 
-      <span className="mx-1 h-5 w-px bg-slate-200" />
+      <span className="mx-1 h-5 w-px bg-warm" />
 
-      <label className="flex items-center gap-1.5 text-xs text-slate-500">
+      <label className="flex items-center gap-1.5 text-xs text-tan-ink">
         Profile
         <select
           value={activeProfileId ?? ""}
@@ -82,7 +82,7 @@ export default function CityBar({
       </label>
       <button onClick={onToggleProfileEditor} className={btn}>Edit profile / anchors</button>
 
-      <span className="mx-1 h-5 w-px bg-slate-200" />
+      <span className="mx-1 h-5 w-px bg-warm" />
 
       <button onClick={onDiscover} disabled={discovering} className={primary}>
         {discovering ? "Discovering…" : "Discover apartments here"}
@@ -100,8 +100,8 @@ export default function CityBar({
         {autofilling ? "Auto-filling…" : `Auto-fill rent & amenities (${autofillCount})`}
       </button>
 
-      <span className={`ml-auto flex items-center gap-1.5 rounded-full px-2.5 py-1 text-[11px] font-medium ${cloud ? "bg-brand-50 text-brand-700" : "bg-slate-100 text-slate-400"}`}>
-        <span className={`inline-block h-2 w-2 rounded-full ${cloud ? "bg-brand-500" : "bg-slate-300"}`} />
+      <span className={`ml-auto flex items-center gap-1.5 rounded-full px-2.5 py-1 text-[11px] font-medium ${cloud ? "bg-blue-50 text-blue-700" : "bg-cream text-tan"}`}>
+        <span className={`inline-block h-2 w-2 rounded-full ${cloud ? "bg-blue-600" : "bg-warm"}`} />
         {cloud ? "Synced to Supabase" : "Local only"}
       </span>
     </div>

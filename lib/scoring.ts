@@ -157,8 +157,8 @@ export function fitTier(score: number): FitTier {
 
 export const TIER_COLOR: Record<FitTier, string> = {
   green: "#16a34a",
-  yellow: "#eab308",
-  red: "#dc2626",
+  yellow: "#d99a16",
+  red: "#bd3342",
 };
 
 export function hasIndoorCourt(place: Place): boolean {

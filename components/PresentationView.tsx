@@ -17,11 +17,11 @@ export default function PresentationView({ places, profile, city, onSelect }: Pr
 
   return (
     <div className="space-y-6">
-      <div className="rounded-xl border border-slate-200 bg-white p-6">
-        <h1 className="text-2xl font-bold text-slate-900">
+      <div className="rounded-xl border border-warm bg-white p-6">
+        <h1 className="text-2xl font-bold text-ink">
           Our {city?.name ?? "apartment"} shortlist
         </h1>
-        <p className="mt-1 text-sm text-slate-500">
+        <p className="mt-1 text-sm text-tan-ink">
           {profile?.name ?? "Ranked by fit"} · ranked by fit. Pricing changes daily — confirm with leasing.
         </p>
       </div>
@@ -35,12 +35,12 @@ export default function PresentationView({ places, profile, city, onSelect }: Pr
             <button
               key={p.id}
               onClick={() => onSelect(p.id)}
-              className="flex flex-col rounded-xl border border-slate-200 bg-white p-4 text-left transition hover:border-slate-400 hover:shadow-md"
+              className="flex flex-col rounded-xl border border-warm bg-white p-4 text-left transition hover:border-tan hover:shadow-md"
             >
               <div className="flex items-start justify-between">
                 <div>
-                  <div className="font-bold text-slate-900">{p.name}</div>
-                  <div className="text-xs text-slate-500">{p.neighborhood}, {p.city}</div>
+                  <div className="font-bold text-ink">{p.name}</div>
+                  <div className="text-xs text-tan-ink">{p.neighborhood}, {p.city}</div>
                 </div>
                 <span
                   className="rounded-full px-2 py-0.5 text-xs font-bold text-white"
@@ -50,9 +50,9 @@ export default function PresentationView({ places, profile, city, onSelect }: Pr
                 </span>
               </div>
 
-              <div className="mt-3 text-2xl font-bold text-slate-900">
+              <div className="mt-3 text-2xl font-bold text-ink">
                 {price ? `$${price.toLocaleString()}` : "Confirm"}
-                <span className="text-sm font-normal text-slate-400">{price ? "/mo+" : ""}</span>
+                <span className="text-sm font-normal text-tan">{price ? "/mo+" : ""}</span>
               </div>
 
               <div className="mt-3 flex flex-wrap gap-1.5">
@@ -61,24 +61,30 @@ export default function PresentationView({ places, profile, city, onSelect }: Pr
                     🏀 {d.basketballCourtType}
                   </Tag>
                 )}
-                {d?.hasGym && <Tag color="bg-slate-100 text-slate-700">🏋️ gym</Tag>}
+                {d?.hasGym && <Tag color="bg-cream text-ink">🏋️ gym</Tag>}
                 {d?.hasCoffee && <Tag color="bg-stone-100 text-stone-700">☕ coffee</Tag>}
-                {d?.hasBeerOrTap && <Tag color="bg-yellow-100 text-yellow-800">🍺 tap/bar</Tag>}
+                {d?.hasBeerOrTap && <Tag color="bg-amber-100 text-amber-800">🍺 tap/bar</Tag>}
               </div>
 
-              <div className="mt-3 space-y-1 text-xs text-slate-600">
-                {profile?.anchors.map((a) => {
-                  const mins = commuteMinutes(p, a.id);
-                  return (
-                    <div key={a.id}>➡️ {a.label}: {mins != null ? `~${mins} min` : "—"}</div>
-                  );
-                })}
+              <div className="mt-3 space-y-1 text-xs text-ink/70">
+                {(() => {
+                  const anchors = profile?.anchors ?? [];
+                  const computed = anchors.filter((a) => commuteMinutes(p, a.id) != null);
+                  if (anchors.length > 0 && computed.length === 0) {
+                    return <div className="text-tan">Commute not computed yet</div>;
+                  }
+                  return computed.map((a) => (
+                    <div key={a.id}>
+                      ➡️ {a.label}: ~{commuteMinutes(p, a.id)} min
+                    </div>
+                  ));
+                })()}
                 {(!profile || profile.anchors.length === 0) && d?.nearestMetro && (
                   <div>🚇 {d.nearestMetro} · {d.walkingMinutesToMetro ?? "?"} min walk</div>
                 )}
               </div>
 
-              <p className="mt-3 border-t border-slate-100 pt-3 text-xs italic text-slate-500">{p.roommatePitch}</p>
+              <p className="mt-3 border-t border-warm/60 pt-3 text-xs italic text-tan-ink">{p.roommatePitch}</p>
             </button>
           );
         })}

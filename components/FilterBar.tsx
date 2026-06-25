@@ -43,18 +43,18 @@ export default function FilterBar({ filters, profile, onChange, onReset, count, 
   const hasAnchors = (profile?.anchors.length ?? 0) > 0;
 
   return (
-    <div className="no-print space-y-3 rounded-xl border border-brand-100 bg-white p-4">
+    <div className="no-print space-y-3 rounded-xl border border-warm bg-white p-4">
       <div className="flex flex-wrap items-center gap-3">
         <input
           value={filters.search}
           onChange={(e) => set({ search: e.target.value })}
           placeholder="Search name, neighborhood, tag…"
-          className="w-56 rounded-lg border border-slate-300 px-3 py-1.5 text-sm focus:border-brand-400 focus:outline-none"
+          className="w-56 rounded-lg border border-warm px-3 py-1.5 text-sm focus:border-blue-500 focus:outline-none"
         />
         <select
           value={filters.maxPrice ?? ""}
           onChange={(e) => set({ maxPrice: e.target.value === "" ? null : Number(e.target.value) })}
-          className="rounded-lg border border-slate-300 px-3 py-1.5 text-sm"
+          className="rounded-lg border border-warm px-3 py-1.5 text-sm"
         >
           {PRICE_OPTIONS.map((o) => (
             <option key={o.label} value={o.value ?? ""}>
@@ -66,7 +66,7 @@ export default function FilterBar({ filters, profile, onChange, onReset, count, 
           <select
             value={filters.maxCommuteMinutes ?? ""}
             onChange={(e) => set({ maxCommuteMinutes: e.target.value === "" ? null : Number(e.target.value) })}
-            className="rounded-lg border border-slate-300 px-3 py-1.5 text-sm"
+            className="rounded-lg border border-warm px-3 py-1.5 text-sm"
           >
             {COMMUTE_OPTIONS.map((o) => (
               <option key={o.label} value={o.value ?? ""}>
@@ -75,26 +75,26 @@ export default function FilterBar({ filters, profile, onChange, onReset, count, 
             ))}
           </select>
         )}
-        <label className="flex items-center gap-1.5 text-xs text-slate-600">
+        <label className="flex items-center gap-1.5 text-xs text-ink/70">
           Available by
           <input
             type="date"
             value={filters.availableByDate}
             onChange={(e) => set({ availableByDate: e.target.value })}
-            className="rounded-lg border border-slate-300 px-2 py-1 text-xs"
+            className="rounded-lg border border-warm px-2 py-1 text-xs"
           />
         </label>
-        <span className="ml-auto text-xs text-slate-500">
+        <span className="ml-auto text-xs text-tan-ink">
           {count} of {total} shown
         </span>
-        <button onClick={onReset} className="text-xs font-medium text-brand-600 hover:underline">
+        <button onClick={onReset} className="text-xs font-medium text-blue-600 hover:underline">
           Reset
         </button>
       </div>
 
       {/* Quick filters for the roommate apartment hunt */}
-      <div className="flex flex-wrap items-center gap-2 border-t border-slate-100 pt-3">
-        <span className="mr-1 text-[11px] font-semibold uppercase tracking-wide text-brand-600">Quick</span>
+      <div className="flex flex-wrap items-center gap-2 border-t border-warm/60 pt-3">
+        <span className="mr-1 text-[11px] font-semibold uppercase tracking-wide text-blue-600">Quick</span>
         <Toggle active={filters.area === "arlington"} label="Arlington only" onClick={() => set({ area: filters.area === "arlington" ? "all" : "arlington" })} />
         <Toggle active={filters.area === "dc"} label="DC only" onClick={() => set({ area: filters.area === "dc" ? "all" : "dc" })} />
         <Toggle active={filters.priceCap === 3000} label="Under $3k" onClick={() => set({ priceCap: filters.priceCap === 3000 ? null : 3000 })} />
@@ -130,8 +130,8 @@ function Toggle({ active, label, onClick }: { active: boolean; label: string; on
       onClick={onClick}
       className={`rounded-full border px-3 py-1 text-xs font-medium transition ${
         active
-          ? "border-brand-500 bg-brand-500 text-white"
-          : "border-slate-300 bg-white text-slate-700 hover:border-brand-300"
+          ? "border-blue-600 bg-blue-600 text-white"
+          : "border-warm bg-white text-ink hover:border-blue-300"
       }`}
     >
       {label}

@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from "react";
 import { useState } from "react";
 import { BasketballCourtType, City, Place, SearchProfile } from "@/lib/types";
 
@@ -24,6 +25,14 @@ export default function AddApartmentModal({ city, profile, onAdd, onClose }: Pro
   const [msg, setMsg] = useState<string | null>(null);
 
   const amenities = profile?.amenities ?? [];
+
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+    };
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, [onClose]);
 
   const toggleAmenity = (k: string) =>
     setAmenityKeys((prev) => (prev.includes(k) ? prev.filter((x) => x !== k) : [...prev, k]));
@@ -179,20 +188,23 @@ export default function AddApartmentModal({ city, profile, onAdd, onClose }: Pro
     }
   }
 
-  const input = "w-full rounded-lg border border-slate-300 px-3 py-1.5 text-sm focus:border-brand-400 focus:outline-none";
+  const input = "w-full rounded-lg border border-warm px-3 py-1.5 text-sm focus:border-blue-500 focus:outline-none";
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/40 p-4" onClick={onClose}>
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-ink/40 p-4" onClick={onClose}>
       <div
-        className="max-h-[88vh] w-full max-w-lg overflow-y-auto rounded-2xl border border-brand-100 bg-white p-5 shadow-2xl"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="add-apartment-title"
+        className="max-h-[88vh] w-full max-w-lg overflow-y-auto rounded-2xl border border-warm bg-white p-5 shadow-2xl"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="mb-4 flex items-center justify-between">
-          <h2 className="text-lg font-bold text-slate-900">
+          <h2 id="add-apartment-title" className="text-lg font-bold text-ink">
             Add apartment{city ? ` in ${city.name}` : ""}
           </h2>
-          <button onClick={onClose} className="rounded-lg p-1 text-slate-400 hover:bg-slate-100 hover:text-slate-700">
-            ✕
+          <button onClick={onClose} aria-label="Close" className="rounded-lg p-1 text-tan hover:bg-cream hover:text-ink">
+            <span aria-hidden="true">✕</span>
           </button>
         </div>
 
@@ -200,6 +212,7 @@ export default function AddApartmentModal({ city, profile, onAdd, onClose }: Pro
           <Field label="Listing link">
             <div className="flex gap-2">
               <input
+                autoFocus
                 value={website}
                 onChange={(e) => setWebsite(e.target.value)}
                 placeholder="https://…"
@@ -208,7 +221,7 @@ export default function AddApartmentModal({ city, profile, onAdd, onClose }: Pro
               <button
                 onClick={autofillFromLink}
                 disabled={autofilling}
-                className="shrink-0 rounded-lg border border-brand-300 bg-brand-50 px-3 py-1.5 text-xs font-semibold text-brand-700 hover:bg-brand-100 disabled:opacity-50"
+                className="shrink-0 rounded-lg border border-blue-300 bg-blue-50 px-3 py-1.5 text-xs font-semibold text-blue-700 hover:bg-blue-100 disabled:opacity-50"
                 title="Read the listing page and fill in rent + amenities"
               >
                 {autofilling ? "…" : "Auto-fill"}
@@ -233,15 +246,15 @@ export default function AddApartmentModal({ city, profile, onAdd, onClose }: Pro
             <Field label="Rent ($/mo)">
               <input type="number" value={rent} onChange={(e) => setRent(e.target.value)} placeholder="3000" className={input} />
             </Field>
-            <label className="flex items-end gap-2 pb-1.5 text-sm text-slate-700">
-              <input type="checkbox" checked={has2br2ba} onChange={(e) => setHas2br2ba(e.target.checked)} className="h-4 w-4 accent-brand-500" />
+            <label className="flex items-end gap-2 pb-1.5 text-sm text-ink">
+              <input type="checkbox" checked={has2br2ba} onChange={(e) => setHas2br2ba(e.target.checked)} className="h-4 w-4 accent-blue-600" />
               2BR / 2BA
             </label>
           </div>
 
           {amenities.length > 0 && (
             <div>
-              <span className="mb-1 block text-[11px] font-medium text-slate-500">Amenities</span>
+              <span className="mb-1 block text-[11px] font-medium text-tan-ink">Amenities</span>
               <div className="flex flex-wrap gap-2">
                 {amenities.map((a) => (
                   <button
@@ -249,8 +262,8 @@ export default function AddApartmentModal({ city, profile, onAdd, onClose }: Pro
                     onClick={() => toggleAmenity(a.key)}
                     className={`rounded-full border px-3 py-1 text-xs font-medium transition ${
                       amenityKeys.includes(a.key)
-                        ? "border-brand-500 bg-brand-500 text-white"
-                        : "border-slate-300 bg-white text-slate-700 hover:border-brand-300"
+                        ? "border-blue-600 bg-blue-600 text-white"
+                        : "border-warm bg-white text-ink hover:border-blue-300"
                     }`}
                   >
                     {a.label}
@@ -267,13 +280,13 @@ export default function AddApartmentModal({ city, profile, onAdd, onClose }: Pro
           {msg && <p className="text-xs text-amber-600">{msg}</p>}
 
           <div className="flex justify-end gap-2 pt-1">
-            <button onClick={onClose} className="rounded-lg border border-slate-300 px-4 py-1.5 text-sm font-medium text-slate-700 hover:border-slate-400">
+            <button onClick={onClose} className="rounded-lg border border-warm px-4 py-1.5 text-sm font-medium text-ink hover:border-tan">
               Cancel
             </button>
             <button
               onClick={submit}
               disabled={saving}
-              className="rounded-lg bg-brand-600 px-4 py-1.5 text-sm font-semibold text-white hover:bg-brand-500 disabled:opacity-50"
+              className="rounded-lg bg-red-500 px-4 py-1.5 text-sm font-semibold text-white hover:bg-red-600 disabled:opacity-50"
             >
               {saving ? "Adding…" : "Add apartment"}
             </button>
@@ -287,7 +300,7 @@ export default function AddApartmentModal({ city, profile, onAdd, onClose }: Pro
 function Field({ label, children }: { label: string; children: React.ReactNode }) {
   return (
     <label className="block">
-      <span className="mb-1 block text-[11px] font-medium text-slate-500">{label}</span>
+      <span className="mb-1 block text-[11px] font-medium text-tan-ink">{label}</span>
       {children}
     </label>
   );

@@ -19,7 +19,7 @@ const DEFAULT_CENTER = { lat: 38.89, lng: -77.12 };
 // Build an SVG pin: colored teardrop, optional basketball dot, optional metro ring.
 function pinSVG(color: string, court: "none" | "court" | "indoor", strongMetro: boolean): string {
   const ring = strongMetro
-    ? `<circle cx="14" cy="14" r="13" fill="none" stroke="#3a90e2" stroke-width="2.5"/>`
+    ? `<circle cx="14" cy="14" r="13" fill="none" stroke="#2f5f7f" stroke-width="2.5"/>`
     : "";
   const ball =
     court === "indoor"
@@ -30,7 +30,7 @@ function pinSVG(color: string, court: "none" | "court" | "indoor", strongMetro: 
   return `
     <svg xmlns="http://www.w3.org/2000/svg" width="34" height="46" viewBox="0 0 28 40">
       <path d="M14 0C6.8 0 1 5.8 1 13c0 9.2 13 27 13 27s13-17.8 13-27C27 5.8 21.2 0 14 0z"
-            fill="${color}" stroke="#1f2937" stroke-width="1"/>
+            fill="${color}" stroke="#29251f" stroke-width="1"/>
       ${ring}
       ${ball}
     </svg>`;
@@ -108,7 +108,7 @@ export default function MapView({ places, selectedId, onSelect, center, zoom, pr
     infoRef.current.setContent(`
       <div style="font-family:ui-sans-serif,system-ui;max-width:260px;padding:12px 14px;">
         <div style="font-weight:700;font-size:14px;margin-bottom:2px;">${escapeHTML(place.name)}</div>
-        <div style="color:#64748b;font-size:12px;margin-bottom:6px;">${escapeHTML(place.neighborhood)}, ${escapeHTML(place.city)}</div>
+        <div style="color:#8a6a47;font-size:12px;margin-bottom:6px;">${escapeHTML(place.neighborhood)}, ${escapeHTML(place.city)}</div>
         <div style="font-size:12px;line-height:1.5;">
           <div>${price ? "From $" + price.toLocaleString() + "/mo" : "Price: confirm"}</div>
           <div>${d?.nearestMetro ?? ""} (${d?.metroLine ?? ""}) · ${d?.walkingMinutesToMetro ?? "?"} min walk</div>
@@ -116,7 +116,7 @@ export default function MapView({ places, selectedId, onSelect, center, zoom, pr
           <div style="margin-top:4px;font-weight:600;">Fit ${computeFit(place, profileRef.current ?? undefined).score}/100</div>
         </div>
         <a href="${escapeHTML(place.website)}" target="_blank" rel="noopener"
-           style="display:inline-block;margin-top:8px;font-size:12px;color:#3a90e2;">Visit website →</a>
+           style="display:inline-block;margin-top:8px;font-size:12px;color:#2f5f7f;font-weight:600;">Visit website →</a>
       </div>`);
     infoRef.current.open({ map: mapRef.current, anchor: marker });
   }

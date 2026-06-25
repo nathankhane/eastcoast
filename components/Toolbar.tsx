@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import { Place } from "@/lib/types";
 import { downloadCSV, downloadJSON, parseJSON, parseCSV } from "@/lib/io";
+import { useToast } from "@/components/ui";
 
 interface Props {
   places: Place[];
@@ -14,6 +15,7 @@ interface Props {
 
 export default function Toolbar({ places, onImport, onResetData, view, onToggleView }: Props) {
   const fileRef = useRef<HTMLInputElement>(null);
+  const toast = useToast();
 
   function handleFile(e: React.ChangeEvent<HTMLInputElement>) {
     const file = e.target.files?.[0];
@@ -24,23 +26,23 @@ export default function Toolbar({ places, onImport, onResetData, view, onToggleV
       try {
         if (file.name.endsWith(".json")) onImport(parseJSON(text));
         else if (file.name.endsWith(".csv")) onImport(parseCSV(text, places));
-        else alert("Please choose a .json or .csv file.");
+        else toast.error("Please choose a .json or .csv file.");
       } catch (err) {
-        alert("Import failed: " + (err as Error).message);
+        toast.error("Import failed: " + (err as Error).message);
       }
     };
     reader.readAsText(file);
     e.target.value = "";
   }
 
-  const btn = "rounded-lg border border-slate-300 bg-white px-3 py-1.5 text-xs font-medium text-slate-700 hover:border-slate-400";
+  const btn = "rounded-lg border border-warm bg-white px-3 py-1.5 text-xs font-medium text-ink hover:border-tan";
 
   return (
     <div className="no-print flex flex-wrap items-center gap-2">
-      <button onClick={onToggleView} className="rounded-lg bg-slate-900 px-3 py-1.5 text-xs font-semibold text-white hover:bg-slate-700">
+      <button onClick={onToggleView} className="rounded-lg bg-ink px-3 py-1.5 text-xs font-semibold text-white hover:bg-ink/85">
         {view === "explore" ? "Roommate view →" : "← Back to explore"}
       </button>
-      <span className="mx-1 h-5 w-px bg-slate-200" />
+      <span className="mx-1 h-5 w-px bg-warm" />
       <button onClick={() => downloadJSON(places)} className={btn}>Export JSON</button>
       <button onClick={() => downloadCSV(places)} className={btn}>Export CSV</button>
       <button onClick={() => fileRef.current?.click()} className={btn}>Import JSON/CSV</button>

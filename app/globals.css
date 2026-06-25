@@ -2,17 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
-:root { --bg: #f4f9ff; }
+:root {
+  --bg: #f8f7f2;
+}
 html, body { height: 100%; }
 body {
-  /* Soft baby-blue wash */
-  background: linear-gradient(180deg, #eaf4ff 0%, #f4f9ff 240px, #f8fafc 100%);
-  background-attachment: fixed;
-  color: #0f172a;
+  background: #f8f7f2;
+  color: #29251f;
+  font-feature-settings: "cv11", "ss01";
 }
 
-/* Google Maps InfoWindow tidy-up */
-.gm-style .gm-style-iw-c { padding: 0 !important; border-radius: 12px !important; }
+/* Tabular numerals for dense data (prices, ratings, commute times). */
+table, .tabular-nums { font-variant-numeric: tabular-nums; }
+
+/* Saigon-inspired wordmark: lacquer red with a subtle cream + weathered-blue offset. */
+.wordmark {
+  font-family: var(--font-display), Georgia, serif;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: #a82c3a;
+  text-shadow: 1px 1px 0 #f6ead2, 2px 2px 0 rgba(47, 95, 127, 0.22);
+}
+.wordmark-accent {
+  color: #2f5f7f;
+  text-shadow: 1px 1px 0 #f6ead2;
+}
+
+/* Google Maps InfoWindow tidy-up. */
+.gm-style .gm-style-iw-c { padding: 0 !important; border-radius: 14px !important; }
 .gm-style .gm-style-iw-d { overflow: hidden !important; }
 
 @media print {

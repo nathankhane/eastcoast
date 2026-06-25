@@ -2,11 +2,13 @@
 
 import { useEffect, useMemo, useState } from "react";
 import dynamic from "next/dynamic";
+import { MapPinHouse } from "lucide-react";
 import { City, CommuteResult, Place, SearchProfile, UserMeta, UserMetaStore } from "@/lib/types";
 import { SEED_PLACES } from "@/data/seed";
 import { CITIES, makeDefaultProfile } from "@/data/profiles";
 import { Filters, DEFAULT_FILTERS, applyFilters } from "@/lib/filters";
 import { getMetaForPlace } from "@/lib/storage";
+import { lowestPrice } from "@/lib/scoring";
 import {
   isCloud,
   getCities,
@@ -27,10 +29,30 @@ import MapPlaceholder from "@/components/MapPlaceholder";
 import CityBar from "@/components/CityBar";
 import ProfileEditor from "@/components/ProfileEditor";
 import AddApartmentModal from "@/components/AddApartmentModal";
+import WorkflowStrip from "@/components/WorkflowStrip";
+import NextBestActions from "@/components/NextBestActions";
+import {
+  ToastProvider,
+  useToast,
+  ConfirmDialog,
+  ConfirmOptions,
+  PromptModal,
+  EmptyState,
+} from "@/components/ui";
 
 const MapView = dynamic(() => import("@/components/MapView"), { ssr: false });
 
 export default function Home() {
+  return (
+    <ToastProvider>
+      <AppShell />
+    </ToastProvider>
+  );
+}
+
+function AppShell() {
+  const toast = useToast();
+
   const [cities, setCities] = useState<City[]>([]);
   const [activeCityId, setActiveCityId] = useState<string>("dmv");
   const [profiles, setProfiles] = useState<SearchProfile[]>([]);
@@ -48,6 +70,12 @@ export default function Home() {
   const [computing, setComputing] = useState(false);
   const [autofilling, setAutofilling] = useState(false);
 
+  // App-native dialogs (replacing window.alert/confirm/prompt).
+  const [confirm, setConfirm] = useState<ConfirmOptions | null>(null);
+  const [showAddCity, setShowAddCity] = useState(false);
+  const [addCityLoading, setAddCityLoading] = useState(false);
+  const [addCityError, setAddCityError] = useState<string | null>(null);
+
   const hasMapKey = !!process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
   const cloud = isCloud();
 
@@ -60,9 +88,7 @@ export default function Home() {
       const [cs, mt] = await Promise.all([getCities(), getUserMeta()]);
       setCities(cs);
       setMeta(mt);
-      // Keep the active city valid (avoids select/state divergence).
       if (!cs.some((c) => c.id === activeCityId)) setActiveCityId(cs[0]?.id ?? "dmv");
-      // Seed built-in cities into the cloud so place/profile FKs always resolve.
       CITIES.forEach((c) => {
         upsertCity(c);
       });
@@ -82,9 +108,6 @@ export default function Home() {
 
       let list = pl;
       if (activeCityId === "dmv") {
-        // Ensure the shipped seed apartments are present even if the cloud holds
-        // an older subset; cloud rows win for ids we already have, seed fills the
-        // rest. Persist newly added seed places so they stick.
         const haveIds = new Set(pl.map((p) => p.id));
         const missing = SEED_PLACES.filter((s) => !haveIds.has(s.id));
         list = [...pl, ...missing];
@@ -116,41 +139,122 @@ export default function Home() {
     saveUserMetaEntry(meta, selectedId, patch).then(setMeta);
   }
 
+  // Workflow status counts.
+  const decidedCount = useMemo(
+    () =>
+      places.filter((p) => {
+        const dec = getMetaForPlace(meta, p.id).decision;
+        return dec && dec !== "unset";
+      }).length,
+    [places, meta]
+  );
+  const needsVerifyCount = useMemo(
+    () =>
+      places.filter((p) => p.apartmentDetails?.needsPriceConfirmation || lowestPrice(p) === null)
+        .length,
+    [places]
+  );
+
+  // ---- Overlay exclusivity ---------------------------------------------------
+  function closeOverlays() {
+    setShowProfileEditor(false);
+    setShowAddApartment(false);
+    setSelectedId(null);
+  }
+  function selectPlace(id: string) {
+    setSelectedId(id);
+    setShowAddApartment(false); // opening detail closes the add modal
+  }
+  function openAddApartment() {
+    setShowAddApartment(true);
+    setShowProfileEditor(false);
+    setSelectedId(null);
+  }
+  function toggleProfileEditor() {
+    const next = !showProfileEditor;
+    setShowProfileEditor(next);
+    if (next) {
+      setShowAddApartment(false);
+      setSelectedId(null);
+    }
+  }
+  function toggleView() {
+    const next = view === "explore" ? "present" : "explore";
+    setView(next);
+    if (next === "present") closeOverlays();
+  }
+  function goToRoommateView() {
+    setView("present");
+    closeOverlays();
+  }
+
+  // ---- Workflow / next-best-action navigation --------------------------------
+  function focusCompare() {
+    document.getElementById("compare")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+  function gotoVerify() {
+    setView("explore");
+    setFilters({ ...DEFAULT_FILTERS, needsPriceConfirmation: true });
+    setTimeout(focusCompare, 50);
+  }
+  function filterNeedsPrice() {
+    setView("explore");
+    setFilters({ ...DEFAULT_FILTERS, needsPriceConfirmation: true });
+    setTimeout(focusCompare, 50);
+  }
+  function openFirstUndecided() {
+    const p = places.find((pl) => {
+      const dec = getMetaForPlace(meta, pl.id).decision;
+      return !dec || dec === "unset";
+    });
+    if (p) selectPlace(p.id);
+    else toast.info("Every place already has a decision.");
+  }
+
   function importPlaces(next: Place[]) {
     const tagged = next.map((p) => ({ ...p, cityId: p.cityId ?? activeCityId }));
     setPlaces(tagged);
     (async () => {
-      if (activeCity) await upsertCity(activeCity); // satisfy places.city_id FK
+      if (activeCity) await upsertCity(activeCity);
       await upsertPlaces(tagged);
     })();
     setSelectedId(null);
+    toast.success(`Imported ${tagged.length} place${tagged.length === 1 ? "" : "s"}.`);
   }
 
   function addApartment(place: Place) {
     const next = mergePlaces(places, [place]);
     setPlaces(next);
     (async () => {
-      if (activeCity) await upsertCity(activeCity); // satisfy places.city_id FK
+      if (activeCity) await upsertCity(activeCity);
       await upsertPlaces([place]);
     })();
-    setSelectedId(place.id);
+    selectPlace(place.id);
+    toast.success(`Added "${place.name}".`);
   }
 
-  // Places worth auto-filling: have a link to read and no confirmed rent yet.
   function needsAutofill(p: Place): boolean {
     const hasLink = Boolean(p.website || p.primarySourceUrl || p.googlePlaceId);
-    return hasLink && (p.apartmentDetails?.priceLow == null);
+    return hasLink && p.apartmentDetails?.priceLow == null;
   }
 
-  async function autofillAll() {
+  function requestAutofillAll() {
+    const targets = places.filter(needsAutofill);
+    if (!targets.length) {
+      toast.info("Nothing needs auto-fill right now.");
+      return;
+    }
+    setConfirm({
+      title: "Auto-fill rent & amenities?",
+      message: `Read ${targets.length} website${targets.length === 1 ? "" : "s"} and fill rent + amenities with the LLM (${targets.length} model call${targets.length === 1 ? "" : "s"}).`,
+      confirmLabel: "Run auto-fill",
+      onConfirm: runAutofillAll,
+    });
+  }
+
+  async function runAutofillAll() {
     const targets = places.filter(needsAutofill);
     if (!targets.length) return;
-    if (
-      !confirm(
-        `Read ${targets.length} websites and auto-fill rent + amenities with the LLM? This makes ${targets.length} model calls.`
-      )
-    )
-      return;
     setAutofilling(true);
     let ok = 0;
     let failed = 0;
@@ -169,7 +273,7 @@ export default function Home() {
           });
           const data = await res.json();
           if (!data.implemented) {
-            alert(data.reason || "Auto-fill needs an LLM key.");
+            toast.error(data.reason || "Auto-fill needs an LLM key configured.");
             break;
           }
           if (data.ok && data.fields) {
@@ -188,7 +292,7 @@ export default function Home() {
           failed++;
         }
       }
-      alert(`Auto-fill done: ${ok} filled, ${failed} skipped/failed.`);
+      toast.success(`Auto-fill complete: ${ok} filled, ${failed} skipped.`);
     } finally {
       setAutofilling(false);
     }
@@ -207,14 +311,21 @@ export default function Home() {
   }
 
   function resetData() {
-    if (!confirm("Reset this city to its default dataset? Your notes/status are kept.")) return;
-    const base = activeCityId === "dmv" ? SEED_PLACES : [];
-    setPlaces(base);
-    upsertPlaces(base);
-    setSelectedId(null);
+    setConfirm({
+      title: "Reset this city?",
+      message: "Restore the default dataset for this city. Your notes, tour status, and decisions are kept.",
+      confirmLabel: "Reset data",
+      tone: "danger",
+      onConfirm: () => {
+        const base = activeCityId === "dmv" ? SEED_PLACES : [];
+        setPlaces(base);
+        upsertPlaces(base);
+        setSelectedId(null);
+        toast.success("City reset to its default dataset.");
+      },
+    });
   }
 
-  // Merge discovered/new places by id without clobbering curated entries.
   function mergePlaces(existing: Place[], incoming: Place[]): Place[] {
     const map = new Map(existing.map((p) => [p.id, p] as const));
     for (const p of incoming) if (!map.has(p.id)) map.set(p.id, p);
@@ -232,19 +343,20 @@ export default function Home() {
       });
       const data = await res.json();
       if (data.error) {
-        alert("Discover failed: " + data.error);
+        toast.error("Discover failed: " + data.error);
         return;
       }
       const incoming: Place[] = data.places ?? [];
       if (!incoming.length) {
-        alert("No new places found for this search.");
+        toast.info("No new places found for this search.");
         return;
       }
       const merged = mergePlaces(places, incoming);
       setPlaces(merged);
       await upsertPlaces(incoming);
+      toast.success(`Discovery complete: added ${incoming.length} place${incoming.length === 1 ? "" : "s"}.`);
     } catch (e) {
-      alert("Discover failed: " + String(e));
+      toast.error("Discover failed: " + String(e));
     } finally {
       setDiscovering(false);
     }
@@ -252,13 +364,19 @@ export default function Home() {
 
   async function computeCommutes() {
     if (!activeProfile || activeProfile.anchors.length === 0) {
-      alert("Add at least one anchor in the profile editor first.");
+      toast.info("Add at least one commute anchor in the profile editor first.");
+      setShowProfileEditor(true);
+      setShowAddApartment(false);
+      setSelectedId(null);
       return;
     }
     const origins = places
       .filter((p) => p.latitude != null && p.longitude != null)
       .map((p) => ({ id: p.id, lat: p.latitude as number, lng: p.longitude as number }));
-    if (!origins.length) return;
+    if (!origins.length) {
+      toast.info("No places have coordinates to measure from yet.");
+      return;
+    }
 
     setComputing(true);
     try {
@@ -269,22 +387,21 @@ export default function Home() {
       });
       const data = await res.json();
       if (data.enabled === false) {
-        alert(data.reason || "Routes API not configured.");
+        toast.error(data.reason || "Routes API is not configured.");
         return;
       }
       if (data.error) {
-        alert("Commute failed: " + data.error);
+        toast.error("Commute failed: " + data.error);
         return;
       }
       const commutes: Record<string, CommuteResult[]> = data.commutes ?? {};
       const updated = places.map((p) => (commutes[p.id] ? { ...p, commutes: commutes[p.id] } : p));
       setPlaces(updated);
       await upsertPlaces(updated.filter((p) => commutes[p.id]));
-
-      // Persist any geocoded anchor coordinates back onto the profile.
       if (data.anchors) saveProfile({ ...activeProfile, anchors: data.anchors });
+      toast.success(`Commutes computed for ${Object.keys(commutes).length} place${Object.keys(commutes).length === 1 ? "" : "s"}.`);
     } catch (e) {
-      alert("Commute failed: " + String(e));
+      toast.error("Commute failed: " + String(e));
     } finally {
       setComputing(false);
     }
@@ -292,16 +409,15 @@ export default function Home() {
 
   function saveProfile(next: SearchProfile) {
     setProfiles((prev) => prev.map((p) => (p.id === next.id ? next : p)));
-    // Ensure the parent city row exists (profiles.city_id -> cities.id FK) before saving.
     (async () => {
       if (activeCity) await upsertCity(activeCity);
       await upsertProfile(next);
     })();
   }
 
-  async function addCity() {
-    const name = window.prompt("City to add (e.g. 'Brooklyn, NY' or 'Austin, TX')");
-    if (!name) return;
+  async function submitAddCity(name: string) {
+    setAddCityLoading(true);
+    setAddCityError(null);
     try {
       const res = await fetch("/api/geocode", {
         method: "POST",
@@ -310,7 +426,7 @@ export default function Home() {
       });
       const data = await res.json();
       if (data.error || !data.location) {
-        alert("Could not find that city: " + (data.error || "no result"));
+        setAddCityError("Could not find that city: " + (data.error || "no result"));
         return;
       }
       const id = slugify(name);
@@ -324,40 +440,70 @@ export default function Home() {
       };
       setCities((prev) => (prev.some((c) => c.id === id) ? prev : [...prev, city]));
       await upsertCity(city);
-      // Seed a default profile for the new city.
       const prof = makeDefaultProfile(id);
       await upsertProfile(prof);
       setActiveCityId(id);
+      setShowAddCity(false);
+      toast.success(`Added ${name}.`);
     } catch (e) {
-      alert("Add city failed: " + String(e));
+      setAddCityError("Add city failed: " + String(e));
+    } finally {
+      setAddCityLoading(false);
     }
   }
+
+  const placeCount = places.length;
 
   return (
     <main className="mx-auto max-w-7xl space-y-4 p-4 md:p-6">
       <header className="no-print flex flex-wrap items-center justify-between gap-3">
-        <div>
-          <h1 className="text-xl font-bold text-slate-900">
-            PlaceScout <span className="text-brand-600">Map</span>
-          </h1>
-          <p className="text-xs text-slate-500">
-            Multi-city apartment scout · auto-discovery · commute scoring
-          </p>
+        <div className="flex items-center gap-3">
+          <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-blue-600 text-white shadow-sm">
+            <MapPinHouse className="h-5 w-5" strokeWidth={2.25} aria-hidden="true" />
+          </span>
+          <div>
+            <h1 className="wordmark text-2xl leading-none">
+              PlaceScout <span className="wordmark-accent">Map</span>
+            </h1>
+            <p className="mt-1.5 text-xs text-tan-ink">
+              Multi-city apartment scout · auto-discovery · commute scoring
+            </p>
+          </div>
         </div>
         <Toolbar
           places={places}
           onImport={importPlaces}
           onResetData={resetData}
           view={view}
-          onToggleView={() => setView(view === "explore" ? "present" : "explore")}
+          onToggleView={toggleView}
         />
       </header>
+
+      <WorkflowStrip
+        total={placeCount}
+        shown={filtered.length}
+        needsVerify={needsVerifyCount}
+        decided={decidedCount}
+        discovering={discovering}
+        view={view}
+        onDiscover={discover}
+        onCompare={() => {
+          setView("explore");
+          setTimeout(focusCompare, 50);
+        }}
+        onVerify={gotoVerify}
+        onDecide={openFirstUndecided}
+        onShare={goToRoommateView}
+      />
 
       <CityBar
         cities={cities}
         activeCityId={activeCityId}
         onCityChange={setActiveCityId}
-        onAddCity={addCity}
+        onAddCity={() => {
+          setAddCityError(null);
+          setShowAddCity(true);
+        }}
         profiles={profiles}
         activeProfileId={activeProfile?.id ?? null}
         onProfileChange={setActiveProfileId}
@@ -366,9 +512,9 @@ export default function Home() {
         onComputeCommutes={computeCommutes}
         computing={computing}
         anchorCount={activeProfile?.anchors.length ?? 0}
-        onToggleProfileEditor={() => setShowProfileEditor((v) => !v)}
-        onAddApartment={() => setShowAddApartment(true)}
-        onAutofillAll={autofillAll}
+        onToggleProfileEditor={toggleProfileEditor}
+        onAddApartment={openAddApartment}
+        onAutofillAll={requestAutofillAll}
         autofilling={autofilling}
         autofillCount={places.filter(needsAutofill).length}
         cloud={cloud}
@@ -382,6 +528,19 @@ export default function Home() {
         />
       )}
 
+      {view === "explore" && hydrated && placeCount > 0 && (
+        <NextBestActions
+          places={places}
+          meta={meta}
+          profile={activeProfile}
+          onComputeCommutes={computeCommutes}
+          onFilterNeedsPrice={filterNeedsPrice}
+          onOpenPlace={selectPlace}
+          onRoommateView={goToRoommateView}
+          onAutofillAll={requestAutofillAll}
+        />
+      )}
+
       {showAddApartment && (
         <AddApartmentModal
           city={activeCity}
@@ -392,17 +551,43 @@ export default function Home() {
       )}
 
       {view === "present" ? (
-        <PresentationView places={places} profile={activeProfile} city={activeCity} onSelect={setSelectedId} />
+        <PresentationView places={places} profile={activeProfile} city={activeCity} onSelect={selectPlace} />
+      ) : hydrated && placeCount === 0 ? (
+        <EmptyState
+          icon="🏙️"
+          title={`No places in ${activeCity?.name ?? "this city"} yet`}
+          action={
+            <div className="flex flex-wrap justify-center gap-2">
+              <button
+                onClick={discover}
+                disabled={discovering}
+                className="rounded-lg bg-red-500 px-4 py-1.5 text-sm font-semibold text-white hover:bg-red-600 disabled:opacity-50"
+              >
+                {discovering ? "Discovering…" : "Discover apartments here"}
+              </button>
+              <button
+                onClick={openAddApartment}
+                className="rounded-lg border border-warm px-4 py-1.5 text-sm font-medium text-ink hover:border-tan"
+              >
+                + Add apartment
+              </button>
+            </div>
+          }
+        >
+          Run a discovery search, add a listing by link, or import a JSON/CSV file to get started.
+        </EmptyState>
       ) : (
         <>
-          <FilterBar
-            filters={filters}
-            profile={activeProfile}
-            onChange={setFilters}
-            onReset={() => setFilters(DEFAULT_FILTERS)}
-            count={filtered.length}
-            total={places.length}
-          />
+          <div id="compare">
+            <FilterBar
+              filters={filters}
+              profile={activeProfile}
+              onChange={setFilters}
+              onReset={() => setFilters(DEFAULT_FILTERS)}
+              count={filtered.length}
+              total={placeCount}
+            />
+          </div>
 
           <div className="grid gap-4 lg:grid-cols-2">
             <div className="h-[420px] lg:h-[560px]">
@@ -410,7 +595,7 @@ export default function Home() {
                 <MapView
                   places={filtered}
                   selectedId={selectedId}
-                  onSelect={setSelectedId}
+                  onSelect={selectPlace}
                   center={activeCity?.center}
                   zoom={activeCity?.defaultZoom}
                   profile={activeProfile}
@@ -419,14 +604,19 @@ export default function Home() {
                 <MapPlaceholder />
               )}
             </div>
-            <div className="lg:h-[560px] lg:overflow-y-auto">
+            <div className="lg:h-[560px]">
               {hydrated && (
                 <TableView
                   places={filtered}
                   meta={meta}
                   profile={activeProfile}
                   selectedId={selectedId}
-                  onSelect={setSelectedId}
+                  onSelect={selectPlace}
+                  totalCount={placeCount}
+                  hasAnchors={(activeProfile?.anchors.length ?? 0) > 0}
+                  onComputeCommutes={computeCommutes}
+                  computing={computing}
+                  onResetFilters={() => setFilters(DEFAULT_FILTERS)}
                 />
               )}
             </div>
@@ -441,32 +631,50 @@ export default function Home() {
           place={selected}
           meta={selectedMeta}
           profile={activeProfile}
+          hasAnchors={(activeProfile?.anchors.length ?? 0) > 0}
+          computing={computing}
+          onComputeCommutes={computeCommutes}
           onClose={() => setSelectedId(null)}
           onMetaChange={updateMeta}
           onPlaceChange={updatePlace}
         />
       )}
+
+      <ConfirmDialog options={confirm} onClose={() => setConfirm(null)} />
+      <PromptModal
+        open={showAddCity}
+        title="Add a city"
+        label="City to add"
+        placeholder="e.g. Brooklyn, NY or Austin, TX"
+        submitLabel="Add city"
+        loading={addCityLoading}
+        error={addCityError}
+        onSubmit={submitAddCity}
+        onClose={() => setShowAddCity(false)}
+      />
     </main>
   );
 }
 
 function slugify(s: string): string {
-  return s
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/(^-|-$)/g, "")
-    .slice(0, 40) || `city-${Date.now()}`;
+  return (
+    s
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/(^-|-$)/g, "")
+      .slice(0, 40) || `city-${Date.now()}`
+  );
 }
 
 function Legend({ profile }: { profile: SearchProfile | null }) {
   const hasBasketball = (profile?.amenities ?? []).some((a) => a.key.includes("basketball"));
   const hasAnchors = (profile?.anchors ?? []).length > 0;
   return (
-    <div className="no-print flex flex-wrap items-center gap-4 rounded-xl border border-brand-100 bg-white p-3 text-xs text-slate-600">
-      <span className="font-semibold text-brand-700">Map legend:</span>
+    <div className="no-print flex flex-wrap items-center gap-4 rounded-xl border border-warm bg-white p-3 text-xs text-ink/70">
+      <span className="font-semibold text-blue-700">Map legend:</span>
       <Dot color="#16a34a" label="Strong fit" />
-      <Dot color="#eab308" label="Good, tradeoffs" />
-      <Dot color="#dc2626" label="Weak fit / over budget" />
+      <Dot color="#d99a16" label="Good, tradeoffs" />
+      <Dot color="#bd3342" label="Weak fit / over budget" />
       {hasBasketball && (
         <span className="flex items-center gap-1.5">
           <span className="inline-block h-3 w-3 rounded-full bg-orange-500" /> basketball court
@@ -474,7 +682,7 @@ function Legend({ profile }: { profile: SearchProfile | null }) {
       )}
       {hasAnchors && (
         <span className="flex items-center gap-1.5">
-          <span className="inline-block h-3 w-3 rounded-full border-2 border-brand-500" /> close to your anchor
+          <span className="inline-block h-3 w-3 rounded-full border-2 border-blue-600" /> close to your anchor
         </span>
       )}
     </div>
