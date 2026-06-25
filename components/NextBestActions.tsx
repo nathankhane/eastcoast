@@ -1,5 +1,7 @@
 "use client";
 
+import { useState } from "react";
+import { ChevronDown } from "lucide-react";
 import { Place, SearchProfile, UserMetaStore } from "@/lib/types";
 import { lowestPrice } from "@/lib/scoring";
 import { bestCommuteMinutes } from "@/lib/filters";
@@ -34,6 +36,7 @@ export default function NextBestActions({
   onRoommateView,
   onAutofillAll,
 }: Props) {
+  const [open, setOpen] = useState(false);
   const hasAnchors = (profile?.anchors.length ?? 0) > 0;
 
   const missingCommute = hasAnchors
@@ -93,44 +96,69 @@ export default function NextBestActions({
 
   if (places.length === 0) return null;
 
-  return (
-    <section
-      aria-label="Next best actions"
-      className="no-print rounded-xl border border-warm bg-white p-4"
-    >
-      <div className="mb-2 flex items-center justify-between">
-        <h2 className="text-xs font-bold uppercase tracking-wide text-blue-600">Next best actions</h2>
-        {rows.length > 0 && (
-          <button onClick={onRoommateView} className="text-xs font-medium text-blue-600 hover:underline">
-            Share roommate view →
-          </button>
-        )}
-      </div>
+  const attentionCount = rows.length;
+  const allClear = attentionCount === 0;
 
-      {rows.length === 0 ? (
-        <p className="flex items-center gap-2 text-sm text-green-700">
-          <span aria-hidden="true">✓</span> You&apos;re all caught up — everything is priced, decided, and contacted.
-        </p>
-      ) : (
-        <ul className="grid gap-2 sm:grid-cols-2">
-          {rows.map((r) => (
-            <li
-              key={r.key}
-              className="flex items-center justify-between gap-3 rounded-lg border border-warm/70 bg-paper px-3 py-2"
-            >
-              <span className="text-sm text-ink">
-                <span className="font-semibold tabular-nums text-ink">{r.count}</span>{" "}
-                <span className="text-ink/70">{r.label}</span>
-              </span>
-              <button
-                onClick={r.onAction}
-                className="shrink-0 rounded-lg border border-blue-300 bg-blue-50 px-2.5 py-1 text-xs font-semibold text-blue-700 hover:bg-blue-100"
-              >
-                {r.actionLabel}
-              </button>
-            </li>
-          ))}
-        </ul>
+  return (
+    <section aria-label="Next best actions" className="no-print rounded-xl border border-warm bg-white">
+      <button
+        onClick={() => setOpen((v) => !v)}
+        aria-expanded={open}
+        className="flex w-full items-center justify-between gap-3 rounded-xl px-4 py-2.5 text-left hover:bg-cream/60"
+      >
+        <span className="flex items-center gap-2">
+          <span className="text-xs font-bold uppercase tracking-wide text-blue-600">Next best actions</span>
+          {allClear ? (
+            <span className="inline-flex items-center gap-1 rounded-full bg-green-50 px-2 py-0.5 text-[11px] font-semibold text-green-700">
+              <span aria-hidden="true">✓</span> All caught up
+            </span>
+          ) : (
+            <span className="rounded-full bg-blue-100 px-2 py-0.5 text-[11px] font-semibold tabular-nums text-blue-700">
+              {attentionCount} {attentionCount === 1 ? "thing" : "things"} need attention
+            </span>
+          )}
+        </span>
+        <ChevronDown
+          className={`h-4 w-4 shrink-0 text-tan-ink transition-transform ${open ? "rotate-180" : ""}`}
+          aria-hidden="true"
+        />
+      </button>
+
+      {open && (
+        <div className="border-t border-warm px-4 pb-4 pt-3">
+          {allClear ? (
+            <p className="flex items-center gap-2 text-sm text-green-700">
+              <span aria-hidden="true">✓</span> You&apos;re all caught up — everything is priced, decided, and contacted.
+            </p>
+          ) : (
+            <>
+              <ul className="grid gap-2 sm:grid-cols-2">
+                {rows.map((r) => (
+                  <li
+                    key={r.key}
+                    className="flex items-center justify-between gap-3 rounded-lg border border-warm/70 bg-paper px-3 py-2"
+                  >
+                    <span className="text-sm text-ink">
+                      <span className="font-semibold tabular-nums text-ink">{r.count}</span>{" "}
+                      <span className="text-ink/70">{r.label}</span>
+                    </span>
+                    <button
+                      onClick={r.onAction}
+                      className="shrink-0 rounded-lg border border-blue-300 bg-blue-50 px-2.5 py-1 text-xs font-semibold text-blue-700 hover:bg-blue-100"
+                    >
+                      {r.actionLabel}
+                    </button>
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-3 text-right">
+                <button onClick={onRoommateView} className="text-xs font-medium text-blue-600 hover:underline">
+                  Share roommate view →
+                </button>
+              </div>
+            </>
+          )}
+        </div>
       )}
     </section>
   );
