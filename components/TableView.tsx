@@ -14,7 +14,7 @@ interface Props {
   onSelect: (id: string) => void;
 }
 
-type SortKey = "name" | "city" | "commute" | "price" | "gym" | "bball" | "fit";
+type SortKey = "name" | "city" | "commute" | "price" | "rating" | "walk" | "gym" | "bball" | "fit";
 
 const TIER_DOT: Record<string, string> = {
   green: "bg-fit-green",
@@ -58,8 +58,10 @@ export default function TableView({ places, meta, profile, selectedId, onSelect 
           <tr>
             {header("name", "Name")}
             {header("city", "Area")}
-            {header("commute", "Commute")}
             {header("price", "Rent")}
+            {header("rating", "★")}
+            {header("walk", "Metro")}
+            {header("commute", "Commute")}
             {header("gym", "Gym")}
             {header("bball", "🏀")}
             <th className="px-3 py-2 text-left font-semibold text-slate-600">Avail</th>
@@ -83,10 +85,15 @@ export default function TableView({ places, meta, profile, selectedId, onSelect 
                   selectedId === p.id ? "bg-brand-50" : ""
                 }`}
               >
-                <td className="px-3 py-2 font-medium text-slate-900">{p.name}</td>
+                <td className="px-3 py-2 font-medium text-slate-900">
+                  {p.name}
+                  {d?.needsPriceConfirmation && <span title="Price/2BA needs confirmation" className="ml-1 text-amber-500">⚠︎</span>}
+                </td>
                 <td className="px-3 py-2 text-slate-600">{p.neighborhood || p.city}</td>
-                <td className="px-3 py-2 text-slate-600">{commute != null ? `${commute}m` : "—"}</td>
                 <td className="px-3 py-2 text-slate-900">{price ? "$" + price.toLocaleString() : "confirm"}</td>
+                <td className="px-3 py-2 text-slate-600">{p.rating != null ? `${p.rating}★` : "—"}</td>
+                <td className="px-3 py-2 text-slate-600">{d?.walkingMinutesToMetro != null ? `${d.walkingMinutesToMetro}m` : "—"}</td>
+                <td className="px-3 py-2 text-slate-600">{commute != null ? `${commute}m` : "—"}</td>
                 <td className="px-3 py-2">{d?.hasGym ? "✓" : "—"}</td>
                 <td className="px-3 py-2">
                   {d?.hasBasketballCourt ? (d.basketballCourtType === "indoor" ? "indoor" : d.basketballCourtType === "nearby public court" ? "park" : "yes") : "—"}
@@ -133,6 +140,8 @@ function sortVal(p: Place, key: SortKey, profile: SearchProfile | null): string 
     case "city": return p.neighborhood || p.city;
     case "commute": return (profile ? bestCommuteMinutes(p, profile) : null) ?? 9999;
     case "price": return lowestPrice(p) ?? 999999;
+    case "rating": return p.rating ?? -1;
+    case "walk": return d?.walkingMinutesToMetro ?? 9999;
     case "gym": return d?.hasGym ? 1 : 0;
     case "bball": return d?.hasBasketballCourt ? (d.basketballCourtType === "indoor" ? 2 : 1) : 0;
     case "fit": return computeFit(p, profile ?? undefined).score;

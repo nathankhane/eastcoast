@@ -144,8 +144,10 @@ export default function DetailPanel({ place, meta, profile, onClose, onMetaChang
           <Section title="Key facts">
             <Facts
               rows={[
+                ["Google rating", place.rating != null ? `${place.rating}★ (${place.reviewCount ?? "?"} reviews)` : "Not rated / fetch"],
                 ["2BR/2BA price", price ? `From $${price.toLocaleString()}/mo` : "Confirm with leasing"],
                 ["Price notes", d.priceNotes],
+                ["Price status", d.needsPriceConfirmation ? "⚠︎ Re-confirm price & 2BA with leasing" : ""],
                 ["Metro", `${d.nearestMetro} (${d.metroLine})`],
                 ["Walk to Metro", `${d.walkingMinutesToMetro ?? "?"} min · ${d.walkingMilesToMetro ?? "?"} mi`],
                 ["To McLean (transit)", d.transitMinutesToMcLean ? `${d.transitMinutesToMcLean} min` : "—"],
@@ -181,14 +183,23 @@ export default function DetailPanel({ place, meta, profile, onClose, onMetaChang
 
         <Section title="Sources">
           <ul className="space-y-1 text-xs">
-            <li>
-              <a href={place.website} target="_blank" rel="noopener" className="text-blue-600 hover:underline">
-                Official site →
-              </a>
-            </li>
+            {place.website && (
+              <li>
+                <a href={place.website} target="_blank" rel="noopener" className="text-brand-600 hover:underline">
+                  Official site →
+                </a>
+              </li>
+            )}
+            {place.googleMapsUri && (
+              <li>
+                <a href={place.googleMapsUri} target="_blank" rel="noopener" className="text-brand-600 hover:underline">
+                  Google Maps listing →
+                </a>
+              </li>
+            )}
             {place.secondarySourceUrls.map((u, i) => (
               <li key={i}>
-                <a href={u} target="_blank" rel="noopener" className="text-blue-600 hover:underline">
+                <a href={u} target="_blank" rel="noopener" className="text-brand-600 hover:underline">
                   {new URL(u).hostname.replace("www.", "")} →
                 </a>
               </li>

@@ -103,6 +103,9 @@ export interface ApartmentDetails {
   basketballCourtType: BasketballCourtType;
   basketballNotes: string;
   parkingNotes: string;
+  // True when the listed price / 2BR-2BA status is researched-but-unconfirmed
+  // and should be re-checked with the leasing office before deciding.
+  needsPriceConfirmation?: boolean;
 }
 
 // User-editable overlay, persisted to localStorage and merged at load.
@@ -144,6 +147,8 @@ export interface Place {
 
   // Generic scoring / display
   rating: number | null; // generic 0-5 (for restaurants etc.)
+  reviewCount?: number | null; // Google review count (from Places enrichment)
+  googleMapsUri?: string; // canonical Google Maps URL (from Places enrichment)
   priceLevel: string; // generic "$$" style (for restaurants etc.)
   tags: string[];
   imageUrls: string[];

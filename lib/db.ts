@@ -108,7 +108,15 @@ export async function upsertPlaces(places: Place[]): Promise<void> {
       data: p,
       updated_at: new Date().toISOString(),
     }));
-    await sb.from("places").upsert(rows);
+    const { error } = await sb.from("places").upsert(rows);
+    if (error) {
+      // The partial unique index on google_place_id can conflict when a curated
+      // /seed place shares a Google Place id with an already-stored discovered
+      // row. The id stays inside `data`, so retry without the dedicated column
+      // so the write still succeeds.
+      const rowsNoGpid = rows.map((r) => ({ ...r, google_place_id: null }));
+      await sb.from("places").upsert(rowsNoGpid);
+    }
     return;
   }
   // localStorage: merge by id into the stored set.

@@ -1,12 +1,18 @@
 import { Place } from "@/lib/types";
+import { SEED_EXTRA } from "./seed-extra";
 
 // ============================================================================
 // Verified apartment dataset — research last verified 2026-06-24.
 // Coordinates are approximate unless coordsApproximate === false.
 // Pricing is dynamic; confirm with leasing office before deciding.
+//
+// CURATED = hand-verified basketball/commute-focused set.
+// SEED_EXTRA = 21 researched Arlington/DC ~<$3k apartments (auto-enriched with
+// Google geocoding, ratings, and Metro walk times via scripts/enrich-seed.mjs).
+// The two are merged (by id) into SEED_PLACES below.
 // ============================================================================
 
-export const SEED_PLACES: Place[] = [
+const CURATED_SEED_PLACES: Place[] = [
   {
     id: "halstead-square",
     name: "Halstead Square – Lotus & Lofts",
@@ -716,3 +722,13 @@ export const SEED_PLACES: Place[] = [
     },
   },
 ];
+
+// Merge curated + enriched seed by id (curated wins on collision; there are no
+// id collisions after de-duplicating the 5 overlaps in the enrichment script).
+function mergeSeedById(base: Place[], extra: Place[]): Place[] {
+  const map = new Map(base.map((p) => [p.id, p] as const));
+  for (const p of extra) if (!map.has(p.id)) map.set(p.id, p);
+  return Array.from(map.values());
+}
+
+export const SEED_PLACES: Place[] = mergeSeedById(CURATED_SEED_PLACES, SEED_EXTRA);

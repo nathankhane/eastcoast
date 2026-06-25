@@ -92,6 +92,23 @@ export default function FilterBar({ filters, profile, onChange, onReset, count, 
         </button>
       </div>
 
+      {/* Quick filters for the roommate apartment hunt */}
+      <div className="flex flex-wrap items-center gap-2 border-t border-slate-100 pt-3">
+        <span className="mr-1 text-[11px] font-semibold uppercase tracking-wide text-brand-600">Quick</span>
+        <Toggle active={filters.area === "arlington"} label="Arlington only" onClick={() => set({ area: filters.area === "arlington" ? "all" : "arlington" })} />
+        <Toggle active={filters.area === "dc"} label="DC only" onClick={() => set({ area: filters.area === "dc" ? "all" : "dc" })} />
+        <Toggle active={filters.priceCap === 3000} label="Under $3k" onClick={() => set({ priceCap: filters.priceCap === 3000 ? null : 3000 })} />
+        <Toggle active={filters.priceCap === 3300} label="Near $3k (≤$3,300)" onClick={() => set({ priceCap: filters.priceCap === 3300 ? null : 3300 })} />
+        <Toggle active={filters.requireGym} label="Has gym" onClick={() => set({ requireGym: !filters.requireGym })} />
+        <Toggle active={filters.requireBasketball} label="🏀 Basketball" onClick={() => set({ requireBasketball: !filters.requireBasketball })} />
+        <Toggle active={filters.minRating === 4.0} label="★ 4.0+" onClick={() => set({ minRating: filters.minRating === 4.0 ? null : 4.0 })} />
+        <Toggle active={filters.minRating === 4.3} label="★ 4.3+" onClick={() => set({ minRating: filters.minRating === 4.3 ? null : 4.3 })} />
+        <Toggle active={filters.maxMetroWalk === 10} label="Metro ≤10 min" onClick={() => set({ maxMetroWalk: filters.maxMetroWalk === 10 ? null : 10 })} />
+        <Toggle active={filters.maxMetroWalk === 15} label="Metro ≤15 min" onClick={() => set({ maxMetroWalk: filters.maxMetroWalk === 15 ? null : 15 })} />
+        <Toggle active={filters.needsPriceConfirmation} label="Needs price check" onClick={() => set({ needsPriceConfirmation: !filters.needsPriceConfirmation })} />
+      </div>
+
+      {/* Profile-driven amenity toggles */}
       <div className="flex flex-wrap gap-2">
         <Toggle active={filters.require2br2ba} label="2BR/2BA" onClick={() => set({ require2br2ba: !filters.require2br2ba })} />
         {amenities.map((a) => (

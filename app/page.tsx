@@ -80,7 +80,18 @@ export default function Home() {
       setActiveProfileId(profs[0]?.id ?? null);
 
       let list = pl;
-      if (!list.length && activeCityId === "dmv") list = SEED_PLACES; // ship-with default
+      if (activeCityId === "dmv") {
+        // Ensure the shipped seed apartments are present even if the cloud holds
+        // an older subset; cloud rows win for ids we already have, seed fills the
+        // rest. Persist newly added seed places so they stick.
+        const haveIds = new Set(pl.map((p) => p.id));
+        const missing = SEED_PLACES.filter((s) => !haveIds.has(s.id));
+        list = [...pl, ...missing];
+        if (missing.length && activeCity) {
+          await upsertCity(activeCity);
+          await upsertPlaces(missing);
+        }
+      }
       setPlaces(list);
       setSelectedId(null);
       setFilters(DEFAULT_FILTERS);

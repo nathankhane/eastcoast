@@ -10,6 +10,15 @@ export interface Filters {
   amenityKeys: string[]; // amenities that must be present (true)
   maxCommuteMinutes: number | null; // best commute to any anchor must be ≤ this
   availableByDate: string; // ISO date; empty = no filter
+
+  // Quick filters (roommate apartment hunt)
+  area: "all" | "arlington" | "dc"; // Arlington-only / DC-only
+  priceCap: number | null; // quick rent cap: 3000 (under) or 3300 (near)
+  requireGym: boolean;
+  requireBasketball: boolean;
+  minRating: number | null; // Google rating ≥ (4.0 or 4.3)
+  maxMetroWalk: number | null; // walking minutes to Metro ≤ (10 or 15)
+  needsPriceConfirmation: boolean; // only places flagged to re-check price/2BA
 }
 
 export const DEFAULT_FILTERS: Filters = {
@@ -19,6 +28,13 @@ export const DEFAULT_FILTERS: Filters = {
   amenityKeys: [],
   maxCommuteMinutes: null,
   availableByDate: "",
+  area: "all",
+  priceCap: null,
+  requireGym: false,
+  requireBasketball: false,
+  minRating: null,
+  maxMetroWalk: null,
+  needsPriceConfirmation: false,
 };
 
 export function applyFilters(
@@ -36,6 +52,26 @@ export function applyFilters(
       const hay = `${p.name} ${p.neighborhood} ${p.city} ${p.tags.join(" ")}`.toLowerCase();
       if (!hay.includes(q)) return false;
     }
+
+    // Area (Arlington-only / DC-only)
+    if (f.area === "arlington" && !isArlington(p)) return false;
+    if (f.area === "dc" && !isDC(p)) return false;
+
+    // Quick rent cap (under $3,000 / near $3,300). Unknown price is excluded.
+    if (f.priceCap !== null && (price === null || price > f.priceCap)) return false;
+
+    // Google rating threshold. Unknown rating is excluded.
+    if (f.minRating !== null && (p.rating === null || p.rating === undefined || p.rating < f.minRating)) return false;
+
+    // Metro walking-time cap. Unknown walk time is excluded.
+    if (f.maxMetroWalk !== null) {
+      const w = d?.walkingMinutesToMetro;
+      if (w === null || w === undefined || w > f.maxMetroWalk) return false;
+    }
+
+    if (f.requireGym && !d?.hasGym) return false;
+    if (f.requireBasketball && !d?.hasBasketballCourt) return false;
+    if (f.needsPriceConfirmation && !d?.needsPriceConfirmation) return false;
 
     if (f.maxPrice !== null && price !== null && price > f.maxPrice) return false;
     if (f.require2br2ba && !d?.has2br2ba) return false;
@@ -57,6 +93,14 @@ export function applyFilters(
     }
     return true;
   });
+}
+
+function isArlington(p: Place): boolean {
+  return /arlington/i.test(`${p.city} ${p.neighborhood}`);
+}
+
+function isDC(p: Place): boolean {
+  return p.state === "DC" || /washington|\bdc\b/i.test(`${p.city} ${p.neighborhood}`);
 }
 
 // Shortest commute across all anchors (null if none computed).
