@@ -1,0 +1,917 @@
+[
+  {
+    "id": "halstead-square",
+    "name": "Halstead Square – Lotus & Lofts",
+    "category": "apartment",
+    "streetAddress": "2729 Merrilee Dr",
+    "city": "Fairfax",
+    "state": "VA",
+    "zip": "22031",
+    "neighborhood": "Dunn Loring / Merrifield",
+    "latitude": 38.883,
+    "longitude": -77.228,
+    "coordsApproximate": true,
+    "website": "https://www.halsteadsquare.com",
+    "primarySourceUrl": "https://www.halsteadsquare.com",
+    "secondarySourceUrls": [
+      "https://www.apartments.com/halstead-square-fairfax-va/",
+      "https://www.apartmentlist.com/va/fairfax/halstead-square"
+    ],
+    "sourceQuotes": [
+      "From The Dunk, our indoor basketball court... Halstead Square offers a suite of amenities (halsteadsquare.com)",
+      "indoor basketball court, luxurious clubhouse, cinema-quality theatre (Yelp resident review)"
+    ],
+    "rating": null,
+    "priceLevel": "$$$",
+    "tags": [
+      "indoor basketball",
+      "Orange Line",
+      "Bozzuto",
+      "between McLean & DC"
+    ],
+    "imageUrls": [],
+    "confidenceScore": 95,
+    "fitScore": 88,
+    "fitReasoning": "price >$3k: 0; ≤10-min walk: +25; gym: +10; basketball: +15; indoor: +10; between McLean & DC: +15; 2BR/2BA: +10; −2 over budget = 88",
+    "roommatePitch": "A full indoor basketball court at home plus an 8-min Metro walk and a perfect midpoint between McLean and DC.",
+    "pros": [
+      "Indoor full court",
+      "Great transit (~8 min walk)",
+      "Pool",
+      "Strong Bozzuto management"
+    ],
+    "cons": [
+      "2BR/2BA slightly over budget",
+      "Thin walls per reviews"
+    ],
+    "lastVerified": "2026-06-24",
+    "apartmentDetails": {
+      "has2br2ba": true,
+      "priceLow": 3182,
+      "priceHigh": 3278,
+      "priceNotes": "2BR/2BA ~$3,182–$3,278. 2BR/1BA from ~$2,795. Ask about specials.",
+      "availabilityStatus": "Multiple July/August 2026 units listed",
+      "availableDateManual": "",
+      "nearestMetro": "Dunn Loring–Merrifield",
+      "metroLine": "Orange",
+      "walkingMilesToMetro": 0.4,
+      "walkingMinutesToMetro": 8,
+      "drivingMinutesToMcLean": 10,
+      "transitMinutesToMcLean": 25,
+      "transitMinutesToDC": 23,
+      "hasGym": true,
+      "hasCoffee": true,
+      "hasBeerOrTap": false,
+      "hasBasketballCourt": true,
+      "basketballCourtType": "indoor",
+      "basketballNotes": "Full-size indoor court \"The Dunk.\" Confirm resident access hours.",
+      "parkingNotes": "Garage parking available."
+    }
+  },
+  {
+    "id": "commons-of-mclean",
+    "name": "Commons of McLean",
+    "category": "apartment",
+    "streetAddress": "1653 Anderson Rd",
+    "city": "McLean",
+    "state": "VA",
+    "zip": "22102",
+    "neighborhood": "Tysons East / McLean",
+    "latitude": 38.926,
+    "longitude": -77.215,
+    "coordsApproximate": true,
+    "website": "https://www.commonsofmclean.com",
+    "primarySourceUrl": "https://www.commonsofmclean.com",
+    "secondarySourceUrls": [
+      "https://www.apartments.com/the-commons-of-mclean-mclean-va/",
+      "https://www.rent.com"
+    ],
+    "sourceQuotes": [
+      "access to basketball and volleyball courts (official site)",
+      "24-hour Onsite Starbucks and Safeway (apartmentsearch)"
+    ],
+    "rating": null,
+    "priceLevel": "$$",
+    "tags": [
+      "on budget",
+      "outdoor basketball",
+      "Silver Line",
+      "closest to Pam.ai",
+      "Starbucks on-site"
+    ],
+    "imageUrls": [],
+    "confidenceScore": 88,
+    "fitScore": 80,
+    "fitReasoning": "price ≤$3k: +25; ≤15-min walk: +15; gym unknown: 0; basketball: +15; near McLean: +15; 2BR/2BA: +10 = 80",
+    "roommatePitch": "Best on-budget 2BR/2BA near McLean, with an on-site court, pool, and Starbucks downstairs.",
+    "pros": [
+      "On budget",
+      "Closest to Pam.ai",
+      "Coffee on-site",
+      "Spacious 40-acre site"
+    ],
+    "cons": [
+      "Outdoor court only",
+      "Fitness center unclear",
+      "Older complex (1968)",
+      "~0.6 mi to Metro"
+    ],
+    "lastVerified": "2026-06-24",
+    "apartmentDetails": {
+      "has2br2ba": true,
+      "priceLow": 2675,
+      "priceHigh": 2728,
+      "priceNotes": "\"Deerwood\" 2BR/2BA 1,100 sqft ~$2,675–$2,728. Broader range $2,490–$4,145.",
+      "availabilityStatus": "Deerwood listed available Jul 24",
+      "availableDateManual": "",
+      "nearestMetro": "McLean",
+      "metroLine": "Silver",
+      "walkingMilesToMetro": 0.6,
+      "walkingMinutesToMetro": 12,
+      "drivingMinutesToMcLean": 6,
+      "transitMinutesToMcLean": 8,
+      "transitMinutesToDC": 33,
+      "hasGym": false,
+      "hasCoffee": true,
+      "hasBeerOrTap": false,
+      "hasBasketballCourt": true,
+      "basketballCourtType": "outdoor",
+      "basketballNotes": "Outdoor basketball + volleyball courts on site.",
+      "parkingNotes": "Free off-street parking; shuttle to West Falls Church Metro."
+    }
+  },
+  {
+    "id": "maa-tysons-corner",
+    "name": "MAA Tysons Corner",
+    "category": "apartment",
+    "streetAddress": "1526 Lincoln Cir",
+    "city": "McLean",
+    "state": "VA",
+    "zip": "22102",
+    "neighborhood": "Tysons Corner",
+    "latitude": 38.918,
+    "longitude": -77.219,
+    "coordsApproximate": true,
+    "website": "https://www.maac.com/virginia/dc-metro/maa-tysons-corner/",
+    "primarySourceUrl": "https://www.maac.com/virginia/dc-metro/maa-tysons-corner/",
+    "secondarySourceUrls": [
+      "https://www.apartments.com/maa-tysons-corner-mclean-va/"
+    ],
+    "sourceQuotes": [
+      "tennis and basketball courts, lush landscaped gardens, and a fully equipped fitness center (maac.com)"
+    ],
+    "rating": null,
+    "priceLevel": "$$",
+    "tags": [
+      "on budget",
+      "outdoor basketball",
+      "tennis",
+      "Silver Line",
+      "24-hr gym"
+    ],
+    "imageUrls": [],
+    "confidenceScore": 85,
+    "fitScore": 78,
+    "fitReasoning": "price ≤$3k: +25; walk ~15min (confirm): +15; gym: +10; basketball: +15; near McLean: +15; 2BR/2BA: +10; −12 metro distance/age uncertainty = 78",
+    "roommatePitch": "Affordable 2BR near three Silver Line stations with tennis, basketball, pool, and a 24-hr gym.",
+    "pros": [
+      "On budget",
+      "Gym",
+      "Tennis + basketball",
+      "Close to McLean/Pam.ai"
+    ],
+    "cons": [
+      "Outdoor court",
+      "~0.9 mi to Metro (confirm)",
+      "Older (1990)",
+      "Mixed reviews on elevators/pests"
+    ],
+    "lastVerified": "2026-06-24",
+    "apartmentDetails": {
+      "has2br2ba": true,
+      "priceLow": 2500,
+      "priceHigh": 2770,
+      "priceNotes": "Overall 1–2BR ~$1,710–$2,770; 2BR up to ~$2,770. Specials reduce ~$115.",
+      "availabilityStatus": "Confirm specific 2BR/2BA unit for late July",
+      "availableDateManual": "",
+      "nearestMetro": "Spring Hill / Greensboro / McLean",
+      "metroLine": "Silver",
+      "walkingMilesToMetro": 0.9,
+      "walkingMinutesToMetro": 17,
+      "drivingMinutesToMcLean": 7,
+      "transitMinutesToMcLean": 10,
+      "transitMinutesToDC": 35,
+      "hasGym": true,
+      "hasCoffee": false,
+      "hasBeerOrTap": false,
+      "hasBasketballCourt": true,
+      "basketballCourtType": "outdoor",
+      "basketballNotes": "Outdoor basketball + tennis courts.",
+      "parkingNotes": "EV charging, car-care center on site."
+    }
+  },
+  {
+    "id": "the-garrett-collective",
+    "name": "The Garrett at The Collective",
+    "category": "apartment",
+    "streetAddress": "150 I St SE",
+    "city": "Washington",
+    "state": "DC",
+    "zip": "20003",
+    "neighborhood": "Navy Yard",
+    "latitude": 38.876,
+    "longitude": -77.004,
+    "coordsApproximate": true,
+    "website": "https://www.thecollectivedc.com",
+    "primarySourceUrl": "https://www.wcsmith.com",
+    "secondarySourceUrls": [
+      "https://www.thecollectivedc.com",
+      "https://www.point2homes.com"
+    ],
+    "sourceQuotes": [
+      "regulation-size, 6-hoop indoor basketball court that can convert to a volleyball court, plus a separate racquetball court and a tennis court (wcsmith.com)",
+      "Just one minute away from the Navy Yard Metro Station (official)"
+    ],
+    "rating": null,
+    "priceLevel": "$$$",
+    "tags": [
+      "indoor regulation court",
+      "Green Line",
+      "DC",
+      "sportsplex",
+      "coworking"
+    ],
+    "imageUrls": [],
+    "confidenceScore": 92,
+    "fitScore": 80,
+    "fitReasoning": "price >$3k: 0; ≤10-min walk: +25; gym: +10; basketball: +15; indoor: +10; DC-east partial: +5; 2BR/2BA: +10; −5 commute = 80",
+    "roommatePitch": "The most serious basketball setup in the region — a regulation indoor court plus a full sportsplex — one minute from Metro in vibrant Navy Yard.",
+    "pros": [
+      "Best-in-class indoor court + amenities",
+      "1-min Metro",
+      "Coworking",
+      "Access to all Collective buildings"
+    ],
+    "cons": [
+      "East in DC = longest commute west to McLean",
+      "2BR/2BA above budget"
+    ],
+    "lastVerified": "2026-06-24",
+    "apartmentDetails": {
+      "has2br2ba": true,
+      "priceLow": 3281,
+      "priceHigh": 5290,
+      "priceNotes": "2BR from ~$3,281. Building range studio–2BR ~$1,875–$5,290. 1 month free on select.",
+      "availabilityStatus": "Specials running; confirm late-July 2BR/2BA",
+      "availableDateManual": "",
+      "nearestMetro": "Navy Yard–Ballpark",
+      "metroLine": "Green",
+      "walkingMilesToMetro": 0.1,
+      "walkingMinutesToMetro": 1,
+      "drivingMinutesToMcLean": 30,
+      "transitMinutesToMcLean": 50,
+      "transitMinutesToDC": 5,
+      "hasGym": true,
+      "hasCoffee": false,
+      "hasBeerOrTap": false,
+      "hasBasketballCourt": true,
+      "basketballCourtType": "indoor",
+      "basketballNotes": "Regulation 6-hoop indoor court, converts to volleyball. Separate racquetball + tennis.",
+      "parkingNotes": "Garage parking available."
+    }
+  },
+  {
+    "id": "the-point-dunn-loring",
+    "name": "The Point at Dunn Loring",
+    "category": "apartment",
+    "streetAddress": "2677 Avenir Pl",
+    "city": "Vienna",
+    "state": "VA",
+    "zip": "22180",
+    "neighborhood": "Dunn Loring / Vienna",
+    "latitude": 38.884,
+    "longitude": -77.228,
+    "coordsApproximate": true,
+    "website": "https://www.thepointatdunnloring.com",
+    "primarySourceUrl": "https://www.thepointatdunnloring.com",
+    "secondarySourceUrls": [
+      "https://www.apartments.com/the-point-at-dunn-loring-vienna-va/",
+      "https://www.veryapt.com"
+    ],
+    "sourceQuotes": [
+      "multiple swimming pools, fitness centers, cáfes and more (official)",
+      "2 Bedrooms, 2 Baths $2,762+ (VeryApt)"
+    ],
+    "rating": null,
+    "priceLevel": "$$",
+    "tags": [
+      "on budget",
+      "Orange Line",
+      "coffee on-site",
+      "between McLean & DC",
+      "~2 min to Metro"
+    ],
+    "imageUrls": [],
+    "confidenceScore": 86,
+    "fitScore": 80,
+    "fitReasoning": "price ≤$3k: +25; ≤10-min walk: +25; gym: +10; no basketball: 0; between McLean & DC: +15; 2BR/2BA: +10; −5 price varies = 80",
+    "roommatePitch": "Modern Vienna building literally on top of Dunn Loring Metro with Harris Teeter, Starbucks, pools and gyms — strong-value 2BR/2BA between McLean and DC.",
+    "pros": [
+      "On budget",
+      "~2-min Metro walk",
+      "Coffee on-site",
+      "Pools/gyms",
+      "Between McLean & DC"
+    ],
+    "cons": [
+      "No basketball court",
+      "Concierge complaints",
+      "Thin walls per reviews"
+    ],
+    "lastVerified": "2026-06-24",
+    "apartmentDetails": {
+      "has2br2ba": true,
+      "priceLow": 2762,
+      "priceHigh": 3522,
+      "priceNotes": "2BR/2BA from ~$2,762. Overall range $2,101–$3,522. Confirm 2BR/2BA July availability.",
+      "availabilityStatus": "Some July 2026 availability (1BR confirmed; confirm 2BR/2BA)",
+      "availableDateManual": "",
+      "nearestMetro": "Dunn Loring–Merrifield",
+      "metroLine": "Orange",
+      "walkingMilesToMetro": 0.15,
+      "walkingMinutesToMetro": 4,
+      "drivingMinutesToMcLean": 11,
+      "transitMinutesToMcLean": 26,
+      "transitMinutesToDC": 24,
+      "hasGym": true,
+      "hasCoffee": true,
+      "hasBeerOrTap": false,
+      "hasBasketballCourt": false,
+      "basketballCourtType": "none",
+      "basketballNotes": "No on-site basketball court.",
+      "parkingNotes": "Garage parking; Harris Teeter + Starbucks downstairs."
+    }
+  },
+  {
+    "id": "courtland-towers",
+    "name": "Courtland Towers",
+    "category": "apartment",
+    "streetAddress": "1200 N Veitch St",
+    "city": "Arlington",
+    "state": "VA",
+    "zip": "22201",
+    "neighborhood": "Courthouse",
+    "latitude": 38.89,
+    "longitude": -77.085,
+    "coordsApproximate": true,
+    "website": "https://www.rentctwr.com",
+    "primarySourceUrl": "https://www.rentctwr.com",
+    "secondarySourceUrls": [
+      "https://www.rentdittmar.com",
+      "https://www.arlnow.com"
+    ],
+    "sourceQuotes": [
+      "existing indoor basketball and racquetball courts, a theater, a billiard room, and indoor and outdoor pools (ARLnow)",
+      "2BR/2BA MODERNIZED, 1100 Sq. Ft. $3,525 (rentctwr.com)"
+    ],
+    "rating": null,
+    "priceLevel": "$$$",
+    "tags": [
+      "Arlington core",
+      "indoor basketball",
+      "racquetball",
+      "sports simulator",
+      "PET-FREE"
+    ],
+    "imageUrls": [],
+    "confidenceScore": 90,
+    "fitScore": 80,
+    "fitReasoning": "price >$3k: 0; ≤10-min walk: +25; gym: +10; basketball: +15; indoor: +10; between McLean & DC: +15; 2BR/2BA: +10; −5 over budget = 80",
+    "roommatePitch": "A Courthouse high-rise one block from Metro with an indoor basketball court, racquetball, a sports simulator, and both indoor and outdoor pools.",
+    "pros": [
+      "Indoor court + simulator",
+      "1-block Metro",
+      "Huge amenity set",
+      "Great McLean & DC access"
+    ],
+    "cons": [
+      "PET-FREE community",
+      "2BR/2BA ~$3,525 (over budget)",
+      "Recent construction-noise complaints"
+    ],
+    "lastVerified": "2026-06-24",
+    "apartmentDetails": {
+      "has2br2ba": true,
+      "priceLow": 3525,
+      "priceHigh": 3525,
+      "priceNotes": "~$3,525 for modernized 1,100 sqft 2BR/2BA. PET-FREE community.",
+      "availabilityStatus": "Listed available; confirm late July",
+      "availableDateManual": "",
+      "nearestMetro": "Court House",
+      "metroLine": "Orange/Silver",
+      "walkingMilesToMetro": 0.1,
+      "walkingMinutesToMetro": 3,
+      "drivingMinutesToMcLean": 18,
+      "transitMinutesToMcLean": 28,
+      "transitMinutesToDC": 13,
+      "hasGym": true,
+      "hasCoffee": false,
+      "hasBeerOrTap": false,
+      "hasBasketballCourt": true,
+      "basketballCourtType": "indoor",
+      "basketballNotes": "Indoor basketball + racquetball courts, golf/sports simulator.",
+      "parkingNotes": "Garage parking. Pet-free building."
+    }
+  },
+  {
+    "id": "paramount-cortland",
+    "name": "The Paramount / Cortland on South Eads",
+    "category": "apartment",
+    "streetAddress": "1425 S Eads St",
+    "city": "Arlington",
+    "state": "VA",
+    "zip": "22202",
+    "neighborhood": "Crystal City / National Landing",
+    "latitude": 38.8604,
+    "longitude": -77.0532,
+    "coordsApproximate": false,
+    "website": "https://cortland.com",
+    "primarySourceUrl": "https://cortland.com",
+    "secondarySourceUrls": [
+      "https://nationallanding.org/go/the-paramount",
+      "https://www.redfin.com/VA/Arlington/The-Paramount/apartment/11274488"
+    ],
+    "sourceQuotes": [
+      "our 24-hour fitness center with yoga studio and our indoor basketball and racquetball court (National Landing BID)"
+    ],
+    "rating": null,
+    "priceLevel": "$$$",
+    "tags": [
+      "Arlington core",
+      "indoor basketball",
+      "racquetball",
+      "club-room bar",
+      "rooftop"
+    ],
+    "imageUrls": [],
+    "confidenceScore": 90,
+    "fitScore": 78,
+    "fitReasoning": "price >$3k: 0; ≤10-min walk: +25; gym: +10; basketball: +15; indoor: +10; good location: +13; 2BR/2BA: +10; −10 over budget/commute = 78",
+    "roommatePitch": "An Arlington high-rise with an indoor basketball + racquetball court, rooftop DC views, a club-room bar, and a 6–8-min walk to Crystal City Metro.",
+    "pros": [
+      "Indoor court + racquetball",
+      "Club-room bar",
+      "Great walkability",
+      "Arlington core"
+    ],
+    "cons": [
+      "True 2BR/2BA above budget (~$3,200+)",
+      "Aggregators blend cheaper 1.5BA prices",
+      "Commute west needs transfer"
+    ],
+    "lastVerified": "2026-06-24",
+    "apartmentDetails": {
+      "has2br2ba": true,
+      "priceLow": 3201,
+      "priceHigh": 3451,
+      "priceNotes": "2BR/2BA lowest ~$3,201 incl. fees ($3,086 base, \"Washington\" 1,217 sqft). Cheaper \"2BR\" listings are 1.5-bath — confirm bath count.",
+      "availabilityStatus": "Some 2BR/2BA available now; others July–Oct 2026",
+      "availableDateManual": "",
+      "nearestMetro": "Crystal City",
+      "metroLine": "Blue/Yellow",
+      "walkingMilesToMetro": 0.3,
+      "walkingMinutesToMetro": 7,
+      "drivingMinutesToMcLean": 22,
+      "transitMinutesToMcLean": 43,
+      "transitMinutesToDC": 12,
+      "hasGym": true,
+      "hasCoffee": false,
+      "hasBeerOrTap": true,
+      "hasBasketballCourt": true,
+      "basketballCourtType": "indoor",
+      "basketballNotes": "Indoor basketball + racquetball court.",
+      "parkingNotes": "Garage parking; on-site banking/dental/nail salon."
+    }
+  },
+  {
+    "id": "meridian-courthouse",
+    "name": "Meridian at Courthouse Commons",
+    "category": "apartment",
+    "streetAddress": "1401 N Taft St",
+    "city": "Arlington",
+    "state": "VA",
+    "zip": "22201",
+    "neighborhood": "Courthouse",
+    "latitude": 38.89,
+    "longitude": -77.085,
+    "coordsApproximate": true,
+    "website": "https://www.meridiancourthouse.com",
+    "primarySourceUrl": "https://www.meridiancourthouse.com",
+    "secondarySourceUrls": [
+      "https://www.apartments.com/meridian-at-courthouse-commons-arlington-va/"
+    ],
+    "sourceQuotes": [
+      "basketball half court, concierge, Nest thermostats (apartments.com)",
+      "racquetball courts and being a stone's throw from the metro (official)"
+    ],
+    "rating": null,
+    "priceLevel": "$$$",
+    "tags": [
+      "Arlington core",
+      "outdoor half-court",
+      "racquetball",
+      "rooftop pool"
+    ],
+    "imageUrls": [],
+    "confidenceScore": 88,
+    "fitScore": 75,
+    "fitReasoning": "price >$3k: 0; ≤10-min walk: +25; gym: +10; basketball: +15; half-court not indoor: +0; good location: +15; 2BR/2BA: +10 = 75",
+    "roommatePitch": "Courthouse community with a basketball half-court, racquetball, rooftop pool, and a short walk to Metro.",
+    "pros": [
+      "Half-court + racquetball",
+      "Gym",
+      "Great McLean/DC access",
+      "Renovated"
+    ],
+    "cons": [
+      "2BR/2BA above budget (~$3,610+)",
+      "Half-court only",
+      "Mixed management reviews",
+      "Pets banned from amenities"
+    ],
+    "lastVerified": "2026-06-24",
+    "apartmentDetails": {
+      "has2br2ba": true,
+      "priceLow": 3610,
+      "priceHigh": 3900,
+      "priceNotes": "\"Chesapeake\" 1,125 sqft from ~$3,610 (avail now); \"Fairfax\" 1,131 sqft ~$3,900.",
+      "availabilityStatus": "Available now / June 2026",
+      "availableDateManual": "",
+      "nearestMetro": "Court House",
+      "metroLine": "Orange/Silver",
+      "walkingMilesToMetro": 0.4,
+      "walkingMinutesToMetro": 8,
+      "drivingMinutesToMcLean": 18,
+      "transitMinutesToMcLean": 28,
+      "transitMinutesToDC": 13,
+      "hasGym": true,
+      "hasCoffee": false,
+      "hasBeerOrTap": false,
+      "hasBasketballCourt": true,
+      "basketballCourtType": "half-court",
+      "basketballNotes": "Outdoor basketball half-court + racquetball courts.",
+      "parkingNotes": "Underground parking, bike storage, car-wash area."
+    }
+  },
+  {
+    "id": "avalon-dunn-loring",
+    "name": "Avalon Dunn Loring",
+    "category": "apartment",
+    "streetAddress": "2750 Gallows Rd",
+    "city": "Vienna",
+    "state": "VA",
+    "zip": "22180",
+    "neighborhood": "Merrifield",
+    "latitude": 38.883,
+    "longitude": -77.23,
+    "coordsApproximate": true,
+    "website": "https://www.avaloncommunities.com",
+    "primarySourceUrl": "https://www.avaloncommunities.com",
+    "secondarySourceUrls": [
+      "https://www.apartments.com/avalon-dunn-loring-vienna-va/",
+      "https://www.zumper.com"
+    ],
+    "sourceQuotes": [
+      "swimming pools with outdoor bar... fitness center with flex studio, virtual golf system and cosmic bowling lounge (official)"
+    ],
+    "rating": null,
+    "priceLevel": "$$",
+    "tags": [
+      "on budget",
+      "Orange Line",
+      "virtual golf",
+      "bowling lounge",
+      "between McLean & DC"
+    ],
+    "imageUrls": [],
+    "confidenceScore": 88,
+    "fitScore": 74,
+    "fitReasoning": "price ≤$3k: +25; ≤15-min walk: +15; gym: +10; no basketball: 0; between McLean & DC: +15; 2BR/2BA: +10; −1 = 74",
+    "roommatePitch": "Brand-new Merrifield building near Dunn Loring Metro with virtual golf, a bowling lounge, pools, and an outdoor bar — on budget for many 2BRs.",
+    "pros": [
+      "On budget",
+      "Modern",
+      "Near Mosaic District",
+      "Bowling/golf/bar"
+    ],
+    "cons": [
+      "No basketball",
+      "Maintenance complaints (elevators, bowling downtime)"
+    ],
+    "lastVerified": "2026-06-24",
+    "apartmentDetails": {
+      "has2br2ba": true,
+      "priceLow": 2845,
+      "priceHigh": 3135,
+      "priceNotes": "Overall 1–2BR $1,920–$3,135; 2BR median ~$2,875. Specials up to ~$115/mo off.",
+      "availabilityStatus": "Confirm late-July 2BR/2BA",
+      "availableDateManual": "",
+      "nearestMetro": "Dunn Loring–Merrifield",
+      "metroLine": "Orange",
+      "walkingMilesToMetro": 0.4,
+      "walkingMinutesToMetro": 10,
+      "drivingMinutesToMcLean": 11,
+      "transitMinutesToMcLean": 26,
+      "transitMinutesToDC": 24,
+      "hasGym": true,
+      "hasCoffee": false,
+      "hasBeerOrTap": true,
+      "hasBasketballCourt": false,
+      "basketballCourtType": "none",
+      "basketballNotes": "No basketball; has virtual golf + cosmic bowling lounge.",
+      "parkingNotes": "Garage parking."
+    }
+  },
+  {
+    "id": "riverhouse-pentagon-city",
+    "name": "RiverHouse",
+    "category": "apartment",
+    "streetAddress": "1400 S Joyce St",
+    "city": "Arlington",
+    "state": "VA",
+    "zip": "22202",
+    "neighborhood": "Pentagon City",
+    "latitude": 38.862,
+    "longitude": -77.061,
+    "coordsApproximate": true,
+    "website": "https://www.riverhouseapts.com",
+    "primarySourceUrl": "https://www.riverhouseapts.com",
+    "secondarySourceUrls": [
+      "https://www.apartments.com/riverhouse-arlington-va/",
+      "https://www.rentcafe.com"
+    ],
+    "sourceQuotes": [
+      "36 landscaped acres, six tennis courts, three rooftop decks, two swimming pools, two fitness centers (riverhouseapts.com)"
+    ],
+    "rating": null,
+    "priceLevel": "$$",
+    "tags": [
+      "some on budget",
+      "Blue/Yellow",
+      "tennis",
+      "two pools",
+      "two gyms"
+    ],
+    "imageUrls": [],
+    "confidenceScore": 88,
+    "fitScore": 70,
+    "fitReasoning": "price possibly ≤$3k: +25; ≤15-min walk: +15; gym: +10; no basketball: 0; good location: +13; 2BR/2BA confirm: +10; −3 = 70",
+    "roommatePitch": "Resort-style 36-acre community near Pentagon City Metro with tennis, two pools, and two gyms — on budget for some 2BRs.",
+    "pros": [
+      "On-budget 2BR options",
+      "Tennis",
+      "Two gyms",
+      "Good DC access",
+      "Affordable-unit program"
+    ],
+    "cons": [
+      "No basketball",
+      "~0.7 mi to Metro",
+      "Shared (not in-unit) laundry in some buildings"
+    ],
+    "lastVerified": "2026-06-24",
+    "apartmentDetails": {
+      "has2br2ba": true,
+      "priceLow": 2476,
+      "priceHigh": 3479,
+      "priceNotes": "Overall studio–3BR $1,666–$3,479; 2BR from ~$2,476. Confirm which 2BRs are 2BA. 1–1.5 months free.",
+      "availabilityStatus": "Specials running; confirm 2BR/2BA",
+      "availableDateManual": "",
+      "nearestMetro": "Pentagon City",
+      "metroLine": "Blue/Yellow",
+      "walkingMilesToMetro": 0.7,
+      "walkingMinutesToMetro": 14,
+      "drivingMinutesToMcLean": 20,
+      "transitMinutesToMcLean": 40,
+      "transitMinutesToDC": 12,
+      "hasGym": true,
+      "hasCoffee": false,
+      "hasBeerOrTap": false,
+      "hasBasketballCourt": false,
+      "basketballCourtType": "none",
+      "basketballNotes": "No basketball; six tennis courts.",
+      "parkingNotes": "Garage parking."
+    }
+  },
+  {
+    "id": "1800-oak-rosslyn",
+    "name": "1800 Oak",
+    "category": "apartment",
+    "streetAddress": "1800 N Oak St",
+    "city": "Arlington",
+    "state": "VA",
+    "zip": "22209",
+    "neighborhood": "Rosslyn",
+    "latitude": 38.893,
+    "longitude": -77.07,
+    "coordsApproximate": true,
+    "website": "https://www.equityapartments.com",
+    "primarySourceUrl": "https://www.equityapartments.com",
+    "secondarySourceUrls": [
+      "https://www.apartments.com/1800-oak-arlington-va/",
+      "https://www.zumper.com"
+    ],
+    "sourceQuotes": [
+      "swimming pool and sundeck, beautiful courtyard garden and fitness center (official)"
+    ],
+    "rating": null,
+    "priceLevel": "$$$",
+    "tags": [
+      "Arlington core",
+      "3-line Metro",
+      "pool",
+      "concierge"
+    ],
+    "imageUrls": [],
+    "confidenceScore": 86,
+    "fitScore": 66,
+    "fitReasoning": "price >$3k: 0; ≤10-min walk: +25; gym: +10; no basketball: 0; between McLean & DC: +15; 2BR/2BA: +10 = 66",
+    "roommatePitch": "Rosslyn high-rise a 5-min walk from a 3-line Metro hub, walkable to Georgetown, with pool and gym.",
+    "pros": [
+      "Excellent transit (3 lines)",
+      "Close to DC & McLean",
+      "Nice amenities"
+    ],
+    "cons": [
+      "No basketball",
+      "2BR/2BA above budget"
+    ],
+    "lastVerified": "2026-06-24",
+    "apartmentDetails": {
+      "has2br2ba": true,
+      "priceLow": 3574,
+      "priceHigh": 3595,
+      "priceNotes": "Overall studio–2BR $2,394–$3,574; 2BR median ~$3,595. Above budget.",
+      "availabilityStatus": "Confirm late July",
+      "availableDateManual": "",
+      "nearestMetro": "Rosslyn",
+      "metroLine": "Blue/Orange/Silver",
+      "walkingMilesToMetro": 0.2,
+      "walkingMinutesToMetro": 5,
+      "drivingMinutesToMcLean": 15,
+      "transitMinutesToMcLean": 22,
+      "transitMinutesToDC": 10,
+      "hasGym": true,
+      "hasCoffee": false,
+      "hasBeerOrTap": false,
+      "hasBasketballCourt": false,
+      "basketballCourtType": "none",
+      "basketballNotes": "No on-site basketball court.",
+      "parkingNotes": "Garage parking; 24-hr concierge."
+    }
+  },
+  {
+    "id": "lyon-village",
+    "name": "Lyon Village Apartments",
+    "category": "apartment",
+    "streetAddress": "3004 Langston Blvd",
+    "city": "Arlington",
+    "state": "VA",
+    "zip": "22201",
+    "neighborhood": "Clarendon",
+    "latitude": 38.895,
+    "longitude": -77.094,
+    "coordsApproximate": true,
+    "website": "https://www.lyonvillageapartments.com",
+    "primarySourceUrl": "https://www.lyonvillageapartments.com",
+    "secondarySourceUrls": [
+      "https://www.apartments.com/lyon-village-apartments-arlington-va/"
+    ],
+    "sourceQuotes": [
+      "A Night-lit basketball court at adjacent Lyon Village Park (official)",
+      "an on-site fitness and bike room (official)"
+    ],
+    "rating": null,
+    "priceLevel": "$$",
+    "tags": [
+      "on budget",
+      "free parking",
+      "Orange/Silver",
+      "public park courts",
+      "utilities included"
+    ],
+    "imageUrls": [],
+    "confidenceScore": 80,
+    "fitScore": 62,
+    "fitReasoning": "price ≤$3k: +25; ≤15-min walk: +15; gym: +10; on-site basketball: 0; good location: +15; 2BR/2BA uncertain: 0; −18 uncertainty = 62",
+    "roommatePitch": "Affordable, spacious, renovated units with free parking, a half-mile from Clarendon Metro and next to a public park with basketball + tennis courts.",
+    "pros": [
+      "On budget",
+      "Free parking",
+      "Gym",
+      "Park courts next door",
+      "Quiet",
+      "Utilities included"
+    ],
+    "cons": [
+      "Court is public park, not on-site",
+      "2BR/2BA availability unclear (likely 2BR/1BA)",
+      "Small gym",
+      "Phone-based leasing"
+    ],
+    "lastVerified": "2026-06-24",
+    "apartmentDetails": {
+      "has2br2ba": false,
+      "priceLow": 2050,
+      "priceHigh": 2795,
+      "priceNotes": "1–2BR ~$2,050–$2,795, mostly 1-bath. CONFIRM whether any true 2BR/2BA exists.",
+      "availabilityStatus": "Phone-based leasing; confirm 2BA availability",
+      "availableDateManual": "",
+      "nearestMetro": "Clarendon",
+      "metroLine": "Orange/Silver",
+      "walkingMilesToMetro": 0.5,
+      "walkingMinutesToMetro": 11,
+      "drivingMinutesToMcLean": 17,
+      "transitMinutesToMcLean": 27,
+      "transitMinutesToDC": 15,
+      "hasGym": true,
+      "hasCoffee": false,
+      "hasBeerOrTap": false,
+      "hasBasketballCourt": false,
+      "basketballCourtType": "nearby public court",
+      "basketballNotes": "Adjacent Lyon Village Park has night-lit public basketball + tennis courts (NOT on-site).",
+      "parkingNotes": "Free parking included; gas & water included."
+    }
+  },
+  {
+    "id": "blvd-gramercy-east",
+    "name": "BLVD Gramercy East at Loudoun Station",
+    "category": "apartment",
+    "streetAddress": "43805 Central Station Dr",
+    "city": "Ashburn",
+    "state": "VA",
+    "zip": "20147",
+    "neighborhood": "Loudoun Station (Ashburn)",
+    "latitude": 39.018,
+    "longitude": -77.464,
+    "coordsApproximate": true,
+    "website": "https://www.blvdgramercyeast.com",
+    "primarySourceUrl": "https://www.blvdgramercyeast.com",
+    "secondarySourceUrls": [
+      "https://www.apartments.com/blvd-gramercy-east-ashburn-va/",
+      "https://www.apartmentlist.com"
+    ],
+    "sourceQuotes": [
+      "play a game of hoops on the indoor court (official)",
+      "the basketball gym hours could definitely be improved (resident review)"
+    ],
+    "rating": null,
+    "priceLevel": "$$",
+    "tags": [
+      "LONG COMMUTE",
+      "on budget",
+      "indoor basketball",
+      "Silver Line",
+      "comparison only"
+    ],
+    "imageUrls": [],
+    "confidenceScore": 85,
+    "fitScore": 60,
+    "fitReasoning": "price ≤$3k: +25; ≤10-min walk: +25; gym: +10; basketball: +15; indoor: +10; far/long commute: −25; 2BR/2BA: +10; −10 commute penalty = 60",
+    "roommatePitch": "Brand-new Silver Line building with an indoor basketball court and on-budget 2BRs — but a ~45-min commute to McLean.",
+    "pros": [
+      "On budget",
+      "Indoor court",
+      "Modern",
+      "On Silver Line"
+    ],
+    "cons": [
+      "~45 min to McLean/Pam.ai (LONG)",
+      "Far from DC",
+      "Limited court hours"
+    ],
+    "lastVerified": "2026-06-24",
+    "apartmentDetails": {
+      "has2br2ba": true,
+      "priceLow": 2831,
+      "priceHigh": 4002,
+      "priceNotes": "2BR from ~$2,831; overall $1,922–$4,002.",
+      "availabilityStatus": "Confirm late July",
+      "availableDateManual": "",
+      "nearestMetro": "Loudoun Gateway / Ashburn",
+      "metroLine": "Silver",
+      "walkingMilesToMetro": 0.1,
+      "walkingMinutesToMetro": 2,
+      "drivingMinutesToMcLean": 30,
+      "transitMinutesToMcLean": 45,
+      "transitMinutesToDC": 60,
+      "hasGym": true,
+      "hasCoffee": false,
+      "hasBeerOrTap": false,
+      "hasBasketballCourt": true,
+      "basketballCourtType": "indoor",
+      "basketballNotes": "Indoor basketball court; resident reviews note limited court hours.",
+      "parkingNotes": "Garage parking."
+    }
+  }
+]

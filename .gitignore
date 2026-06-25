@@ -1,0 +1,13 @@
+node_modules
+.next
+out
+.env.local
+.env*.local
+.DS_Store
+*.tsbuildinfo
+next-env.d.ts
+.vercel
+
+# Env files (never commit real secrets) — but keep the example template
+.env*
+!.env.local.example
