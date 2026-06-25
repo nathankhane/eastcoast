@@ -76,6 +76,12 @@ export async function POST(req: NextRequest) {
     // Cache server-side (bypasses RLS via service role) when configured.
     if (supabaseConfigured() && places.length) {
       try {
+        const db = adminSupabase();
+        // Ensure the parent city row exists first (places.city_id -> cities.id FK).
+        await db
+          .from("cities")
+          .upsert({ id: city.id, data: city, updated_at: new Date().toISOString() });
+
         const rows = places.map((p) => ({
           id: p.id,
           city_id: p.cityId ?? null,
@@ -83,7 +89,7 @@ export async function POST(req: NextRequest) {
           data: p,
           updated_at: new Date().toISOString(),
         }));
-        await adminSupabase().from("places").upsert(rows);
+        await db.from("places").upsert(rows);
       } catch {
         // Caching is best-effort; still return results to the client.
       }

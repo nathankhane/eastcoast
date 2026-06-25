@@ -98,7 +98,10 @@ export default function Home() {
   function importPlaces(next: Place[]) {
     const tagged = next.map((p) => ({ ...p, cityId: p.cityId ?? activeCityId }));
     setPlaces(tagged);
-    upsertPlaces(tagged);
+    (async () => {
+      if (activeCity) await upsertCity(activeCity); // satisfy places.city_id FK
+      await upsertPlaces(tagged);
+    })();
     setSelectedId(null);
   }
 
@@ -188,7 +191,11 @@ export default function Home() {
 
   function saveProfile(next: SearchProfile) {
     setProfiles((prev) => prev.map((p) => (p.id === next.id ? next : p)));
-    upsertProfile(next);
+    // Ensure the parent city row exists (profiles.city_id -> cities.id FK) before saving.
+    (async () => {
+      if (activeCity) await upsertCity(activeCity);
+      await upsertProfile(next);
+    })();
   }
 
   async function addCity() {
