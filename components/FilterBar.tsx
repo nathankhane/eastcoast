@@ -43,13 +43,13 @@ export default function FilterBar({ filters, profile, onChange, onReset, count, 
   const hasAnchors = (profile?.anchors.length ?? 0) > 0;
 
   return (
-    <div className="no-print space-y-3 rounded-xl border border-slate-200 bg-white p-4">
+    <div className="no-print space-y-3 rounded-xl border border-brand-100 bg-white p-4">
       <div className="flex flex-wrap items-center gap-3">
         <input
           value={filters.search}
           onChange={(e) => set({ search: e.target.value })}
           placeholder="Search name, neighborhood, tag…"
-          className="w-56 rounded-lg border border-slate-300 px-3 py-1.5 text-sm focus:border-blue-500 focus:outline-none"
+          className="w-56 rounded-lg border border-slate-300 px-3 py-1.5 text-sm focus:border-brand-400 focus:outline-none"
         />
         <select
           value={filters.maxPrice ?? ""}
@@ -87,7 +87,7 @@ export default function FilterBar({ filters, profile, onChange, onReset, count, 
         <span className="ml-auto text-xs text-slate-500">
           {count} of {total} shown
         </span>
-        <button onClick={onReset} className="text-xs font-medium text-blue-600 hover:underline">
+        <button onClick={onReset} className="text-xs font-medium text-brand-600 hover:underline">
           Reset
         </button>
       </div>
@@ -113,8 +113,8 @@ function Toggle({ active, label, onClick }: { active: boolean; label: string; on
       onClick={onClick}
       className={`rounded-full border px-3 py-1 text-xs font-medium transition ${
         active
-          ? "border-blue-600 bg-blue-600 text-white"
-          : "border-slate-300 bg-white text-slate-700 hover:border-slate-400"
+          ? "border-brand-500 bg-brand-500 text-white"
+          : "border-slate-300 bg-white text-slate-700 hover:border-brand-300"
       }`}
     >
       {label}

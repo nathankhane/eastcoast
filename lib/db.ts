@@ -30,7 +30,8 @@ export async function getCities(): Promise<City[]> {
   const sb = browserSupabase();
   if (sb) {
     const { data, error } = await sb.from("cities").select("data");
-    if (!error && data && data.length) return data.map((r) => r.data as City);
+    // Always keep the built-in cities present; cloud rows override by id.
+    if (!error && data) return mergeById(CITIES, data.map((r) => r.data as City));
   } else {
     const local = readLS<City[]>(LS_CITIES);
     if (local && local.length) return mergeById(CITIES, local);

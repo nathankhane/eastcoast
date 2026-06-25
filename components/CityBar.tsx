@@ -19,6 +19,7 @@ interface Props {
   anchorCount: number;
 
   onToggleProfileEditor: () => void;
+  onAddApartment: () => void;
   cloud: boolean;
 }
 
@@ -36,14 +37,15 @@ export default function CityBar({
   computing,
   anchorCount,
   onToggleProfileEditor,
+  onAddApartment,
   cloud,
 }: Props) {
-  const select = "rounded-lg border border-slate-300 bg-white px-3 py-1.5 text-sm";
-  const btn = "rounded-lg border border-slate-300 bg-white px-3 py-1.5 text-xs font-medium text-slate-700 hover:border-slate-400 disabled:opacity-50";
-  const primary = "rounded-lg bg-blue-600 px-3 py-1.5 text-xs font-semibold text-white hover:bg-blue-500 disabled:opacity-50";
+  const select = "rounded-lg border border-slate-300 bg-white px-3 py-1.5 text-sm focus:border-brand-400 focus:outline-none";
+  const btn = "rounded-lg border border-slate-300 bg-white px-3 py-1.5 text-xs font-medium text-slate-700 hover:border-brand-400 hover:text-brand-700 disabled:opacity-50";
+  const primary = "rounded-lg bg-brand-600 px-3 py-1.5 text-xs font-semibold text-white hover:bg-brand-500 disabled:opacity-50";
 
   return (
-    <div className="no-print flex flex-wrap items-center gap-2 rounded-xl border border-slate-200 bg-white p-3">
+    <div className="no-print flex flex-wrap items-center gap-2 rounded-xl border border-brand-100 bg-white p-3">
       <label className="flex items-center gap-1.5 text-xs text-slate-500">
         City
         <select value={activeCityId} onChange={(e) => onCityChange(e.target.value)} className={select}>
@@ -79,12 +81,13 @@ export default function CityBar({
       <button onClick={onDiscover} disabled={discovering} className={primary}>
         {discovering ? "Discovering…" : "Discover apartments here"}
       </button>
+      <button onClick={onAddApartment} className={btn}>+ Add apartment</button>
       <button onClick={onComputeCommutes} disabled={computing || anchorCount === 0} className={btn} title={anchorCount === 0 ? "Add an anchor first" : ""}>
         {computing ? "Computing…" : `Compute commutes (${anchorCount})`}
       </button>
 
-      <span className="ml-auto flex items-center gap-1.5 text-[11px] text-slate-400">
-        <span className={`inline-block h-2 w-2 rounded-full ${cloud ? "bg-green-500" : "bg-slate-300"}`} />
+      <span className={`ml-auto flex items-center gap-1.5 rounded-full px-2.5 py-1 text-[11px] font-medium ${cloud ? "bg-brand-50 text-brand-700" : "bg-slate-100 text-slate-400"}`}>
+        <span className={`inline-block h-2 w-2 rounded-full ${cloud ? "bg-brand-500" : "bg-slate-300"}`} />
         {cloud ? "Synced to Supabase" : "Local only"}
       </span>
     </div>

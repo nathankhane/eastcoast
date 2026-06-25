@@ -4,7 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import dynamic from "next/dynamic";
 import { City, CommuteResult, Place, SearchProfile, UserMeta, UserMetaStore } from "@/lib/types";
 import { SEED_PLACES } from "@/data/seed";
-import { makeDefaultProfile } from "@/data/profiles";
+import { CITIES, makeDefaultProfile } from "@/data/profiles";
 import { Filters, DEFAULT_FILTERS, applyFilters } from "@/lib/filters";
 import { getMetaForPlace } from "@/lib/storage";
 import {
@@ -26,6 +26,7 @@ import PresentationView from "@/components/PresentationView";
 import MapPlaceholder from "@/components/MapPlaceholder";
 import CityBar from "@/components/CityBar";
 import ProfileEditor from "@/components/ProfileEditor";
+import AddApartmentModal from "@/components/AddApartmentModal";
 
 const MapView = dynamic(() => import("@/components/MapView"), { ssr: false });
 
@@ -42,6 +43,7 @@ export default function Home() {
   const [view, setView] = useState<"explore" | "present">("explore");
   const [hydrated, setHydrated] = useState(false);
   const [showProfileEditor, setShowProfileEditor] = useState(false);
+  const [showAddApartment, setShowAddApartment] = useState(false);
   const [discovering, setDiscovering] = useState(false);
   const [computing, setComputing] = useState(false);
 
@@ -57,8 +59,15 @@ export default function Home() {
       const [cs, mt] = await Promise.all([getCities(), getUserMeta()]);
       setCities(cs);
       setMeta(mt);
+      // Keep the active city valid (avoids select/state divergence).
+      if (!cs.some((c) => c.id === activeCityId)) setActiveCityId(cs[0]?.id ?? "dmv");
+      // Seed built-in cities into the cloud so place/profile FKs always resolve.
+      CITIES.forEach((c) => {
+        upsertCity(c);
+      });
       setHydrated(true);
     })();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // Load profiles + places whenever the active city changes.
@@ -103,6 +112,16 @@ export default function Home() {
       await upsertPlaces(tagged);
     })();
     setSelectedId(null);
+  }
+
+  function addApartment(place: Place) {
+    const next = mergePlaces(places, [place]);
+    setPlaces(next);
+    (async () => {
+      if (activeCity) await upsertCity(activeCity); // satisfy places.city_id FK
+      await upsertPlaces([place]);
+    })();
+    setSelectedId(place.id);
   }
 
   function resetData() {
@@ -236,7 +255,9 @@ export default function Home() {
     <main className="mx-auto max-w-7xl space-y-4 p-4 md:p-6">
       <header className="no-print flex flex-wrap items-center justify-between gap-3">
         <div>
-          <h1 className="text-xl font-bold text-slate-900">PlaceScout Map</h1>
+          <h1 className="text-xl font-bold text-slate-900">
+            PlaceScout <span className="text-brand-600">Map</span>
+          </h1>
           <p className="text-xs text-slate-500">
             Multi-city apartment scout · auto-discovery · commute scoring
           </p>
@@ -264,6 +285,7 @@ export default function Home() {
         computing={computing}
         anchorCount={activeProfile?.anchors.length ?? 0}
         onToggleProfileEditor={() => setShowProfileEditor((v) => !v)}
+        onAddApartment={() => setShowAddApartment(true)}
         cloud={cloud}
       />
 
@@ -272,6 +294,15 @@ export default function Home() {
           profile={activeProfile}
           onChange={saveProfile}
           onClose={() => setShowProfileEditor(false)}
+        />
+      )}
+
+      {showAddApartment && (
+        <AddApartmentModal
+          city={activeCity}
+          profile={activeProfile}
+          onAdd={addApartment}
+          onClose={() => setShowAddApartment(false)}
         />
       )}
 
@@ -316,7 +347,7 @@ export default function Home() {
             </div>
           </div>
 
-          <Legend />
+          <Legend profile={activeProfile} />
         </>
       )}
 
@@ -341,19 +372,25 @@ function slugify(s: string): string {
     .slice(0, 40) || `city-${Date.now()}`;
 }
 
-function Legend() {
+function Legend({ profile }: { profile: SearchProfile | null }) {
+  const hasBasketball = (profile?.amenities ?? []).some((a) => a.key.includes("basketball"));
+  const hasAnchors = (profile?.anchors ?? []).length > 0;
   return (
-    <div className="no-print flex flex-wrap items-center gap-4 rounded-xl border border-slate-200 bg-white p-3 text-xs text-slate-600">
-      <span className="font-semibold text-slate-500">Map legend:</span>
+    <div className="no-print flex flex-wrap items-center gap-4 rounded-xl border border-brand-100 bg-white p-3 text-xs text-slate-600">
+      <span className="font-semibold text-brand-700">Map legend:</span>
       <Dot color="#16a34a" label="Strong fit" />
       <Dot color="#eab308" label="Good, tradeoffs" />
       <Dot color="#dc2626" label="Weak fit / over budget" />
-      <span className="flex items-center gap-1.5">
-        <span className="inline-block h-3 w-3 rounded-full bg-orange-500" /> basketball court
-      </span>
-      <span className="flex items-center gap-1.5">
-        <span className="inline-block h-3 w-3 rounded-full border-2 border-blue-600" /> ≤10 min to Metro
-      </span>
+      {hasBasketball && (
+        <span className="flex items-center gap-1.5">
+          <span className="inline-block h-3 w-3 rounded-full bg-orange-500" /> basketball court
+        </span>
+      )}
+      {hasAnchors && (
+        <span className="flex items-center gap-1.5">
+          <span className="inline-block h-3 w-3 rounded-full border-2 border-brand-500" /> close to your anchor
+        </span>
+      )}
     </div>
   );
 }

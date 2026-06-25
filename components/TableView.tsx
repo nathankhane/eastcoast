@@ -79,8 +79,8 @@ export default function TableView({ places, meta, profile, selectedId, onSelect 
               <tr
                 key={p.id}
                 onClick={() => onSelect(p.id)}
-                className={`cursor-pointer border-b border-slate-100 transition hover:bg-blue-50 ${
-                  selectedId === p.id ? "bg-blue-50" : ""
+                className={`cursor-pointer border-b border-slate-100 transition hover:bg-brand-50 ${
+                  selectedId === p.id ? "bg-brand-50" : ""
                 }`}
               >
                 <td className="px-3 py-2 font-medium text-slate-900">{p.name}</td>

@@ -290,7 +290,7 @@ export default function DetailPanel({ place, meta, profile, onClose, onMetaChang
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <div>
-      <h3 className="mb-2 text-xs font-bold uppercase tracking-wide text-slate-400">{title}</h3>
+      <h3 className="mb-2 text-xs font-bold uppercase tracking-wide text-brand-600">{title}</h3>
       {children}
     </div>
   );

@@ -19,7 +19,7 @@ const DEFAULT_CENTER = { lat: 38.89, lng: -77.12 };
 // Build an SVG pin: colored teardrop, optional basketball dot, optional metro ring.
 function pinSVG(color: string, court: "none" | "court" | "indoor", strongMetro: boolean): string {
   const ring = strongMetro
-    ? `<circle cx="14" cy="14" r="13" fill="none" stroke="#2563eb" stroke-width="2.5"/>`
+    ? `<circle cx="14" cy="14" r="13" fill="none" stroke="#3a90e2" stroke-width="2.5"/>`
     : "";
   const ball =
     court === "indoor"
@@ -116,7 +116,7 @@ export default function MapView({ places, selectedId, onSelect, center, zoom, pr
           <div style="margin-top:4px;font-weight:600;">Fit ${computeFit(place, profileRef.current ?? undefined).score}/100</div>
         </div>
         <a href="${escapeHTML(place.website)}" target="_blank" rel="noopener"
-           style="display:inline-block;margin-top:8px;font-size:12px;color:#2563eb;">Visit website →</a>
+           style="display:inline-block;margin-top:8px;font-size:12px;color:#3a90e2;">Visit website →</a>
       </div>`);
     infoRef.current.open({ map: mapRef.current, anchor: marker });
   }

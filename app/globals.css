@@ -2,9 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-:root { --bg: #f8fafc; }
+:root { --bg: #f4f9ff; }
 html, body { height: 100%; }
-body { background: var(--bg); color: #0f172a; }
+body {
+  /* Soft baby-blue wash */
+  background: linear-gradient(180deg, #eaf4ff 0%, #f4f9ff 240px, #f8fafc 100%);
+  background-attachment: fixed;
+  color: #0f172a;
+}
 
 /* Google Maps InfoWindow tidy-up */
 .gm-style .gm-style-iw-c { padding: 0 !important; border-radius: 12px !important; }
