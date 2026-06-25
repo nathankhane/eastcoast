@@ -27,7 +27,60 @@ export const SEED_EXTRA: Place[] = [
     "sourceQuotes": [],
     "rating": 3.8,
     "reviewCount": 82,
-    "googleMapsUri": "https://www.google.com/maps/place/?q=place_id:ChIJ--CDSzWxt4kRJ_D7ol-TzTQ",
+    "googleMapsUri": "https://maps.google.com/?cid=3804859299163533351&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "reviews": [
+      {
+        "author": "JJ",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a/ACg8ocJqm9p7YvkQMq4S1suRHuMxGEgAV7Us0oGHygmRy_yzrBOU1g=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/118103962213499695287/reviews",
+        "rating": 5,
+        "text": "I have been a resident here for approximately 10 months and have had a consistently positive experience. The property is well-managed, and the staff is professional, responsive, and attentive to residents’ needs. Any time I have raised a concern with the front office, it has been addressed promptly and effectively.\n\nThe leasing process was smooth from the outset, and the team has remained helpful and reliable throughout my time here. I would also like to recognize Manal, who provided a great initial tour experience and continues to be a helpful resource when needed. Overall, I would recommend this community to anyone seeking a well-run and dependable place to live.",
+        "publishTime": "2026-04-23T03:29:53.731849773Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT210WGFFbEdkME5aYkRkWFoyaDVPSGxvUjFBMkxXYxAB!2m1!1s0x89b7b1354b83e0fb:0x34cd935fa2fbf027",
+        "source": "google"
+      },
+      {
+        "author": "Fredy Ferrufino",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a-/ALV-UjUWpOs4EV30usMXdPWN8MwS5KTIxxlXSKZs0_IKvm6tLrMIoIuCHQ=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/100903953670112877156/reviews",
+        "rating": 5,
+        "text": "If I could give them 10 stars ⭐⭐⭐⭐⭐⭐⭐⭐⭐, I would definitely do it! Mrs. Manal Hosein and Mrs. Pamela Maldonado were not just helpful, but also incredibly kind. Their excellent customer service, clear communication, attention to detail, and honesty made this experience outstanding 🌟.\n\nI can’t express how thankful and happy I am with my interactions with both of them at this property leasing office. Thank you for being so welcoming and for taking care of those of us seeking a new home 🏡. You both are amazing! 😊🎉",
+        "publishTime": "2026-03-06T16:16:53.476635421Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT21WMVpYaG1VRkZFV2toeGVsSTBhR1JMZERKaGNIYxAB!2m1!1s0x89b7b1354b83e0fb:0x34cd935fa2fbf027",
+        "source": "google"
+      },
+      {
+        "author": "Yousif Humida",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a-/ALV-UjXTs1Qtaa08jSRECwXN4z-EcMjSyqqaJLCXP_Pn0t0OWwX498o=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/104990339788685776345/reviews",
+        "rating": 5,
+        "text": "I would like to express my heartfelt gratitude to Ms. Manal, an exceptional and highly professional employee at the Dolley Madison Towers leasing office.\nFrom the very first interaction, she demonstrated outstanding customer service, strong problem-solving abilities, and an impressive dedication to ensuring that every detail was handled with care. Her patience, positivity, and welcoming smile truly made the entire leasing process stress-free and enjoyable.\n\nThe property itself is equally impressive. Dolley Madison Towers offers a clean, safe, and serene environment that is perfect for families and individuals alike. The building is meticulously maintained, free of any unpleasant odors or pests, and provides a peaceful atmosphere without any noise or disturbances.\n\nI wholeheartedly recommend this community to anyone looking for a comfortable and high-quality living experience. Thanks to Ms. Manal’s excellent support and the outstanding standards of the property, I am extremely satisfied with my choice.\n\nThank you, Ms. Manal, for going above and beyond to make residents feel valued and at home!",
+        "publishTime": "2025-08-02T16:16:20.350851474Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2psWlFVVjZSekYwZEVkWE1XaExkMUpNWVZKbVoxRRAB!2m1!1s0x89b7b1354b83e0fb:0x34cd935fa2fbf027",
+        "source": "google"
+      },
+      {
+        "author": "Basak",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a-/ALV-UjWJXi5SqUfAJIFAhwG2u0aF830pnRhTxgFrbKqPzLd6uIhLkl0=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/117070386940608589352/reviews",
+        "rating": 1,
+        "text": "I have friends living in this building, and every single time I deal with the front desk staff member MANAL, there is a problem. Her attitude is consistently rude, disrespectful, and completely unprofessional. She comes across as dismissive and unwilling to help, which is unacceptable for someone in a front desk position.\nIt honestly makes no sense that someone like this is representing the building, especially when first impressions matter so much. The difference compared to the other staff—who are actually polite and helpful—is huge. Management should seriously reconsider having someone with this kind of behavior working at the front desk.",
+        "publishTime": "2026-04-21T02:58:29.319853513Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2t0NWRFTjRZWFV4WlRSRGRsbHBRM2MwVFZjMVZIYxAB!2m1!1s0x89b7b1354b83e0fb:0x34cd935fa2fbf027",
+        "source": "google"
+      },
+      {
+        "author": "Jasmine Delva",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a/ACg8ocIGPKOQ3XWJt_GugNtvEtMbFiC9tAHOIdQcXuzGjSvbb2X6BjU=s128-c0x00000000-cc-rp-mo-ba2",
+        "authorUri": "https://www.google.com/maps/contrib/104738282928071874986/reviews",
+        "rating": 5,
+        "text": "The front desk staff, maintenance, and security are superior at Dolley Madison Towers.  I would especially like to thank Coco for going above and beyond. Coco took the initiative to refrigerate a food delivery package for me during a time I wouldn’t have made it home in time to do so myself. Her thoughtful action not only saved my delivery but reminded me that living here is about more than just paying rent, it's about being part of a community.\n\nThe staff here are sincerely the best",
+        "publishTime": "2025-08-04T18:46:48.962568599Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2w5eWJXWnJaWFpGV2t0dFYyWjBiR2hNVlZWbU0wRRAB!2m1!1s0x89b7b1354b83e0fb:0x34cd935fa2fbf027",
+        "source": "google"
+      }
+    ],
+    "reviewsUpdatedAt": "2026-06-25T04:20:09.864Z",
     "priceLevel": "",
     "tags": [
       "arlington",
@@ -97,7 +150,60 @@ export const SEED_EXTRA: Place[] = [
     "sourceQuotes": [],
     "rating": 3.5,
     "reviewCount": 442,
-    "googleMapsUri": "https://www.google.com/maps/place/?q=place_id:ChIJIQNt1MC2t4kRKrFgFknMsUs",
+    "googleMapsUri": "https://maps.google.com/?cid=5454365238002495786&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "reviews": [
+      {
+        "author": "Andrew An",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVNPRni8KAABuPft9xSGhfx9XawdOCuoQmQky20oDIZYNDL7kNT=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/112921622710748875513/reviews",
+        "rating": 1,
+        "text": "I've lived under many landlords, and this is the worst.\n\nMy experience has included mice, rats, roaches, multiple unit-specific power outages, unreliable internet through the provider residents are forced to use, and a ceiling collapse after a pipe burst. After my unit became uninhabitable from the ceiling collapse, management did not credit me for damages or loss of use.\n\nOn top of the maintenance and infrastructure issues, management has been hostile and unhelpful. They keep adding new fees and even tried to increase a parking charge that was listed at a fixed cost in my lease. It took multiple days and over 20 emails to correct this.\n\nWhat pushed this from frustrating to unacceptable was how management handled the damage claim. Community Manager Carolina Kirby sent my insurance company AI-generated responses that gave a misleading repair timeline and falsely described the damage. That has made my claim harder to get approved. Moreover, whenever I attempt to contact management, they simply state that Carolina is in a meeting and will follow up with me (which has never happened).\n\nThe new Cortland management seems completely apathetic. It feels like their focus is on charging residents more, not providing basic pest control, honest communication, or safe living conditions.",
+        "publishTime": "2026-03-19T08:01:13.277675520Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT25JMU9WaHlWa2hHZFROSVpubzBORkk1YXpWV1kxRRAB!2m1!1s0x89b7b6c0d46d0321:0x4bb1cc491660b12a",
+        "source": "google"
+      },
+      {
+        "author": "Leah Scarbrough",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVevoLfTZuAZ7v3xlvPhq1hxJvwPBD3px8qis0FgmiJUB7_zm3z=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/114495563085214553663/reviews",
+        "rating": 5,
+        "text": "Heather in the leasing office is AMAZING! So helpful, so friendly, and one of the best people to get things done! She made my roommate and I’s experience so easy.\nHer plate stays loaded, and she still found the time to deal with our issues in a timely manner with no work on our part.",
+        "publishTime": "2026-06-05T21:34:37.374206228Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2pGbFJXUjZOM0pmUVZFMFlWZGtiVWxCVWswemJtYxAB!2m1!1s0x89b7b6c0d46d0321:0x4bb1cc491660b12a",
+        "source": "google"
+      },
+      {
+        "author": "Yonas Gebremichael",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a/ACg8ocJlX9lpJbDFSslunPRHZ9ZYbTUFRSU9vlGgmreEHNj6vaNZLg=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/111864383182943313777/reviews",
+        "rating": 5,
+        "text": "The management makes up for any short coming a tenant might think. Maintenance is well organized and responds promptly. And I thing the biggest advantage is the size of your apartment , they just don’t make them this big anymore and u have seen around. To top it all, the top management skill in resolving any issue is 10*. I love this place.",
+        "publishTime": "2026-06-07T18:28:26.225791Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2prd1pFOHhjSE4wWmtsMmFVNTZZVTFxWWkxbU9GRRAB!2m1!1s0x89b7b6c0d46d0321:0x4bb1cc491660b12a",
+        "source": "google"
+      },
+      {
+        "author": "Elsa",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a/ACg8ocLM25qxo6lkbnxAwoQvm_SJQ260uiDPwKcXJBhVnPQXIJGh=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/117199399687238225065/reviews",
+        "rating": 1,
+        "text": "I’ve had a very frustrating experience living at this apartment complex. Basic maintenance and management responsiveness have been ongoing issues that significantly impact day-to-day living.\nFor example, the lobby door has been broken for months, which raises both security and convenience concerns. The air conditioning barely works, making it uncomfortable to live here, especially during warmer months. The elevators are consistently dirty and poorly maintained, and the gym is another major disappointment, with much of the equipment frequently broken or unusable.\nThere are also serious cleanliness and pest concerns. I’ve encountered issues with rats and roaches in the building, which is unacceptable and speaks to a lack of proper upkeep and pest control.\nManagement and communication are equally disappointing. The leasing office rarely answers the phone, and when they do, they’re often unable to assist and redirect you to the manager. Unfortunately, the manager always seems to be unavailable or “in a meeting,” making it nearly impossible to get issues properly addressed.\nOverall, this has been a very disappointing experience. I would not recommend living here unless there are significant improvements in maintenance, cleanliness, pest control, and management accountability. Even in the most unfavorable situations, I wouldn’t suggest renting with Cortland Properties.",
+        "publishTime": "2026-05-05T21:37:40.276970339Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT25sTVgwRlhMWGhQTUhwdU9HbHZZazV1V1VZMlVWRRAB!2m1!1s0x89b7b6c0d46d0321:0x4bb1cc491660b12a",
+        "source": "google"
+      },
+      {
+        "author": "David-Kevin Bryant",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a/ACg8ocJ6zJjS_2vXvUNmqvTqjTgy42QwZwKoEe3j4RtVe7ThmfKnjw=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/102652214170604959243/reviews",
+        "rating": 5,
+        "text": "The leasing staff is excellent with special mention going to Keith. He is known in the community for his customer service; affable disposition; and reliability. The entire team in fact deserves kudos for always going above and beyond for residents--especially those who have lived here for many years. Toncho and Carlos, and their teams in Housekeeping and Maintenance, respectively, are also incredibly helpful. I have an elderly parent who lives at the property. Rarely does she have to contact maintenance but when she does, they respond IMMEDIATELY and leave her apartment spotless. It is very much appreciated.",
+        "publishTime": "2026-03-16T19:10:28.713011351Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2twbldFVkhVek10UW5SMFN6Vk5hRkZpVTFWMGNXYxAB!2m1!1s0x89b7b6c0d46d0321:0x4bb1cc491660b12a",
+        "source": "google"
+      }
+    ],
+    "reviewsUpdatedAt": "2026-06-25T04:20:10.582Z",
     "priceLevel": "",
     "tags": [
       "arlington",
@@ -168,7 +274,60 @@ export const SEED_EXTRA: Place[] = [
     "sourceQuotes": [],
     "rating": 4.5,
     "reviewCount": 980,
-    "googleMapsUri": "https://www.google.com/maps/place/?q=place_id:ChIJuUsmtDSxt4kRHSBUMXGPNwA",
+    "googleMapsUri": "https://maps.google.com/?cid=15638840040759325&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "reviews": [
+      {
+        "author": "Maram Alhazmi",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a/ACg8ocKQzKeim1Mm_COgWGqTB2FG7Bo8vQ3LWreYjUwkAvY5oUW9hg=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/102353066407926130396/reviews",
+        "rating": 5,
+        "text": "I’ve been living here for almost 8 months, and it has been a wonderful experience. Everyone is always very welcoming and willing to help! They do a great job creating a sense of community by organizing activities and finding ways to celebrate with residents, which I really appreciate.\nI just hope they can include something for Eid next time.\n\nI also want to thank Lidiya for her exceptional service and professionalism throughout my stay. She’s always friendly and ready to help with a smile. My son always asks about her, and she welcomes him with so much kindness every time, even surprising him with small gifts.\n\nHighly recommend!",
+        "publishTime": "2026-04-11T16:33:36.142901655Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2tscWJ6TTVSRmRJVFhsUVkzSTJWbGczVmpaMU1tYxAB!2m1!1s0x89b7b134b4264bb9:0x378f713154201d",
+        "source": "google"
+      },
+      {
+        "author": "Raymund Morales",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a/ACg8ocLJHzyuTtEKQXlXt_5DgQdPGi4jPrRplNB3Tgj9j_1KP1VVWw=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/107684813763991421535/reviews",
+        "rating": 4,
+        "text": "We’ve been living at Park Ridge for a little while now, and overall it’s been a really good experience for our family. The move-in process was smooth, and Josephine was very helpful and easy to talk to. She made sure we understood everything and was always responsive when we had questions.\n\nLike any place, there were a few minor things that needed fixing after we moved in, but maintenance was quick to respond and got everything taken care of without any hassle. They’ve also continued to check in, which we really appreciate.\n\nWhat we like most is how convenient the location is, especially for commuting to DC. It’s also a big plus that schools are within walking distance, which makes daily life easier for us as a family. The neighborhood feels safe and generally quiet, which is important to us.\n\nOverall, we’re happy with our decision to move here and feel comfortable in the community. Definitely a solid place to consider if you’re looking for something practical and family-friendly.",
+        "publishTime": "2026-03-25T16:30:09.954195354Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2pCeVJteFVZbTlmVGt4aWVUaFJVbVJpWDA1elduYxAB!2m1!1s0x89b7b134b4264bb9:0x378f713154201d",
+        "source": "google"
+      },
+      {
+        "author": "Melissa Medina Cancel",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVT11QpjlG-SN-ry3ZCRl-hMwZRytya-FuiW7FkPYh4obPmEhntUw=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/111621397671050034666/reviews",
+        "rating": 5,
+        "text": "I truly had one of the best tour experiences at Park at Arlington Ridge. My leasing associate took the time to show me everything thoroughly and exceeded all of my expectations. She was very detailed, professional, and answered every question I had.\nThe apartment looked exactly how it was described to me, which made me feel very confident and comfortable throughout the process. What stood out the most was how welcoming everyone was. They truly treat you like family and make you feel at home from the moment you walk in. They even offered coffee and snacks, which was such a thoughtful touch.\nThe staff is very attentive, detail-oriented, and genuinely goes above and beyond to help you find a place that fits your needs. I really appreciate the excellent customer service and hospitality I received.\nThank you Ms.Lidyia",
+        "publishTime": "2026-05-14T12:00:41.200480328Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2sxdlVVODBjbUZyTldKVFZrTjVaMkpQU0docGNXYxAB!2m1!1s0x89b7b134b4264bb9:0x378f713154201d",
+        "source": "google"
+      },
+      {
+        "author": "Soaring Solo",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a/ACg8ocK_xoEI3K4nWbeLj0CrTtwbUvX4lHnxBe-gW2WKaaqb82wm-A=s128-c0x00000000-cc-rp-mo-ba3",
+        "authorUri": "https://www.google.com/maps/contrib/101412047479643954268/reviews",
+        "rating": 3,
+        "text": "I've lived here for a year and there has been the good and the bad. On the plus side:\n\nThe apartment is comfortable.  Maintenance requests are handled quickly. The overall community is pleasant and has a nice neighborhood feel. I've always felt safe here. I had to break my lease and they were very reasonable about not charging outrageous fees. I've had good neighbors, but I do hear noise coming from next door and above me.\n\nOn the negative side:\n\nLeasing office staff does not respond to emails or requests to call back. It felt like once they had my deposit check, they didn't feel the need to communicate with me further. Walking into the leasing office is the best way to get someone to deal with an issue.\n\nNear my apartment, the trash dump is woefully inadequate. Every day there is a dangerous assortment of oversized and often sharp/broken items left next to the  path where children and pets walk.  Loose bits of trash get blown around the surrounding area. Kudos to the dedicated facilities staff for trying to keep it under control, but The Park has failed to address this inadequate trash dump (see photos).\n\nAs a grown adult, I am not allowed to sit by the pool or swim a few laps until the lifeguard is on duty, which isn't until 11:00 on weekends.\n\nOverall it's a nice apartment and a nice complex, but there are several significant deficiencies that impacted my stay here.",
+        "publishTime": "2025-08-21T17:48:04.628034877Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT25sVVkzUk9WMmxFWlVoUVFUSjVVemRvTjBGdWNHYxAB!2m1!1s0x89b7b134b4264bb9:0x378f713154201d",
+        "source": "google"
+      },
+      {
+        "author": "Alice Tram",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a/ACg8ocJWhUUykZ6b6RkgBXS9ZksAk0jZWHQ8T8mis9iQK03M0zRs3w=s128-c0x00000000-cc-rp-mo-ba3",
+        "authorUri": "https://www.google.com/maps/contrib/111667512930603656705/reviews",
+        "rating": 5,
+        "text": "We are former residents @ 1531 28th and loved every minute of it for the locale , convenience and staffs.\n\nConcierge service is top notch from Ms Yohit , Ms Audrey , Ms Diane and Ms Luisa. They’re always so helpful, courteous, above and beyond at their job making sure they meet my needs. They treat you like a family member.\nThese ladies are awesome!!\n\nThe maintenance team is great at their job. Keeping the Park clean and well maintained.\n\nThank you Josephine . You were the one who sold us on selecting the Park when we first moved to the area. You made the signing seamless.",
+        "publishTime": "2026-04-12T01:54:38.426856172Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2tZM2N6VjFNMDltWXpWck9GWXlXRmx1WW10bGMyYxAB!2m1!1s0x89b7b134b4264bb9:0x378f713154201d",
+        "source": "google"
+      }
+    ],
+    "reviewsUpdatedAt": "2026-06-25T04:20:11.290Z",
     "priceLevel": "",
     "tags": [
       "arlington",
@@ -239,7 +398,60 @@ export const SEED_EXTRA: Place[] = [
     "sourceQuotes": [],
     "rating": 3.9,
     "reviewCount": 148,
-    "googleMapsUri": "https://www.google.com/maps/place/?q=place_id:ChIJxZxUMgK0t4kRhdWuIhASHAA",
+    "googleMapsUri": "https://maps.google.com/?cid=7901159858558341&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "reviews": [
+      {
+        "author": "Maria Cristia Natividad",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a-/ALV-UjXp8lcaSZqu2-jsH8GRhC6QD05Yq-OPzeSQzFv0w3CBZRXVeduR=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/116763440715209229091/reviews",
+        "rating": 5,
+        "text": "It has truly been a wonderful nine months living at Whitmore. If not for personal reasons, I would not be vacating my apartment. The Whitmore community is well maintained, and the staff consistently provides timely updates whenever there are building or area-related notices.\n\nThe location is incredibly convenient—close to bus stops (with most major routes passing right in front), stores, restaurants, the mall, and set within a quiet, peaceful neighborhood.\n\nMy sincere thanks to the leasing office team—Samad, Heather, Carleigh, and everyone else—for consistently delivering service that deserves more than five stars. They have been helpful, considerate, and always approachable. I’m also grateful to the maintenance crew, who are courteous and prompt in addressing requests.\n\nThank you all for the exceptional service.",
+        "publishTime": "2026-02-16T17:48:26.639957854Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2tvMlJVaG5iR2Q2WlhJdE9TMXNiM0ZuWjFsbWRuYxAB!2m1!1s0x89b7b40232549cc5:0x1c121022aed585",
+        "source": "google"
+      },
+      {
+        "author": "Irina",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a-/ALV-UjWa2nD1tauQbuC-F_QEbD7hbcDnVEhOvlN2SWJ8TsH0m6ELvOf06A=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/118381877803007814167/reviews",
+        "rating": 5,
+        "text": "Great place to live. Unfortunately, I had to move because it was a bit too far from my job. Samad, the leasing agent, was always helpful and responsive. The maintenance team usually came the very next day after I submitted a request. I lived there with my two dogs, and the community is very dog-friendly. The building is cozy, clean, and well maintained.",
+        "publishTime": "2026-01-09T23:17:10.186284665Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT21NMlJIRTFiVVJGYlRSME0yaHZWM0JLTTNRemIyYxAB!2m1!1s0x89b7b40232549cc5:0x1c121022aed585",
+        "source": "google"
+      },
+      {
+        "author": "Patti Flynn",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a-/ALV-UjU2aKhqyq6vbwdolkzRZixvtnUuG175HTa1guK8_6KS3GJiiak=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/112986464180633811633/reviews",
+        "rating": 5,
+        "text": "Hello, for anyone searching for an apartment in the Arlington area, here is my review. This is a very long one, so scroll on if you don’t have the patience to read it. My apartment was completely renovated with brand new cabinets in the kitchen and bathroom. There was brand new flooring throughout in every room, brand new hardware fixtures on all the doors, to include closets, showers, and lighting. I was also impressed with the very large ceiling and floor trim. The apartment itself reminds me of a hotel.\n\nMy lease began in September; however, it took me close to two months to move in.During those two months, and the following month of settling in, there were things I began to notice that needed attention. The items included loose outlets, pantry door being upside down, a loose oven door, spare bedroom closet door fell off, dining room blind upside down, garbage disposal not turning on, toilet not flushing, and a soft spot on one area of the living room floor.\n\nEach time I found one of these things, I placed an online work order before bed. I would go to work the next day, and by lunch time the next day, I would have a text telling me the work order had been completed. This went on continuously over the course of those two months. I kept thinking that with each item they were going to get upset with me. I felt bad because as I mentioned, I was finding these things gradually because I didn’t live there yet. I was slowly  moving in, and didn’t find them all at once. EVERY SINGLE TIME, they came the VERY NEXT DAY and completed the work order. I have never experienced such prompt service. For the toilet, they replaced all the hardware in the tank. For the oven door, they also went above and beyond and left a note stating they noticed the light was also out so they replaced that too!!\n\nThe floor I noticed after I had moved in. Evidently the contractors they hired didn’t put sub flooring down prior to putting the new floor in. They told me it would have to wait until after the Thanksgiving holiday. I told them I understood. I came home from work on November 19th, and the repairman was there with plywood and half my floor pulled up, fixing my living room floor! Well before the holiday!! I have never in my life been so impressed by an apartment’s management team dedication to fulfill the work orders of a tenant.\n\nI have now been here since September. (4 months). Every day I come home to the smell of Febreeze because the cleaning personnel scrubs the garbage shoot area next to my apartment every day. They are always sweeping and washing the hallways.The amount of parking is in abundance, unlike my daughter’s apartment where they have to park on the street. I literally have no complaints here. Secure package room for large packages, parcel lockers for small packages, and locked mail boxes for mail (I work for the post office so I’m picky hahah ). The gentleman working the front desk is the nicest man ever. I honestly love this place.\n\nThank you for reading.\n\nPatti Flynn",
+        "publishTime": "2026-01-18T17:01:42.426463979Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT21wVVEyRjBiRnBGTTFKS2FFYzVTRzB6YW5Bd2VtYxAB!2m1!1s0x89b7b40232549cc5:0x1c121022aed585",
+        "source": "google"
+      },
+      {
+        "author": "Alexa Loaiza",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a-/ALV-UjWlpJbwoZRbgU_d8GwCxgtj86B0k9A5Bj-b19aITVMuLfdkHqlAQQ=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/110650734510923926833/reviews",
+        "rating": 5,
+        "text": "I have been living at The Whitmore in apartment 118 since October 2023, and I’ve had a great experience. The property manager, Samad, is always friendly and helpful. The service mánager Cristobal, and service tech Ascención are quick, professional, and reliable. The building is clean and well-maintained. I highly recommend it!",
+        "publishTime": "2026-04-13T00:19:31.366509126Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2xSb2IzWllka2RDVm04M1owUndZM0ZvTnpWSFZrRRAB!2m1!1s0x89b7b40232549cc5:0x1c121022aed585",
+        "source": "google"
+      },
+      {
+        "author": "Hadia Alimy",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a/ACg8ocLyLoW1jKM4bdz740qZh-xIvZ_OCjIqLLWiqZzS8BHSrDdSOQ=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/113990234483723876445/reviews",
+        "rating": 5,
+        "text": "We’ve had a positive experience living at The Whitmore so far. The building is clean, well maintained, and the community feels quiet and welcoming.\n\nThe maintenance team has been responsive, and requests have been handled in a timely manner. The leasing and management team have also been professional and helpful. I’d especially like to mention Mr. Samad Fazli,who has been very responsive and supportive whenever we’ve had questions or needed assistance.\n\nOverall, we’re happy with our experience and appreciate the effort that goes into keeping the property comfortable and well managed.",
+        "publishTime": "2026-01-12T20:14:38.557367503Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2xoaE1tNVhlRTVOYVY5aWVIWlJjRXcwUW05MU1HYxAB!2m1!1s0x89b7b40232549cc5:0x1c121022aed585",
+        "source": "google"
+      }
+    ],
+    "reviewsUpdatedAt": "2026-06-25T04:20:11.950Z",
     "priceLevel": "",
     "tags": [
       "arlington",
@@ -310,7 +522,60 @@ export const SEED_EXTRA: Place[] = [
     "sourceQuotes": [],
     "rating": 3.9,
     "reviewCount": 540,
-    "googleMapsUri": "https://www.google.com/maps/place/?q=place_id:ChIJOaTjSzSxt4kR1kaNVzsIKqA",
+    "googleMapsUri": "https://maps.google.com/?cid=11541046046055286486&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "reviews": [
+      {
+        "author": "Phil Z",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a/ACg8ocKbPW5-8x2-gD8kztxn1qasralU6-cMlyjNzp0m2x3kIBF0bQ=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/102882192447063638687/reviews",
+        "rating": 5,
+        "text": "I’ve lived here for 4 years and I’ve seen a huge improvement in the maintenance service. Chris and the entire team have been fantastic. Recently I had an electrical issue and they were at my door first thing in the morning. They stayed and worked on it until everything was completely fixed.\n\nWhat really stands out is how responsive they are now. If I submit a ticket, Chris or one of the other maintenance techs are usually here the same day. That’s a big change from the old days when issues could take several days to get resolved.\n\nThe team is professional, friendly, and genuinely helpful. They clearly care about doing a great job. Highly recommend this apartment community based on the excellent maintenance support alone!",
+        "publishTime": "2026-05-18T15:45:26.182376475Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT25sUFVFOW9WVUpqWVVWMVFWOUhSMjF2Vm5OeFJGRRAB!2m1!1s0x89b7b1344be3a439:0xa02a083b578d46d6",
+        "source": "google"
+      },
+      {
+        "author": "A R",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a/ACg8ocI7KJiPmwZ3vkH0evy6HNbW7KFm1TAMXluIoNSOTB9pdz4HPw=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/118087481345084526774/reviews",
+        "rating": 5,
+        "text": "I wanted to share a quick review for Mark Jefferson.\n\nI had no hot water, and Mark responded right away. He came in, took the time to make sure everything was working properly, and didn’t leave until my water was scalding hot again and my dryer was also fully fixed.\n\nWhat I really appreciated was that he didn’t just do a quick repair and leave. He made sure everything was running exactly the way it should and that I was completely taken care of.\n\nMark was professional, efficient, and genuinely helpful. If I could give him eight stars, I absolutely would. Thank you for the excellent service!",
+        "publishTime": "2026-03-04T13:03:33.998768781Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT25sWWIzZzFYM1pWZFVwbmN6bHVUa051T1dGa2QwRRAB!2m1!1s0x89b7b1344be3a439:0xa02a083b578d46d6",
+        "source": "google"
+      },
+      {
+        "author": "Travis Williams",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a/ACg8ocINjxmZL1oOmoPXHE38BR-yN_FcnlN3DPCeVDfjLHBEkQrJAA=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/105591384353225031693/reviews",
+        "rating": 1,
+        "text": "Management began doing a water heater repairs for my apartment unit, which you think would be great.\n\nWhat they did fail to mention is they actually moved our water heater into the middle of our living room for a week + (still here), and built ghetto box around it.\n\nThis on top of damaging the carpet, leaving their tools and ladder in the apartment when I returned home, and leaving the whole apartment smelling like paint.\n\nAll this and no confirmed date or time for when this would be done or coordination on what time to expect them to return to finish the job.\n\nUnprofessional, rude, and disrespectful to all the people living in this area of the building because I know this is not just affecting me.",
+        "publishTime": "2026-04-08T21:03:24.992717750Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2xST1pXdEpkak0wVFd0NFFYbEZiVlpOY0VwUFRYYxAB!2m1!1s0x89b7b1344be3a439:0xa02a083b578d46d6",
+        "source": "google"
+      },
+      {
+        "author": "Burte-Ujin Myagmar",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a-/ALV-UjXwjw1c9ns9o71YmeUKTsRC-q2eACXzHAk4H0d0Ze7QVwex-VSI=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/112155582197089218267/reviews",
+        "rating": 5,
+        "text": "Mark is truly the best when it comes to handling issues. What sets him apart is that he doesn’t just apply a quick fix, he focuses on finding the best long-term solution. He takes the time to listen carefully to the problem, understands the root cause, and then acts quickly and efficiently to resolve it the right way.\nIt’s rare to find someone so proactive, thoughtful, and solution-oriented. I genuinely appreciate his professionalism and dedication. Thank you, Mark, for your excellent support and commitment!",
+        "publishTime": "2026-03-02T16:23:44.651471749Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2pGeVJHeFNPWEYxT0ZadmVUTmhOVFUwVWtKNVYxRRAB!2m1!1s0x89b7b1344be3a439:0xa02a083b578d46d6",
+        "source": "google"
+      },
+      {
+        "author": "Hajar Douah",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a-/ALV-UjXrlDD0h2ZORsRl-rscupZtpROJtf8E3R6GwMnWu0XPEmIefU9k=s128-c0x00000000-cc-rp-mo-ba3",
+        "authorUri": "https://www.google.com/maps/contrib/113525821143459517995/reviews",
+        "rating": 1,
+        "text": "Construction is very very loud, they come in every day at 8 AM and start banging on the walls. Imagine you need to sleep and you hear extremely loud banging, and men shouting. This is suppose to go on for 2 months, 2 months of constant banging and no sleep or peace and quiet.Literally can’t even open my window blinds because there is absolutely no privacy. Can’t enjoy my balcony because of the construction. It’s a mess.",
+        "publishTime": "2026-04-10T12:15:29.820087245Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT205TlExUllNa2RYUlhkS2RXcFRPSEJFTlc0M1drRRAB!2m1!1s0x89b7b1344be3a439:0xa02a083b578d46d6",
+        "source": "google"
+      }
+    ],
+    "reviewsUpdatedAt": "2026-06-25T04:20:12.682Z",
     "priceLevel": "",
     "tags": [
       "arlington",
@@ -381,7 +646,60 @@ export const SEED_EXTRA: Place[] = [
     "sourceQuotes": [],
     "rating": 3.8,
     "reviewCount": 236,
-    "googleMapsUri": "https://www.google.com/maps/place/?q=place_id:ChIJBxGbzL-3t4kRH3lTwx2aW8M",
+    "googleMapsUri": "https://maps.google.com/?cid=14077014512898373919&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "reviews": [
+      {
+        "author": "Liliana Guzman",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a-/ALV-UjXou_CKKNl78n3znRgAixFeb5oNhzv3ruta0CxK_NiYnTaXvP4=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/113595314690245587790/reviews",
+        "rating": 1,
+        "text": "If I could leave 0 stars, I would. Living here has been beyond frustrating. Residents are charged every month for pest control, yet there are still roaches throughout the building and rats in the parking garage. The garage door is constantly broken, and there have been several car thefts in just the past couple of weeks.\n\nMaintenance and upkeep are clearly not a priority. When there are leaks or damage in common areas like the hallway, management’s solution is to literally cover holes with Amazon cardboard instead of properly fixing them. Trash is constantly left outside apartment doors because neighbors don’t take it to the trash chute, and management does nothing to enforce cleanliness.\n\nLately, the water has been shut off repeatedly for “repairs.” Today, the water has been off since 9 AM, and now we’ve received an email saying it will remain off “until further notice.” When you call the office, of course they’re closed, and the answering service has no information or help to offer.\n\nThe office staff is generally nice for the most part, but they often seem frustrated when residents ask questions they don’t immediately have answers to. While that may be understandable, residents still deserve follow-up and communication — especially considering how much rent costs here.\n\nFor the amount of money people pay to live here, it honestly feels more like staying at a 1-star motel than a luxury apartment community. At this point, it doesn’t matter who takes over the property — the biggest issue is the complete lack of care and concern for the residents who live here.",
+        "publishTime": "2026-05-19T22:56:35.912687394Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT25JNWVuVXdTbGhmY2tabGR6RXpRMVJwVjFwemFXYxAB!2m1!1s0x89b7b7bfcc9b1107:0xc35b9a1dc353791f",
+        "source": "google"
+      },
+      {
+        "author": "Jean Parsiphal",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a-/ALV-UjU3WJntwofx1805g1B_CiY1OQfAn5bPX8-GDsC2VDFiPL5dFO5T=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/103389905155014221724/reviews",
+        "rating": 5,
+        "text": "A Gem of a Place to Call Home\n\nI've been living here for a while now and I genuinely couldn't be happier with my decision to move in. From the moment you walk through the door, the interior design immediately sets this place apart — it's thoughtfully curated, modern, and warm in a way that instantly makes you feel at home.\n\nMy unit itself is incredibly cozy. It's the kind of space where you actually look forward to coming home at the end of the day. The layout is smart, the finishes are beautiful, and the atmosphere is just right.\n\nThe common areas and amenities are top-notch and well-maintained. It's clear that management takes pride in keeping everything clean and functional — these aren't just boxes checked on a brochure, they're spaces you'll actually use and enjoy.\n\nWhat really seals the deal is the management team. Every request I've submitted has been handled quickly and professionally. It's rare to find a complex where you feel like your comfort is genuinely a priority, but this is one of those places.\n\nAnd the location? Unbeatable. I'm only 7 minutes from work, which has been a total game-changer for my daily routine and quality of life.\n\nIf you're looking for a place that combines style, comfort, great amenities, and responsive management — look no further. Highly recommend!",
+        "publishTime": "2026-04-18T15:53:43.320905482Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT21OaVduQkpiMFF0TW1oMGFrNDBUek10VDFsTFFWRRAB!2m1!1s0x89b7b7bfcc9b1107:0xc35b9a1dc353791f",
+        "source": "google"
+      },
+      {
+        "author": "Nathan Lather",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a/ACg8ocIHQYLX3TY436aTvXy9LG5l824aXmtgM2LbVu2gxglJ9axx=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/101240649264699249100/reviews",
+        "rating": 3,
+        "text": "It's a nice building. But cars have been vandalized, likely due to the lack of security in the garage (door is almost always broken). People will just leave trash in hallways. There are definitely rats outside of the building if that bothers you.\n\nBut THE most annoying part is the frequency the fire alarm goes off. Consistently at inconvenient times (at night, while it is pouring rain), leading me to believe it is an immature resident(s) annoying other tenants for fun.\n\nStaff otherwise is friendly. Apartments are nice.",
+        "publishTime": "2026-06-12T20:21:36.701132662Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT201VGRuRjNWelY2Y2xOT2JIQnBSMk5PUVhSbWVHYxAB!2m1!1s0x89b7b7bfcc9b1107:0xc35b9a1dc353791f",
+        "source": "google"
+      },
+      {
+        "author": "Blue Harmony",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a/ACg8ocIKuOuqXULVaAqQ5FBoG3Dz_XltG5eXlwR0JsVoTu7yPnjBOg=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/117997219263169048098/reviews",
+        "rating": 5,
+        "text": "It has truly been a pleasure living here. Ebony has been wonderful from the very beginning. She has been very helpful, we toured the available units and I immediately fell in love with the penthouse. From my balcony, I have incredible views of the Washington Monument, the Air Force Memorial, and the Capitol.\n\nThe gym is excellent, and the rooftop space is beautiful and elegant. The photos do not fully capture how refined the entire apartment community feels in person.\n\nI cannot say enough about Ebony. She has been incredibly accessible, helpful, and consistently supportive whenever needed. Overall, I highly recommend living here.",
+        "publishTime": "2026-03-12T19:23:52.468516152Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT21WeGRuazVibmR5U21OWVEzbEVabnByWXpCMU9IYxAB!2m1!1s0x89b7b7bfcc9b1107:0xc35b9a1dc353791f",
+        "source": "google"
+      },
+      {
+        "author": "Joi Cotton",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a/ACg8ocJl74KgLeijDAtb24IKCKDSmw9Nmi9wjuoeKUhgkCv6Qec0TA=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/102074649611918029484/reviews",
+        "rating": 1,
+        "text": "The comments in these reviews are absolutely true. We moved here with extremely high hopes and it has been a disappointment month after month. Management transitioned from Elme to Cortland in October 2025 yet nothing has improved. Save your money, your time, and your cortisol levels, and find another community.\n\nThe only reason we are still here is because of the convenience of the location. The garage gate is always broken, packages are constantly disorganized, concierge services are inconsistent, and the management team is rarely on site or responsive. And today it is raining inside on the sixth floor. We are directly next to the damaged area and our ceilings are cracking for the second time since moving in July 2025.. 4months.\n\nNone of these issues are tenant related. They are property related problems that continue to go unresolved.",
+        "publishTime": "2025-12-02T13:03:59.714667723Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT21VMU1uQlJkMlpFTlZKYWNXbDZjek5OVGt0Q1RIYxAB!2m1!1s0x89b7b7bfcc9b1107:0xc35b9a1dc353791f",
+        "source": "google"
+      }
+    ],
+    "reviewsUpdatedAt": "2026-06-25T04:20:13.347Z",
     "priceLevel": "",
     "tags": [
       "arlington",
@@ -451,7 +769,60 @@ export const SEED_EXTRA: Place[] = [
     "sourceQuotes": [],
     "rating": 3.8,
     "reviewCount": 177,
-    "googleMapsUri": "https://www.google.com/maps/place/?q=place_id:ChIJ707pDdm2t4kRIEll5Id37kw",
+    "googleMapsUri": "https://maps.google.com/?cid=5543499616875792672&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "reviews": [
+      {
+        "author": "Deborah McIvy",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVrbqKiT5o48geAFE8349VQBaX2i49uKBWKRx67B0rT7PGlu7M6PA=s128-c0x00000000-cc-rp-mo-ba2",
+        "authorUri": "https://www.google.com/maps/contrib/114956453196084476667/reviews",
+        "rating": 5,
+        "text": "I have now been living here at Park at Pentagon Row for one full year now, and I can honestly say it’s been an enjoyable year! I picked this place amongst all other apartments in this area ( believe me, I have visited majority of them), because it felt like home and a great family!  I am always treated with respect and welcomed with a friendly smile especially by Katrina Clark.  The maintenance crew will get the job done immediately!  The parking, mini mart, gym, pool, and the amenities/events are suitable for all of your needs!! You can’t beat the location ( near metro, mall, restaurants, and work). I truly enjoy coming home to a nice and quiet place. The other residents are friendly and respectful of you and the property. I never had any problems since I have been living here. I feel very safe and secure! I am trying to upgrade to a bigger apartment. I highly recommend Park at Pentagon Row.",
+        "publishTime": "2024-03-19T11:35:53.291036Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sChZDSUhNMG9nS0VJQ0FnSUM5dnRDZFJREAE!2m1!1s0x89b7b6d90de94eef:0x4cee7787e4654920",
+        "source": "google"
+      },
+      {
+        "author": "Alicia",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a/ACg8ocI2zFHbcx7AhIDrXroRBCzNyTpWFIynZhRG_vBPdmC9E_llmQ=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/108387472798298347209/reviews",
+        "rating": 1,
+        "text": "Do not move here. Ever since Cortland took over, it’s a nightmare. Like others have said, there’s constant loud construction to the point that I can’t hear coworkers on Zoom calls when the volume on my computer is all the way up. It’s incredibly disruptive and so loud I get headaches.\n\nThey’ve closed all the amenities that we pay for so we aren’t able to use the pool, fitness center, or anything else we’ve paid for. Who knows when they’ll be accessible again since the pool has been closed for months and they haven’t started. Their alternative is being able to use amenities in a building about a mile away. It’s such a joke since there’s no parking, is inconvenient, and now overcrowded.\n\nManagement will literally tell you they don’t have time to respond to your call but somehow have time to send multiple messages a day about water outages, closed elevators, and other inconveniences.\n\nI used to like living here but now I can’t wait to move. They’ve raised the rent and made it a worse place to live. My neighbors are all moving out because of how low the experience has gotten. You can find much nicer places to live in the area at a lower or equal price point.",
+        "publishTime": "2025-12-26T16:40:55.586273705Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2t4dWJVNUhXVFZPWmtSYVptWnNiRzVHZG5oRFlYYxAB!2m1!1s0x89b7b6d90de94eef:0x4cee7787e4654920",
+        "source": "google"
+      },
+      {
+        "author": "Symphoni Bush",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVsXXY1qSkRgE41bT1LC9XGUhHOSWCtyyH6JHc1J9UtmwJf-8d3=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/101573811002896573960/reviews",
+        "rating": 1,
+        "text": "DO NOT MOVE HERE!!! This building was fine prior to it being purchased by Cortland. They raised the rent by $300+ a month when the building is outdated and amenities are severely lacking compared to other apartments in this area charging less. Their elevators are constantly down - expect to wait up to 15 minutes to be able to get to the parking garage. The freight elevator was down for over a month, and they did not communicate to residents with scheduled move out dates. Gym AC was constantly out, the pool is outdated and wasn't available for residents this entire summer.\n\nTheir leasing office was terrible during my lease renewal/move out process. Didn't provide any lease renewal rate sheets, reached out a week after my notice date to tell me they can only renew for 4 months (I didn't notify because was intending to renew) and then hit me over the head in $700 rent fees for informing them a week late - mind you, this fee was never communicated to me while providing my notice to vacate, nor when I was provided a breakdown of my move-out costs. They gave me 3 days to decide if I was going to renew for 4 months or move out.\n\nAfter living in 3 different apartments with no issues for the last 6 years, this is hands down my worst experience with an apartment complex.  Quite literally the entire move-out process has been terrible and the leasing office's lack of communication has been a consistent problem. Only good things here are location and their maintenance staff -  you can 100% find a better apartment complex for the same or better price.",
+        "publishTime": "2025-10-28T22:31:25.783916999Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2xWSldFeEJhMmhuTFRoYU9WbHVhRFJSTlZGbFpXYxAB!2m1!1s0x89b7b6d90de94eef:0x4cee7787e4654920",
+        "source": "google"
+      },
+      {
+        "author": "Christian Delfin",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a/ACg8ocLZBFcYq17fk0FcKoFjTTH5IplK2FzVAOyMAOj8XyZFoTtiJQ=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/113709734769049758169/reviews",
+        "rating": 5,
+        "text": "You truly can’t beat the location of this apartment. While many residents mention the ongoing construction, it’s important to note that these upgrades are being done to improve the property overall. Management consistently communicates about construction schedules through email and text notifications, and the work is limited to standard business hours when most residents are typically away. Of course, this may be more noticeable for those who work from home, but the efforts to minimize disruption are clear.\n\nThe hallways and building entrance have improved tremendously compared to when I first moved in a year ago. The staff has always been responsive, and my maintenance requests have been handled promptly often almost immediately. I genuinely have no complaints about living here. The team has been attentive, proactive, and open to feedback, which makes a noticeable difference in the overall experience.",
+        "publishTime": "2026-02-27T05:39:56.552668334Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2xWRlZIbEdSM0JPUkhWQmJWZFRjMWxSUXpkVlpWRRAB!2m1!1s0x89b7b6d90de94eef:0x4cee7787e4654920",
+        "source": "google"
+      },
+      {
+        "author": "Caleb Pearson",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a-/ALV-UjXujtk2Fe1NxmuzXAuWr9uAk2PN81D_5ynfd8KOy2qjH839CCh6=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/109181715451654544687/reviews",
+        "rating": 2,
+        "text": "Building is pretty and staff seems nice enough. Tour was pretty straightforward, nice guy answered questions. Current construction on amenities and unities with no clear timeline or “one they can provide”. Also, their follow up is extremely lacking. Ignoring emails for multiple days from prospects is not a good look. If this is how they treat interested folks, imagine how they treat their residents…",
+        "publishTime": "2026-04-16T15:58:14.296310462Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT201Tk5HTXdVMHRtVWpCT2FYSmxVeTE0VFdnMGNVRRAB!2m1!1s0x89b7b6d90de94eef:0x4cee7787e4654920",
+        "source": "google"
+      }
+    ],
+    "reviewsUpdatedAt": "2026-06-25T04:20:13.943Z",
     "priceLevel": "",
     "tags": [
       "arlington",
@@ -521,7 +892,60 @@ export const SEED_EXTRA: Place[] = [
     "sourceQuotes": [],
     "rating": 4.1,
     "reviewCount": 426,
-    "googleMapsUri": "https://www.google.com/maps/place/?q=place_id:ChIJDbD0PCm3t4kRN_RDaE6ryFM",
+    "googleMapsUri": "https://maps.google.com/?cid=6037263653735232567&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "reviews": [
+      {
+        "author": "Amir Bel-Ami",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a-/ALV-UjV105Hkbz47YKl7Qp-TjGXHElGJQM1TUjLuZrJoWSjB-xhDTK9s=s128-c0x00000000-cc-rp-mo-ba3",
+        "authorUri": "https://www.google.com/maps/contrib/118308449527809068166/reviews",
+        "rating": 5,
+        "text": "I love this place! Location is amazing, as there is plenty of activity in the area. I don’t think you can find an apartment any closer to the airport than Quimby. 15 min walk and you’re in line at TSA.\n\nManagement is great! They organize monthly community activities. And communicate consistently about maintenance activities in the building. I did my tour with Desiree. Her energy and care is a big part of the reason I decided to move in. The Concierge, Lala is always welcoming and sweet. And she went out of her way to make my move-in process a smooth one. Also would like to acknowledge Arben and Tiffany for always greeting me good morning when I’m out early and good night when I get back late. Such simple gestures make this feel like home.\n\nI’ve been here a little under a year. But can definitely see myself staying for a while.",
+        "publishTime": "2026-04-16T13:32:37.582771116Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2tORVFVWlBaRnBLYVVWVFEwSlNOelZ5V1RBdGFVRRAB!2m1!1s0x89b7b7293cf4b00d:0x53c8ab4e6843f437",
+        "source": "google"
+      },
+      {
+        "author": "Terika Davis",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVCgzwaHPOO7pxl0t09-oSDrBDjzmx0_3TWRxRjFRxwjkbkIJ8=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/107172329137685754818/reviews",
+        "rating": 5,
+        "text": "I would like to take a moment to recognize Lalla at the front desk for her exceptional service. She consistently greets residents with a warm smile and a positive attitude that truly makes a difference in the atmosphere of the building.\n\nLalla is always helpful, attentive, and willing to go the extra mile to assist with any questions or concerns. Her professionalism and kindness do not go unnoticed, and she creates a welcoming environment for everyone who walks through the door.\n\nIt’s clear that she genuinely cares about the residents and takes pride in her role. Having someone like Lalla at the front desk adds so much value to the community, and I’m grateful for her continued support and friendly presence.",
+        "publishTime": "2026-04-06T21:29:55.574949873Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2taNlFsSlBZVXRWVjJodE9VaHhhbk5EUkVKb00xRRAB!2m1!1s0x89b7b7293cf4b00d:0x53c8ab4e6843f437",
+        "source": "google"
+      },
+      {
+        "author": "Dan S",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a/ACg8ocJsh4faoAuSmujiUrGKkVElc2ce9Qhj2S-dmnOuYm2flAI05g=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/115169982845636936840/reviews",
+        "rating": 5,
+        "text": "The concierge team, especially Arben and Lalla, is truly exceptional. They provide a warm and welcoming environment every day and go above and beyond to ensure residents feel at home. The maintenance team is equally impressive. Jackson and Francisco are incredibly responsive and professional, addressing any issues quickly and efficiently.\n\nThe apartments themselves are spacious and the neighborhood has greatly improved, with a lot of restaurants and activities close by, not to mention easy metro access.\n\nManaging an older building certainly comes with its own set of challenges, but the recent improvements have been noticeable and much appreciated. It is clear that there is a dedicated effort to modernize the space.",
+        "publishTime": "2026-04-13T14:06:32.088570276Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2t4cFpERkpkbFZRVEZWQlV6aEVabkJTWDA1cGFYYxAB!2m1!1s0x89b7b7293cf4b00d:0x53c8ab4e6843f437",
+        "source": "google"
+      },
+      {
+        "author": "Devine Nickelson",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a/ACg8ocI9sb6iAVfkXCOn463bvGlVGqNZnwkfoiYoBmQqBS4kJjOixQ=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/104357391476497384803/reviews",
+        "rating": 5,
+        "text": "Lalla consistently does an amazing job at the front desk. She’s always welcoming, with a warm smile that immediately makes you feel valued. Every time I’ve needed help—especially when trying to track down or locate a package—she’s been patient, attentive, and incredibly helpful. She goes out of her way to make sure everything is handled smoothly and efficiently. It’s clear she takes pride in her work, and her positive attitude truly makes a difference. I’m always happy to see her there!",
+        "publishTime": "2026-04-17T23:57:21.186747180Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT25jd1JtazVSM2szVWpnMWNIZzFNRGR3ZGxacFExRRAB!2m1!1s0x89b7b7293cf4b00d:0x53c8ab4e6843f437",
+        "source": "google"
+      },
+      {
+        "author": "Steve Knott",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a/ACg8ocKlVozU9lJqnPgzhl4b6iMZ38cS0WmMJAeNN4PTkthnUVsAPA=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/111311085355014021797/reviews",
+        "rating": 5,
+        "text": "Arben,  I wanted to convey my sincere thanks for the assistance you provided as Concierge during my recent move.  Your coordination to secure the loading dock at Quimby on 23rd on the 8th made it possible to accommodate the movers and save both the movers and me a great inconvenience, despite the very short notice you were given.  And your very resourceful problem solving to work around an unscheduled freight elevator shutdown during my final move out on the 13th also saved me a great deal of trouble and expense.\n\nIn both cases, you were very positive, professional, and accommodating, relieving everyone involved in a high-pressure situation.  Sincerest appreciation for your cordial service.",
+        "publishTime": "2026-01-26T17:57:36.086149881Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT21GSGR6ZDRPR2R3YUV4dlNIWXlaVXBaWTNaSGQwRRAB!2m1!1s0x89b7b7293cf4b00d:0x53c8ab4e6843f437",
+        "source": "google"
+      }
+    ],
+    "reviewsUpdatedAt": "2026-06-25T04:20:14.612Z",
     "priceLevel": "",
     "tags": [
       "arlington",
@@ -590,7 +1014,60 @@ export const SEED_EXTRA: Place[] = [
     "sourceQuotes": [],
     "rating": 3.9,
     "reviewCount": 129,
-    "googleMapsUri": "https://www.google.com/maps/place/?q=place_id:ChIJ_w3edNK1t4kRZT7D9weZpS0",
+    "googleMapsUri": "https://maps.google.com/?cid=3289203362364604005&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "reviews": [
+      {
+        "author": "kristin smith",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a/ACg8ocJjf3oqOi5VVohaT6dgMsgmuhj9fW8287NHObteb8zk-fOvsg=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/111654244189181827762/reviews",
+        "rating": 5,
+        "text": "I absolutely love living here. My home is amazing, the neighborhood is perfect for my son and I. The staff is so friendly from the leasing office to the maintenance. Michelle, Cindy and John (leasing) are the best. They stay on top of all your needs, they’re warming, responsive and polite. Kindo ( maintenance) is so kind, respectful and helpful, he goes above and beyond and gets the job done. 10 outta 10 highly recommend 🫶🏽😊",
+        "publishTime": "2026-04-15T01:51:09.555757510Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT25KTWFsVlZSbVZ1UW5aYU0yVm9RWFkyU1VaS1JWRRAB!2m1!1s0x89b7b5d274de0dff:0x2da59907f7c33e65",
+        "source": "google"
+      },
+      {
+        "author": "Frehiwot T",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a-/ALV-UjUjiOPVMe3twczvWNWMCNHsS2N5HpeGnxXXyVuw4o6MtbfI8oM=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/113294606386497008079/reviews",
+        "rating": 5,
+        "text": "I have been a resident of The Horizons Apartments for several years and have truly enjoyed my experience here. One aspect I’d especially like to highlight is the exceptional management team. They are attentive, responsive, and consistently address any requests or maintenance tickets promptly and efficiently.\nI would also like to recognize Mr. Thomas George for his professionalism and positive attitude. He is always courteous, approachable, and ensures that concerns are handled effectively.\nThank you to the entire team, and especially to Mr. Thomas George, for their continued dedication and excellent service.",
+        "publishTime": "2026-04-15T20:26:48.529054527Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2xkaVZ6TTJaVU13ZDJsaVNXWnhObkl3TFU5dlpuYxAB!2m1!1s0x89b7b5d274de0dff:0x2da59907f7c33e65",
+        "source": "google"
+      },
+      {
+        "author": "Julia Schroeck",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a-/ALV-UjULcBLkJJFgButGiS0STEta_RKauJLb9hS6iYwQLt3NqgYkZkNe=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/101463573235670860235/reviews",
+        "rating": 5,
+        "text": "I recently moved in about a month ago, and my experience so far has been fantastic. The entire leasing and move-in process was seamless and stress-free, which made a big difference during what can usually be a hectic time.\n\nThe management team has been incredibly friendly and responsive—Cindy, in particular, has been amazing to work with. She’s been my main point of contact and has gone above and beyond to make sure everything has gone smoothly.\n\nI’ve also been really impressed with how proactive the maintenance team is. It’s clear they stay on top of things, which gives me a lot of peace of mind. On top of that, the amenities are well-maintained and add a lot of value to living here.\n\nOverall, I’m very happy with my decision to move here and would absolutely recommend this community to anyone looking for a great place to live.",
+        "publishTime": "2026-04-15T19:40:22.787420425Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT21rM2FraG1jRWhJUVdkUGFETkhibTVtUlZKMGNuYxAB!2m1!1s0x89b7b5d274de0dff:0x2da59907f7c33e65",
+        "source": "google"
+      },
+      {
+        "author": "Urszula Velez",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a-/ALV-UjUj6GsoKUGu_dwXioSIya3gq1nH_knfeOWmq1SwyNnsquxC6pd9_g=s128-c0x00000000-cc-rp-mo-ba2",
+        "authorUri": "https://www.google.com/maps/contrib/113897087714552969832/reviews",
+        "rating": 5,
+        "text": "Big shout out to Mr. Thomas George, the head of the Horizon's maintenance. He is experienced, kind and goes way beyond expectations to make sure your issues are resolved and you feel comfortable at your apartment.\n\nMy family lives here since October 2024, after our family grew to 2+2. Our first experience with the staff was mixed, but ever since the management and the head of maintenance changed, our experience has improved tremendously. Big thanks to Michelle for her leadership!",
+        "publishTime": "2026-04-17T14:26:49.138120025Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2pORU4wOTZMWEZYUWxOcFoxUlFOa0ZKU0daNloxRRAB!2m1!1s0x89b7b5d274de0dff:0x2da59907f7c33e65",
+        "source": "google"
+      },
+      {
+        "author": "Yongmei Gao",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a/ACg8ocL090nSVI7Xt-7mKntQ4irSUjLOUkzPDvDrhJMPWfpBDavdCw=s128-c0x00000000-cc-rp-mo-ba2",
+        "authorUri": "https://www.google.com/maps/contrib/102029896744179397044/reviews",
+        "rating": 3,
+        "text": "Could be a bit better\n\nOur family enjoys the big rooms. There is balcony with a beautiful view of neighboring buildings. There is a coffee machine that is 100% free (but sometimes breaks）. The neighbors pretty kindhearted. Additionally, the staff is very friendly. For amenities, our room had a dishwasher, clothes washer, and a clothes dryer.\n\nOn the other hand, the AC breaks down when you need it the very most and the rooms can be a little bit dirty.\n\nWould recommend staying here if you have children that go to Dorothy Hamm Middle School, as it is less than a two minute walk.\n\nEdit #1\n\nIt is currently less than 10 degrees in Fahrenheit. Our main heater in the kitchen just broke down. It’s practically freezing in the apartment, and hard to bear the frosty air. They gave us a warm space heater for compensation, but it is still extremely cold. We called the office and the other workers, but they couldn’t seem to fix it.",
+        "publishTime": "2025-01-22T01:38:01.553444Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sChdDSUhNMG9nS0VJQ0FnSURmNF8yNzh3RRAB!2m1!1s0x89b7b5d274de0dff:0x2da59907f7c33e65",
+        "source": "google"
+      }
+    ],
+    "reviewsUpdatedAt": "2026-06-25T04:20:15.283Z",
     "priceLevel": "",
     "tags": [
       "arlington",
@@ -659,8 +1136,61 @@ export const SEED_EXTRA: Place[] = [
     ],
     "sourceQuotes": [],
     "rating": 3.8,
-    "reviewCount": 405,
-    "googleMapsUri": "https://www.google.com/maps/place/?q=place_id:ChIJi_z0KCe3t4kR1kcIPlnlpJQ",
+    "reviewCount": 406,
+    "googleMapsUri": "https://maps.google.com/?cid=10710937985249462230&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "reviews": [
+      {
+        "author": "DF Knight",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a-/ALV-UjXEAjYx9Q9P2ZyYywmnl45M6L_N4aiGhAxGdXzN4jL3K5A2HwN-xg=s128-c0x00000000-cc-rp-mo-ba3",
+        "authorUri": "https://www.google.com/maps/contrib/115744854543953341718/reviews",
+        "rating": 5,
+        "text": "We have been living at the Cortland for several years. We absolutely love it. When we needed more space, we changed apartments instead of moving. The area is beautiful and it's convenient.\n\nThe bldg staff is responsive and they are quick to handle any and all issues. They also follow up to see if you're satisfied with your work. I report everything and they handle issues with the most professional responses. We have building activities that are posted. The grounds are nice and clean and we have the most beautiful wine and sanctuary on the top floor. I reserved it for Thanksgiving and my family was so impressed. We had a wonderful dinner then did a paint and sip. Pictures below.\n\nI highly recommend this property. It's perfect. My family is extremely happy.",
+        "publishTime": "2026-01-30T16:30:45.312274031Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT21GeVJ5MXpZbHBCUzBKSFoweFVRMWhmZFdSR2NHYxAB!2m1!1s0x89b7b72728f4fc8b:0x94a4e5593e0847d6",
+        "source": "google"
+      },
+      {
+        "author": "Derekt Escobar",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a-/ALV-UjX1zIIL0Pu_JDC9a6Jh3ZJgx8FynqYfkY1xbSKungJ2mOp2Kc4=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/109250765970068756472/reviews",
+        "rating": 5,
+        "text": "Settling into a new place is always a challenge, especially when migrating for professional reasons. After moving from Mexico, I began searching for a home and started the rental process within my first week in the United States. I completed the leasing process by the end of my second week and moved into my new home at Cortland Pentagon City just two weeks after arriving. The entire leasing process was efficient, clear, and highly organized, giving me great peace of mind from day one.\n\nI would like to highlight the invaluable support of Jennifer Romero, whose excellent management and constant guidance at every step allowed me to resolve all my concerns. Her assistance was instrumental in helping me establish my new home without any setbacks. It is truly a pleasure to join an organization with such a professional team. I am very happy with my new home and excited to begin this new chapter!\n\nThanks again for your support.",
+        "publishTime": "2026-05-24T23:46:00.426438990Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT214a1VYQXplRkZFTTA0dFJUVmpSM1kxU1doT1kxRRAB!2m1!1s0x89b7b72728f4fc8b:0x94a4e5593e0847d6",
+        "source": "google"
+      },
+      {
+        "author": "Najee Diallo",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a-/ALV-UjU8VKEJmVFxfYylmhea5UaONOyGJN2Fr8L5h8TImOxSJRnzqUIi=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/105409579384342161669/reviews",
+        "rating": 5,
+        "text": "Honestly, I’ve been at Cortland Pentagon City for about six months now, and I’m really happy with it. You can’t beat this location—being able to just walk to the Metro, the mall, and all the food spots nearby makes such a huge difference for my commute and my weekends.\nThe unit itself is solid, everything feels pretty modern, and the gym is actually decent—definitely better than a lot of other places I looked at around here. Whenever I’ve needed a maintenance fix, the office team has been quick to sort it out, and they do a good job keeping the hallways and lobby looking clean.\nNgl the parking garage can be a bit of a headache when it's busy, and if you’re on the street side, you’ll definitely hear the city noise—but I guess that’s the trade-off for being in the middle of everything. Overall, though, I’m glad I moved here. Definitely worth checking out if you want to be right in the mix.",
+        "publishTime": "2026-06-05T17:05:57.416909988Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT210MloyMUVSRFJ2Y25VMU5VaFRPRkptTXpFeGVYYxAB!2m1!1s0x89b7b72728f4fc8b:0x94a4e5593e0847d6",
+        "source": "google"
+      },
+      {
+        "author": "Naomie Manimani",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a/ACg8ocJDiwNKpSVjvzoWvsRn8Np_d4jK0nXa8KaiRKNRnbF_HcwIaQ=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/117433673712005082397/reviews",
+        "rating": 5,
+        "text": "I recently toured Cortland Pentagon City and had a great experience. Molly was friendly, professional, and very knowledgeable. She answered all my questions and made the tour enjoyable and informative. The property is beautiful, and Molly's excellent customer service made an already great impression even better. Highly recommend!",
+        "publishTime": "2026-06-07T14:25:50.004822080Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2sxNE5GTkVkVXhXVlVsalRGbFRXSFF4UzBKTlNsRRAB!2m1!1s0x89b7b72728f4fc8b:0x94a4e5593e0847d6",
+        "source": "google"
+      },
+      {
+        "author": "Nathan Cleveland",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a/ACg8ocKllpOiY_kerALEipIoHbeVpqusQGFUZhLjp81wjEV-fPcPFg=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/109686532393850696086/reviews",
+        "rating": 5,
+        "text": "Living here has been an absolutely fantastic experience. The building offers an impressive range of amenities that truly elevate everyday living—everything is well-maintained, thoughtfully designed, and easily accessible. Whether it’s the modern fitness center, clean common areas, or inviting shared spaces, there’s a clear attention to detail that makes this place stand out.\n\nOne of the biggest highlights for me is how genuinely pet-friendly the community is. It’s not just allowed—it’s embraced. There are convenient features for pet owners, and it’s clear that both residents and management take pride in creating a welcoming environment for furry companions.\n\nWhat really sets this property apart, though, is the professionalism and friendliness of the management and staff. From day one, they’ve been responsive, respectful, and incredibly helpful. Any questions or maintenance requests are handled promptly and with care, which makes a huge difference in day-to-day comfort.\n\nOverall, this building strikes the perfect balance between comfort, convenience, and community. I would highly recommend it to anyone looking for a well-managed, pet-friendly place with great amenities.",
+        "publishTime": "2026-04-11T14:38:32.089713834Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2tzeU5HOUVOWEZuUmxJd1VuY3RTRkZ5UVZGb1ptYxAB!2m1!1s0x89b7b72728f4fc8b:0x94a4e5593e0847d6",
+        "source": "google"
+      }
+    ],
+    "reviewsUpdatedAt": "2026-06-25T04:20:16.025Z",
     "priceLevel": "",
     "tags": [
       "arlington",
@@ -730,7 +1260,60 @@ export const SEED_EXTRA: Place[] = [
     "sourceQuotes": [],
     "rating": 3.9,
     "reviewCount": 544,
-    "googleMapsUri": "https://www.google.com/maps/place/?q=place_id:ChIJIYYOSya3t4kRqwawENj4mao",
+    "googleMapsUri": "https://maps.google.com/?cid=12293130264761075371&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "reviews": [
+      {
+        "author": "Salam Aliyev",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a-/ALV-UjXJdt9d-qUAQSGLqciCZwKQWs2LV8P8fWjMptIyRMsk9KY8FaiK0g=s128-c0x00000000-cc-rp-mo-ba3",
+        "authorUri": "https://www.google.com/maps/contrib/103269732154779007231/reviews",
+        "rating": 5,
+        "text": "We've been living in Crystal Towers for nearly two years and are absolutely delighted with our choice. The balcony view is truly a 'four seasons' experience, offering a unique and beautiful natural panorama with each changing season. Our apartment is spacious, sunny, and incredibly comfortable. We also love the backyard, which is perfect for enjoying the outdoors. The community here is wonderfully friendly, and the building's maintenance service is remarkably prompt. We're particularly impressed with the recent management initiatives, including the elevator renovations and the ongoing project to replace the carpets and refresh the corridors. These improvements further solidify why we love living at Crystal Towers.",
+        "publishTime": "2025-04-04T05:02:23.746186Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sChdDSUhNMG9nS0VJQ0FnTUNJdmZEN2pnRRAB!2m1!1s0x89b7b7264b0e8621:0xaa99f8d810b006ab",
+        "source": "google"
+      },
+      {
+        "author": "Justin Stoddard",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a-/ALV-UjWrmPpfMNy2aJS-YOH73voMHXuty4Qtu9zfzgfHaMT5O0e7O1JLdw=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/105200795702543846331/reviews",
+        "rating": 5,
+        "text": "Fantastic and Outstanding! I just moved here for work and was a little blown away by all the apartment complexes. I toured several and they all had competing amenities. Crystal Towers had the best combination of everything for me, but that’s not what sealed the deal. Shelly was the one who showed me around and she was by far the best rep I worked with at any of the buildings. After seeing all the different options, I wanted to be where I was treated the best and Shelly made all the difference and was the biggest reason I decided to stay here. Shelly is warm, friendly, informative, didn’t pressure me and answered all my questions, and I’m happy to live in a place with a friendly face to say hello to. Thanks Shelly!",
+        "publishTime": "2026-06-07T19:57:02.514770588Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT25kQlFreHFZbEJYZEZkcmN6Um1VMngzWldOWFYwRRAB!2m1!1s0x89b7b7264b0e8621:0xaa99f8d810b006ab",
+        "source": "google"
+      },
+      {
+        "author": "R HYe",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a/ACg8ocLbD_YtWq9APLdsm8xmMVm-FU4feWJw8n7suZiT6IGlsulWqQ=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/104136784578306902838/reviews",
+        "rating": 5,
+        "text": "Helped my son move in two days ago, and Rebecca at the concierge made the entire process smooth and stress-free! She was incredibly helpful, patient, and attentive to all of our questions and needs during the move. She explained the temporary parking situation clearly and thoroughly, and also shared other useful information about living here. The area itself looks nice, safe, and very convenient.",
+        "publishTime": "2026-05-20T04:22:40.833349288Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2xWcVJVMUZUMGRQUmpBMGF6WnNXR3hzYjNZeFEwRRAB!2m1!1s0x89b7b7264b0e8621:0xaa99f8d810b006ab",
+        "source": "google"
+      },
+      {
+        "author": "Anthony",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a-/ALV-UjV7P0J33UAZoEl0gq6hKW2rU_vDQs3CihKbEyOiZ9mh2eMXa3o=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/102836796924942757227/reviews",
+        "rating": 5,
+        "text": "I moved in about a month ago and have been very happy with my experience so far and choice to live at crystal towers! The units are incredibly spacious and the new renovations on certain units are very luxurious. Shelly in the leasing office was immensely helpful and patient with my roommate and I as we considered the different layouts and finishes available at Crystal towers until we found just the right unit. Since moving in, the maintenance team, leasing office, and concierge have all been incredibly kind and helpful as we’ve needed things. Maintenance has been very quick to respond to the few small requests we’ve had since moving in.",
+        "publishTime": "2026-04-21T20:44:53.223203077Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2xoUVJHRTRNMFpvY0RCWWFGUkhVbmg1WlZoRVdtYxAB!2m1!1s0x89b7b7264b0e8621:0xaa99f8d810b006ab",
+        "source": "google"
+      },
+      {
+        "author": "Maria Payen",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a/ACg8ocIMyPWmPtFGnTm05RjvlF0EwQfw_wKCPk2bGt86BPolHWHG=s128-c0x00000000-cc-rp-mo-ba2",
+        "authorUri": "https://www.google.com/maps/contrib/116334691090872735003/reviews",
+        "rating": 5,
+        "text": "I’ve been living at Crystal Towers for close to a year now, and I absolutely love it. The apartments are spacious, the amenities are fantastic, and the staff is awesome. It’s a huge apartment complex with two towers (North and South), and despite the number of apartments the staff oversees, they do an excellent job, it’s impressive.\n\nI’ve had two minor maintenance requests, and they were handled right away. We are literally a 5-minute walk to the metro, there’s a Whole Foods down the road, and many restaurants and parks nearby. If you work at the Pentagon, you can even walk there! The location is just so great.\n\nAbout the negative reviews: I read them prior to moving in, but I trusted my friend who recommended the apartments because she’s bougie and lived here too. Most negative comments are from Airbnb guests (you will see Airbnb guests at most apartments in this area), so they don’t give a fair assessment if you’re looking to actually live here. Also, I’ve never seen a rodent or cockroach problem, so that was shocking to read.\n\nI recommend living here 1000% if you’re set on living in Crystal City.",
+        "publishTime": "2026-03-28T12:55:16.696678972Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2xCTk1uSktYMVo2V0d4VlprRnZRbXRWWHpoS2JHYxAB!2m1!1s0x89b7b7264b0e8621:0xaa99f8d810b006ab",
+        "source": "google"
+      }
+    ],
+    "reviewsUpdatedAt": "2026-06-25T04:20:16.633Z",
     "priceLevel": "",
     "tags": [
       "arlington",
@@ -800,7 +1383,60 @@ export const SEED_EXTRA: Place[] = [
     "sourceQuotes": [],
     "rating": 4.1,
     "reviewCount": 275,
-    "googleMapsUri": "https://www.google.com/maps/place/?q=place_id:ChIJUUF3wyi3t4kRZ5YNGygeqhI",
+    "googleMapsUri": "https://maps.google.com/?cid=1344920596324914791&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "reviews": [
+      {
+        "author": "Jen Newmeyer",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a-/ALV-UjXVx3-jdg-LpN1L2Aq8ynkZPpVmYXih7P1tfMuB1kgtiAPFRD8LUw=s128-c0x00000000-cc-rp-mo-ba2",
+        "authorUri": "https://www.google.com/maps/contrib/117160136830877217605/reviews",
+        "rating": 4,
+        "text": "I've lived at Crystal Plaza for four years and have thoroughly enjoyed it. The spacious apartment layouts can't be beat. Honestly, it's rare to find such roomy spaces and large balconies! The staff are thoughtful and kind (s/o to Carolyn, Cameron, Ivana, Antonio and all the maintenance staff) and the new management under Josephine Turkman has really been a positive change. Things are fixed quickly, notices come out promptly, and there are even emails about community events and activities such as metro closings and city development meetings.\nIt's an old building, so there are the expected quirks... elevators sometimes go out, water pipes need to be fixed, etc. But overall, it's really infrequent and things are repaired swiftly. Honestly, the maintenance staff can't be beat. Most of the time, I have same day response!\nThe best thing about CP (besides the community events like free breakfast, holiday parties, Mother/Father day treats, and wine club) is the pool! Oh, the glorious pool. The largest I've seen of any apartment complexes here and such lovely landscaping. Over the summer, I tried to spend as much time there as possible.\nThere is a really nice gym with adjoining yoga room. Free coffee (20 cups per month), plus spaces to work and read. The shared library is extensive!\nThere is a two-pipe heating and cooling system (again, old building) in which there are a few days of either no heat or no A/C but the benefits outweigh this somewhat unpleasant issue.\nIt's centrally located, literally a block from the metro, close to lots of convenient eateries, and Whole Foods. The Alamo Cinema, bowling, the Water Park are all nearby as well as the Long Park for a refreshing run or walk. Only one metro stop away from National airport.\nHighly recommend Crystal Plaza!",
+        "publishTime": "2026-03-04T19:42:05.729994255Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT210TU56QkpNR0Z0Vm5kaFVVUlNaVVo1ZFdVemJHYxAB!2m1!1s0x89b7b728c3774151:0x12aa1e281b0d9667",
+        "source": "google"
+      },
+      {
+        "author": "Lance Wei",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVMsIgz7U5f7WWx5ceOSOKv9onuhX06vvUDvVOe2apH29ztkI4=s128-c0x00000000-cc-rp-mo-ba2",
+        "authorUri": "https://www.google.com/maps/contrib/110753505723120812702/reviews",
+        "rating": 1,
+        "text": "After parking at the “One Hour Parking” spot at 2:52 PM, I received a tow-away notice just 10 minutes later at 3:01 PM. The tow truck arrived shortly after (luckily I had already left, otherwise I would have had to fight it in court).\n\nThere was no indication that this parking space required a permit, yet they used that as an excuse to tow my car.\n\nI noticed that comments about encountering the same issue were posted quite some time ago, but they haven't been addressed. If you have to come, please obtain a permit.",
+        "publishTime": "2026-01-14T13:52:18.583902647Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT21GWFFtZzVSMUozTUZZemJVSnBlUzExYlRCTE9WRRAB!2m1!1s0x89b7b728c3774151:0x12aa1e281b0d9667",
+        "source": "google"
+      },
+      {
+        "author": "H FABLESS",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a-/ALV-UjWMwrwejq4Yk1ACvVi6SAp0Vdmdmps4Z2bN9eOfbdMGbJFu6O9z=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/107743586190561587752/reviews",
+        "rating": 5,
+        "text": "I have called Crystal Plaza Apartments home for the past two years, and my experience living here has been nothing short of excellent. From day one, the level of service and professionalism has truly stood out.\n\nThe concierge, Meron, is incredibly knowledgeable, professional, and always willing to help. She has assisted me countless times  from recommending great restaurants to helping locate local businesses and grocery stores. She has also helped my family and friends discover the area, and she truly represents the welcoming face of Crystal Plaza.\n\nThe leasing office team is outstanding as well. They consistently go above and beyond to find the best options and support residents. The management team genuinely cares about the community and does an amazing job maintaining the property and creating a beautiful living environment.\n\nIf you are in the Arlington area and looking for a place to live, I highly recommend giving Crystal Plaza a try  you won’t regret it.",
+        "publishTime": "2026-03-25T02:34:42.321933874Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT25GemJEVkJaVUZ1WVhGelVEUlRUalZVWTI1WFlsRRAB!2m1!1s0x89b7b728c3774151:0x12aa1e281b0d9667",
+        "source": "google"
+      },
+      {
+        "author": "Zénon MAGETE NDIZEYE",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a/ACg8ocK3oTposu1AvxG3MFPx7HzORvvAI95eMvegQWitOGszuq8M0A=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/117066758761212443510/reviews",
+        "rating": 5,
+        "text": "I like the way the personel takes care of us especially Ms Meron and Ms Bell. They are so quick in answering my queries. The apartment is so comfortable and Ms Sharon is also doing a great job in that she makes sure we are informed on each move they take. So thank you very much and keep it up!",
+        "publishTime": "2026-01-30T18:01:56.391799879Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT21KdVEzSnhlVXBtYjI5aFJVTXRZalpyTlRkZldYYxAB!2m1!1s0x89b7b728c3774151:0x12aa1e281b0d9667",
+        "source": "google"
+      },
+      {
+        "author": "M R",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a-/ALV-UjUVorFWuHYjEToPXM2CbCxDTqUPrFaFI0eiHuSy2xPqM_1HSSWA=s128-c0x00000000-cc-rp-mo-ba3",
+        "authorUri": "https://www.google.com/maps/contrib/104830613179219443862/reviews",
+        "rating": 5,
+        "text": "You can park only in surface parking area, if you've pre paid/pre arranged the parking (else they'll tow it). Once you checkin you can only use the 15 min parking spot, that's it. Otherwise location is awesome. There are community food stalls on 2 days of the week and awesome brunch options 5 minute walking distance. Easy to get uber if you select an easy place.",
+        "publishTime": "2026-05-12T19:15:49.242292798Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2toeVMyZFJVWEZHVEhOTlNuWkhTRE5LT0dOa1dGRRAB!2m1!1s0x89b7b728c3774151:0x12aa1e281b0d9667",
+        "source": "google"
+      }
+    ],
+    "reviewsUpdatedAt": "2026-06-25T04:20:17.198Z",
     "priceLevel": "",
     "tags": [
       "arlington",
@@ -870,7 +1506,60 @@ export const SEED_EXTRA: Place[] = [
     "sourceQuotes": [],
     "rating": 4,
     "reviewCount": 121,
-    "googleMapsUri": "https://www.google.com/maps/place/?q=place_id:ChIJpU2eH6e3t4kRpORtEOlPQYs",
+    "googleMapsUri": "https://maps.google.com/?cid=10034389307179787428&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "reviews": [
+      {
+        "author": "Sam",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a/ACg8ocKFryGB6J9IioqP6gQqZbJ8AH1WPjUyYUY0yYn_OzFUQ67T=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/116989129756272584023/reviews",
+        "rating": 5,
+        "text": "I had a really great experience working with Krista Ashcraft during my apartment transfer at Sage. I originally thought I would be moving out, but later decided to transfer to another unit within the building, and Krista was incredibly helpful throughout the entire process.\n\nShe took the time to explain everything clearly, helped make the transition much easier than I expected, and was always quick to respond whenever I had questions. The timing of everything could have made the process stressful, but she helped work things out smoothly and made me feel much more comfortable during the transition.\n\nI truly appreciate all of Krista’s patience, professionalism, and support. It’s clear that she genuinely cares about helping residents and making the process as easy as possible. Thank you again, Krista!",
+        "publishTime": "2026-05-25T22:14:33.831326901Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2s1VE1sOHRlRmN5YzNVelduRmljM1JRZG1scGFFRRAB!2m1!1s0x89b7b7a71f9e4da5:0x8b414fe9106de4a4",
+        "source": "google"
+      },
+      {
+        "author": "Yue Zhang",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a/ACg8ocIx21g_wTZ1VMQ-ftMNGedlAhVJEFQYKIvH3qitRIxheg2ZjA=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/102126826620106690910/reviews",
+        "rating": 5,
+        "text": "Huge thank you to Krista Ashcraft for helping me with my apartment transfer at Sage! I had originally planned to move out, but later decided to stay and transfer to another unit. Krista went above and beyond to help make the process smooth and simple, even with the timing complications on my end.\n\nShe was extremely helpful, responsive, patient, and professional throughout everything. Moving can be stressful, but she made it so much easier for me. I’ve lived at Sage for 3 years and really appreciate all the support she gave me during this transition. Thank you again, Krista!",
+        "publishTime": "2026-05-25T22:10:40.322984699Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2xWb1Z6UnFkWFZtT1RoSFNsWlFhUzAxTUZSM1VuYxAB!2m1!1s0x89b7b7a71f9e4da5:0x8b414fe9106de4a4",
+        "source": "google"
+      },
+      {
+        "author": "Armando Gomez",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a-/ALV-UjXVFZSKUwy4owTK7CaOmIX7lkwuV5XtwuqebFcYg8sjhO6TnKPd=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/118101562373334546617/reviews",
+        "rating": 1,
+        "text": "Lived here for almost 3 years. Multiple times a year the AC or Heat would break and management would give space heaters or fans but it would be a month. For the outage, management promised a partial refund of utility charge for the month of March. We moved out in April and never received this partial refund and while I called them, emailed, and tried to speak with the staff (Isabel took the call and said her manager Krista would get back to me) in person over the next month, they never adjusted it even after multiple times saying they will take care of it.\n\nNow it’s been almost 2 months and they have sent the bill to collections even though we paid the final move out amount that was emailed to us after our move out even with the non adjusted balance.",
+        "publishTime": "2026-05-24T18:34:18.676131986Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2xGNk5YRlhZMUZIUVdWR1FXbEtWbVZUYTIxdFZrRRAB!2m1!1s0x89b7b7a71f9e4da5:0x8b414fe9106de4a4",
+        "source": "google"
+      },
+      {
+        "author": "Sherry Zheng",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a-/ALV-UjU95pbpGUNZr8zD9kfNQfN9-2cSajEwgUKz4SvgARMDP4iYz-0=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/114538702579547704061/reviews",
+        "rating": 5,
+        "text": "The building is really nice with technological amenities and my apartment as one of the biggest and the best one I’d really like it. The leasing office is always helpful and friendly. Maecy and Andrea and Erika are always there when you need help. Maintenance is one of the fastest and mostly come in one day to fix your problem. The only problem is not about the building, but about nearby constructions. Wish they could finish it asap",
+        "publishTime": "2025-04-10T04:54:56.938672Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sChZDSUhNMG9nS0VJQ0FnTURJM29MSVhBEAE!2m1!1s0x89b7b7a71f9e4da5:0x8b414fe9106de4a4",
+        "source": "google"
+      },
+      {
+        "author": "Ancient Hedgehog",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a-/ALV-UjXIAbCnjBHKbmBec00qgGVlQfP2dw7ywvkpHg0JT89b0_90azs=s128-c0x00000000-cc-rp-mo-ba2",
+        "authorUri": "https://www.google.com/maps/contrib/100855292324707820476/reviews",
+        "rating": 1,
+        "text": "I have been living here for over six months now. At first it was nice for a month when the building was half occupied, but it has gone downhill since then.\nThere are a lot of noise issues with repeat offenders having parties until 3am on the weekends.\nIn the bedroom, the noise echoes and bounces around so even if neighbors drop things, open the closet or move furniture around, I can hear most of them. I can let normal life noise go like cars, dogs, and storms, but due to talking and yelling my sleeping cycle has been messed up.\nThe rooftop is always covered in trash like empty beer bottles and cigarettes which is a non-smoking building.\nTenants leave food waste in open containers and large amounts of pet waste in the trash room over just throwing it down the trash chute. Especially pet ones smell horrible.\nYou can smell cigarettes and marijuana in the halls and elevators as well.\nPeople slam their doors pretty consistently all through the night as well. I think they are students so they don't have to get up at 5 am to commute to work.\nThere are a lot of packages just left all over the ground floor with some left right outside the door where any passerby can grab it.\nThe elevators are always busy so add an extra 10-15 minutes to your commute as well especially during mornings and 4-6pm.\nAs there are more than 2-4 people per room so all the amenities are taken up every day so you won't be able to use any of them and they are always left covered in trash left by tenants.\nThere is no 24hour concierge so food and packages are just left anywhere delivery people can find. For sometimes days at a time.\nThe rent is very high for a luxury apartment with our the niceties of other similarly priced apartments.\nThe leasing team cannot do anything as I think the owner basically tied their hands with policies.\nI am just waiting for my lease to be over to move to another apartment in the area.\nThe parking is twice as much as reserved parking at other communities.",
+        "publishTime": "2024-05-11T00:14:31.263214Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sChZDSUhNMG9nS0VJQ0FnSUNsME5Ib2VnEAE!2m1!1s0x89b7b7a71f9e4da5:0x8b414fe9106de4a4",
+        "source": "google"
+      }
+    ],
+    "reviewsUpdatedAt": "2026-06-25T04:20:17.899Z",
     "priceLevel": "",
     "tags": [
       "arlington",
@@ -939,7 +1628,60 @@ export const SEED_EXTRA: Place[] = [
     "sourceQuotes": [],
     "rating": 3.6,
     "reviewCount": 291,
-    "googleMapsUri": "https://www.google.com/maps/place/?q=place_id:ChIJf7b3cUWxt4kRwlDBCY9o_Ck",
+    "googleMapsUri": "https://maps.google.com/?cid=3025408013239406786&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "reviews": [
+      {
+        "author": "Denise D.",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a-/ALV-UjXyYl_KNLN8abJXDFuJ0aHdlBVVqTo-NGSnqWjGJAM3shzMfPtz=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/105958657402930947447/reviews",
+        "rating": 1,
+        "text": "Worst Building in the Best Location!\n\nIf I could give zero stars, I would. We’ve lived abroad and in multiple states, and The Citizen is by far the worst building we’ve ever experienced. We signed an 11-month lease but moved out 6 weeks early due to constant issues. Management refused to work with us when we tried to break the lease early, so we ended up paying rent on an empty apartment.\n\nIn 10 months, we filed 24+ maintenance requests plus emergency calls for: leaking toilets, burst pipes, broken/cheap flooring, a dryer that took months to replace, thermostat failure in the middle of summer, months without proper hot water (after they refused to replace the boiler), black residue coming from drains/faucets, pest infestations (ants covering the bathroom walls and ceiling despite weekly pest control), unsealed windows letting in rain, and even a burst HVAC that flooded our closet and ruined belongings.\n\nOn top of that, the walls and windows aren’t sealed properly - cold air poured in during the winter, driving up our heating bills significantly\n\nThis building is not ADA friendly as evidenced by our elevator being out for over three months - imagine hauling groceries and a stroller up multiple flights of stairs.\n\nThe garage constantly floods with dirty water from open pipes and has no real drainage, leaving puddles everywhere. The package room is disorganized and chaotic; packages are often left outside where anyone can grab them. The recycling area is a disgrace, always overflowing and filthy.\n\nThe property is poorly maintained overall: broken mailboxes, constant fire alarms, hazardous amounts of bird droppings (loudly power-washed weekly, only to return), and even dead birds left for days. We once had a dead bird outside our apartment and were told to either wait three days for maintenance to remove it, remove it ourselves, or ignore it.\n\nMost alarming: 14+ police cars and 20+ armed officers once surrounded the building. Management sent no email, text, or alert to residents. I had to hide in the bathroom with my child while my husband stayed away for safety.\n\nThe “amenities” are unreliable: gym equipment frequently broken, the sauna never worked, and the pool opened dirty and wasn't unusable. Utilities are billed nearly 2 months late, so don’t expect your full deposit back.\n\nThe only positive is the Shirlington location. It has great restaurants, parks, and easy access to DC but no location is worth the stress, safety risks, and neglect here.\n\n⚠️ Bottom line: Great location, but you’ll regret every rent payment. Avoid at all costs.",
+        "publishTime": "2025-08-18T18:25:08.092911800Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT25JelZFY3hVRU5ZYjBZNGF5MVhkMGszVUV3ME5HYxAB!2m1!1s0x89b7b14571f7b67f:0x29fc688f09c150c2",
+        "source": "google"
+      },
+      {
+        "author": "Dan",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a-/ALV-UjUj2Tc-SkTDsjAc69Vrad7Nimf4kaEgByXl4VKwFmbqT25gRHk=s128-c0x00000000-cc-rp-mo-ba2",
+        "authorUri": "https://www.google.com/maps/contrib/110214184065583392658/reviews",
+        "rating": 5,
+        "text": "I just renewed for my second year. The team here is phenominal.  I recently had an issue with my A/C system.  The Maintenence team identified the problem and replaced the entire unit within three days of the initial report.  No runarounds or delays or half baked repair attempts.  I haven't experienced any safety issues or crime, any issues with pests or rowdy neighbors. The neighborhood is great and the staff are even better.  I look forward to the next year and anticipate renewing next year.",
+        "publishTime": "2026-05-31T21:21:47.526676667Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT21WcWRYRjRkbDlZVFhCNFNUTndhME13TTBVMmVuYxAB!2m1!1s0x89b7b14571f7b67f:0x29fc688f09c150c2",
+        "source": "google"
+      },
+      {
+        "author": "Ximena Marin Gutierrez",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a/ACg8ocIjAMUTBo1-W-CNF_OVVvHExm8sz4Vi0ZOn-hzkSILBrHrVHw=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/115631732345521198695/reviews",
+        "rating": 5,
+        "text": "I couldn’t be happier with my experience at The Citizen at Shirlington Village so far! From the very beginning, the entire process was smooth, welcoming, and stress-free. A huge shoutout to Maddie, Tarsha, and Jessie, who truly went above and beyond every step of the way. They were incredibly helpful with the application process, made move-in seamless, and were always available to answer questions or assist with anything we needed. Their professionalism, kindness, and genuine care made a world of difference and really set this place apart. I highly recommend this place to anyone looking for a great living experience!",
+        "publishTime": "2026-01-08T19:23:00.329499559Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT205eVUxUklSRUpVY1RseFZISktiV2hvVVUxZmFXYxAB!2m1!1s0x89b7b14571f7b67f:0x29fc688f09c150c2",
+        "source": "google"
+      },
+      {
+        "author": "Kylee OBrien",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a-/ALV-UjUlxtMJzgEX_jOvqfTCzEwPC8o0jhyYRZ9iC37Cv8QWEfhAhiE=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/116478491893271196035/reviews",
+        "rating": 5,
+        "text": "Been living here for a little over a month and I will say, there are no complaints I have about this place. I see a lot of people complain about bird droppings but…what would you like them to do about it? I personally love the crows outside of my balcony! I have had some maintenance requests and each were fixed the same day and in a timely manner, for the size of the building. The three woman in the office are amazing to work with, they are very friendly and answer any questions I may have. I love calling this place my home, it’s gorgeous and the community surrounding it is gorgeous as well. There are plenty of food places and even a grocery store nearby. If you’re thinking about coming to live here, do it!\n- The Clarksons.",
+        "publishTime": "2026-02-09T18:38:21.191334080Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2pkSGNtVjNORXBxWjJVMFRWQlRZVmhSWkU0NVlsRRAB!2m1!1s0x89b7b14571f7b67f:0x29fc688f09c150c2",
+        "source": "google"
+      },
+      {
+        "author": "Sam Chase",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a/ACg8ocLGujw9YBK9PcT5NJBs6TEkJBwsu2WEjrylp0SKAZvoCfr3DA=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/107315508741252806095/reviews",
+        "rating": 1,
+        "text": "Living at the citizen was pretty good. It’s leaving the citizen that has become a total nightmare.\n\nAn auto payment issue has turned into months of me trying to reclaim $1500 from them. They told me that they are going to keep it because they want to pay for damages to their flimsy wood paneling that broke from the floor. keep in mind, this was not part of any prorated rent, this was not part of my rent, it was a simple mistake that auto payment did . After months of trying to talk to them and then resending my check out three times supposedly, they have only given me half the amount. I moved out in July. I finally got my check in November and it’s not even for the full amount.\n\nThere is never anyone available to take your calls, they never want to see you. I’ve called them while standing in the office just to watch them not pick up. Their maintenance people are also really awkward. One of them would come to change the filter in my apartment and then stand there texting on his phone. The job was done. He’s standing in my house, not leaving after I asked him if he had anything else to do.",
+        "publishTime": "2025-11-04T15:33:32.528860853Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2kxQ1JVZFpkRVJFWkhVM1EycEVjVUp5ZWtGWU1rRRAB!2m1!1s0x89b7b14571f7b67f:0x29fc688f09c150c2",
+        "source": "google"
+      }
+    ],
+    "reviewsUpdatedAt": "2026-06-25T04:20:18.669Z",
     "priceLevel": "",
     "tags": [
       "arlington",
@@ -1009,7 +1751,60 @@ export const SEED_EXTRA: Place[] = [
     "sourceQuotes": [],
     "rating": 3.5,
     "reviewCount": 60,
-    "googleMapsUri": "https://www.google.com/maps/place/?q=place_id:ChIJ1eLpbrm2t4kRkBlGQYKE7y8",
+    "googleMapsUri": "https://maps.google.com/?cid=3454125134192187792&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "reviews": [
+      {
+        "author": "Erka Ch",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a/ACg8ocJo30XQfhmjsKAO5TfJvo6CVT5GqyaUZKpfhkLK6mmYezWwmA=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/115854373602958414474/reviews",
+        "rating": 1,
+        "text": "I had an extremely frustrating and costly experience with this leasing office. Due to the staff’s lack of professionalism and competence, I lost a significant amount of time and money.\nIn particular, an employee named Michael was very rude and unhelpful throughout the process. Instead of providing accurate information and assistance, he was dismissive and failed to handle the situation properly.\nBecause of their mistakes and poor communication, I was left without proper housing and had to stay in a hotel for 7 days while trying to find another place. This caused unnecessary financial strain and stress that could have easily been avoided if the staff had done their job correctly.\nOn top of that, the female manager was never available when needed. It was extremely difficult to reach anyone in a position of responsibility to resolve the issue, which only made the situation worse.\nThis experience was unacceptable. I strongly recommend that management take responsibility, improve staff training, and ensure that future tenants are treated with basic respect and professionalism.",
+        "publishTime": "2026-04-30T18:23:00.566665991Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2sxVWJtOUdlVVIzVEV4UU5YcHRSbUptVG5JdE1XYxAB!2m1!1s0x89b7b6b96ee9e2d5:0x2fef848241461990",
+        "source": "google"
+      },
+      {
+        "author": "Malak Arnous",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVM7uemaajK4A6ZwU3-9ArwW5mheMgQG9Tx0cDIEZeg9jVwjUMc=s128-c0x00000000-cc-rp-mo-ba3",
+        "authorUri": "https://www.google.com/maps/contrib/103105006004946045643/reviews",
+        "rating": 4,
+        "text": "After living at Penrose for 7 years I would love to share my experience to others who are thinking of moving in.\n-This apartment is CLEAN. Their standards are very high and you would never deal with any type of pests.\n-The building is completely secured and security cameras are everywhere. It’s not easy to get into the building.\n-Work orders are completed asap. You never wait for something to be fixed.\n-My apartment was spacious with multiple closets and a walk in closet. (2 bedroom unit)\n- Good location (minus the constructions on Columbia pike) it connects south Arlington with N Arlington , super close to DC.\n-I give 4 stars because not all staff were friendly, they don’t treat all residents the same, and they definitely don’t like kids.",
+        "publishTime": "2025-09-06T00:07:28.967103138Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2t0RFVHRkVUUzFaZEVReVVWSmpOVWRxTlU0dGFXYxAB!2m1!1s0x89b7b6b96ee9e2d5:0x2fef848241461990",
+        "source": "google"
+      },
+      {
+        "author": "Keerti Kadadevarmath",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a-/ALV-UjUmF4zisT3WZjrpbf8ULIG82fOaHYgQDzCwWPKFoBOS2l2i9UPY=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/102699517404232854864/reviews",
+        "rating": 5,
+        "text": "We had a truly positive experience living here. The property was consistently well-maintained .Leasing office team was always responsive and helpful. Their support whenever we had questions or needed assistance made our stay comfortable and stress free.",
+        "publishTime": "2025-05-09T15:01:08.102717Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sChZDSUhNMG9nS0VNNkExNkN2MDY2bUh3EAE!2m1!1s0x89b7b6b96ee9e2d5:0x2fef848241461990",
+        "source": "google"
+      },
+      {
+        "author": "Joseph Cipriano",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a/ACg8ocICstg1hAgGobYglohL4yUJ6haZROtorcoIA9zkYHhlGOewv_xn=s128-c0x00000000-cc-rp-mo-ba2",
+        "authorUri": "https://www.google.com/maps/contrib/111140968056129831386/reviews",
+        "rating": 5,
+        "text": "I recently moved into this community, and so far my experiences have been extremely positive. When I first toured the apartment, Michael was friendly and informative, and he sent me follow up emails with additional information that was not available during the tour. Prior to moving in, I encountered a few logistical challenges that could have delayed the process, however the leasing team, Michael and Toma, were accommodating and helpful throughout. Upon move in, my apartment was clean and smelled fresh, which is especially helpful for me due to allergy concerns. Thus far, all my interactions with employees were positive, including the leasing team, the front desk workers, and the maintenance staff. Everyone seems friendly and willing to help you quickly. As mentioned in other reviews, the location is highly desirable, with easy access to several useful amenities. Overall, based on my experience so far, I think this is a great apartment complex to live in, especially for those commuting to DC.",
+        "publishTime": "2024-05-03T22:19:24.569152Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sChdDSUhNMG9nS0VJQ0FnSURqZ2JTdDF3RRAB!2m1!1s0x89b7b6b96ee9e2d5:0x2fef848241461990",
+        "source": "google"
+      },
+      {
+        "author": "Dancing Queen",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a-/ALV-UjUJ5Q9FwPt0mjHMaNpIFBwpLjkKcWnihS2t_UvikDLa7LaIpIjENg=s128-c0x00000000-cc-rp-mo-ba3",
+        "authorUri": "https://www.google.com/maps/contrib/106237028825234009799/reviews",
+        "rating": 3,
+        "text": "I currently live here and all I can say is dont get an apartment in the front facing the park and columbia pike. People are there all day and all night! You will get no sleep. They play music there all day and sometimes even all night. There is construction constantly on culumbia pike. The apt is clean, some staff is nice, some isnt. They charge you for everything! Cant wait to get out!",
+        "publishTime": "2025-10-05T15:43:46.782617223Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT21nNFUzSnFkREI0WTBoWFR6ZzNiMGRQZEZveGJuYxAB!2m1!1s0x89b7b6b96ee9e2d5:0x2fef848241461990",
+        "source": "google"
+      }
+    ],
+    "reviewsUpdatedAt": "2026-06-25T04:20:19.268Z",
     "priceLevel": "",
     "tags": [
       "arlington",
@@ -1078,7 +1873,60 @@ export const SEED_EXTRA: Place[] = [
     "sourceQuotes": [],
     "rating": 3,
     "reviewCount": 18,
-    "googleMapsUri": "https://www.google.com/maps/place/?q=place_id:ChIJj7SJvW23t4kRmPsonfiRGuA",
+    "googleMapsUri": "https://maps.google.com/?cid=16148379910864960408&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "reviews": [
+      {
+        "author": "Ronni Morris",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a/ACg8ocKWMYTNpm6cGe9I42nPTekXYKlhyDk-PcoHMNKR0QBRpWfJEg=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/115419852966109043702/reviews",
+        "rating": 5,
+        "text": "I couldn’t be happier with my experience! From application to move-in, everything was seamless. Vauneese made the entire process incredibly smooth. She was attentive, efficient, and truly went above and beyond to ensure I was comfortable and satisfied with my new unit. Her professionalism and care made all the difference, and I’m genuinely grateful. I’m excited to call this place home!",
+        "publishTime": "2025-06-05T13:59:46.568167Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sChdDSUhNMG9nS0VNekswTzM1Z0tYdzNnRRAB!2m1!1s0x89b7b76dbd89b48f:0xe01a91f89d28fb98",
+        "source": "google"
+      },
+      {
+        "author": "Eliana Gagliolo",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a/ACg8ocIxh7IORVnE10qkkQzPeMGmMCRa5LgZamYgjdAzpjht_09L3g=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/117201915887372287860/reviews",
+        "rating": 5,
+        "text": "I’m so grateful for Vauneese, she has truly been amazing. From the moment we first connected, she’s been so kind, warm, and easy to talk to. She always responded quickly to any questions or concerns and made what could’ve been a stressful process feel simple and smooth. It honestly felt like she genuinely cared about helping me feel at home, which made such a difference. You don’t always come across people who are this thoughtful and on top of things. Thank you, Vauneese, for everything—you’ve been a real light throughout this process!",
+        "publishTime": "2025-05-28T18:24:56.831865Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sChdDSUhNMG9nS0VNU09tT0xPLTZiZDR3RRAB!2m1!1s0x89b7b76dbd89b48f:0xe01a91f89d28fb98",
+        "source": "google"
+      },
+      {
+        "author": "Pretty E",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a-/ALV-UjUGWwEkTqHxh67WgKoIW7flKeSoBAu3e_ivnJNNyVJzFYB5R-kP=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/110978954987308312006/reviews",
+        "rating": 2,
+        "text": "I had a tour today, and let me just say KEVIN is amazing. He was very honest about the property, and that is what I loved the most. Although the units are small, it is an nice property.Overall, my experience was great, thanks to Kevin.\n\n** UPDATE:\nThey told me I made too much, and when I showed proof that I did not make what they claimed, they said someone would get back with me. A week later was still denied due to me making too much. Which again was false. So I am not sure what the issue is. NICE property if its just you. Not suitable for a large family. The units are SMALL as hell. 1 bedroom is like a closet literally, no space for nothing. No lobby, no club room,  no packaging room, just elevator, so I would hold off on ordering anything. The leasing consultants could be better with answering the phones as well, and act like they are knowledgeable  about the property. Other than that its okay.",
+        "publishTime": "2022-03-11T11:09:55.319819Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sChdDSUhNMG9nS0VJQ0FnSURtaFpxYl9RRRAB!2m1!1s0x89b7b76dbd89b48f:0xe01a91f89d28fb98",
+        "source": "google"
+      },
+      {
+        "author": "Katrina",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a/ACg8ocJx3nX-btyW4Gjvy45ClE04hGreo8QBWT0b63NhQ6uWgSrcIfQ=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/107597657787425068611/reviews",
+        "rating": 5,
+        "text": "Jermisha was great!  In terms of viewing and assessing the property-she was knowledgeable, professional, courteous, timely, and responded promptly when I reached out.  I was able to determine what my income qualified me for, apply, and schedule a tour very quickly.  I ended up not renting here because there were no studios available on my timeframe.  But I still wanted to speak to the process.  Good luck!",
+        "publishTime": "2024-09-30T18:42:00.294423Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sChdDSUhNMG9nS0VJQ0FnSUNucDZXczZnRRAB!2m1!1s0x89b7b76dbd89b48f:0xe01a91f89d28fb98",
+        "source": "google"
+      },
+      {
+        "author": "Marie Edwards",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a/ACg8ocKPX1zAzqIA4dOUXHDLqW2zeapGECmwFds-AE3EJ9Zwh1ygsg=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/106742695761996473011/reviews",
+        "rating": 5,
+        "text": "I have no complaints about my unit whatsoever! Trinise was very nice and respectful when I met her upon moving in, she made sure that the move-in went as smoothtly as possible. If there is ever an issue she very helpful and prompt to the situation, she is very professional at all times, she listens to what her tenants has to say and moves quickly to assure that their concerns are being tend to and in a timely manner!",
+        "publishTime": "2022-08-03T19:31:48.254537Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sChdDSUhNMG9nS0VJQ0FnSUN1N2FHSXRRRRAB!2m1!1s0x89b7b76dbd89b48f:0xe01a91f89d28fb98",
+        "source": "google"
+      }
+    ],
+    "reviewsUpdatedAt": "2026-06-25T04:20:20.036Z",
     "priceLevel": "",
     "tags": [
       "dc",
@@ -1146,7 +1994,60 @@ export const SEED_EXTRA: Place[] = [
     "sourceQuotes": [],
     "rating": 4,
     "reviewCount": 58,
-    "googleMapsUri": "https://www.google.com/maps/place/?q=place_id:ChIJC7e_-4O5t4kRi_TBT-BWlsw",
+    "googleMapsUri": "https://maps.google.com/?cid=14742065951654671499&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "reviews": [
+      {
+        "author": "Matthew Vitarelli",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a-/ALV-UjXeBAvwoAGI859LoI-iFP2jF3vCaALa1cJYhW048rPfaf4SM-qV=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/117753218698402891843/reviews",
+        "rating": 1,
+        "text": "Do not move here! It looks wonderful while touring, but after moving in, a series of problems started to crop up.\n\nThere are frequently spills/messes/etc. in the elevator and shared common spaces. Residents will often smoke and spill alcohol in these spaces, contributing to overall bad odor and cleanliness.\n\nThe garage door is perpetually broken. They charge ~$300/month for parking in a \"closed\" lot, yet the garage door is often left open due to maintenance issues. They hire security to watch the entrance during these (long) maintenance windows, but oftentimes, there are no security guards present or the guard is asleep, leaving your car/any valuables inside completely unprotected.\n\nAdditionally, they will conduct maintenance without letting you know. I had to leave for work but could not drive out of the garage door because maintenance was ongoing--there was no notice given of any issue, and I missed an important meeting as a result.\n\nThe safety of the building is suspect. There were several instances of non-residents getting up to my floor and soliciting myself and my partner for money or food. It is unclear what/if anything is being done to deal with these issues, which are frequent.\n\nDo not be fooled by the seemingly nice amenities and relatively low rent--living here has been a disaster, and if I could go back, I would absolutely sign a lease with a better-maintained building.",
+        "publishTime": "2026-06-01T13:11:10.634274561Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT21KdVFXNXBaVzlvYlZaV1ZuQmpkRWxCYVZsc1QwRRAB!2m1!1s0x89b7b983fbbfb70b:0xcc9656e04fc1f48b",
+        "source": "google"
+      },
+      {
+        "author": "Amber Mayo",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a/ACg8ocLTBpLdyGLJhd8MYvk6QVsxrQyGkMNKUxpjRtpepCP7PNI1Kg=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/113740462407568192634/reviews",
+        "rating": 5,
+        "text": "Living at the Iris has been great! the staff really takes care of the building and always makes sure the hallways and shared areas are clean. The concierge staff is awesome and the Travis, the leasing agent is great He is quick to respond to emails and addresses any questions I bring to him in person quickly.",
+        "publishTime": "2026-02-05T22:31:57.047595975Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2pJeFdGRllTM05mVUMxU2RIVnlPRFppUmpkSWFuYxAB!2m1!1s0x89b7b983fbbfb70b:0xcc9656e04fc1f48b",
+        "source": "google"
+      },
+      {
+        "author": "John K",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a/ACg8ocKnNA4BRCLhwnqp0QP6tFE0l32y8PuILbavxQLqouThVzgI8ms=s128-c0x00000000-cc-rp-mo-ba3",
+        "authorUri": "https://www.google.com/maps/contrib/107222648278977725288/reviews",
+        "rating": 5,
+        "text": "The place isn’t as bad as some of the most recent reviews. I took a tour with the manager, saw a spill on the elevator and immediately sent a response team to address the cleanliness. Also, while touring I witnessed her pick up miscellaneous debris left in hallways. Overall, my touring experience was 5 ⭐️",
+        "publishTime": "2025-11-08T21:02:27.677804216Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2tObllsRlFkR1JZVEVJdFZVUTNia056UWpFNFUzYxAB!2m1!1s0x89b7b983fbbfb70b:0xcc9656e04fc1f48b",
+        "source": "google"
+      },
+      {
+        "author": "Lola Byers",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a/ACg8ocJ0az3NjFHkAcqjCsDTuiNRFruXB5WVgSagw6uVoR9YAr-seA=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/107499874025783871581/reviews",
+        "rating": 5,
+        "text": "When it comes to building they are amazing and very respectful. They get things done in a timely manner and the staff makes me feel safe. Well mannered team and they take care of us. I love my apartment and the amenities are beautiful. Can't forget, maintenance team is fantastic.",
+        "publishTime": "2025-12-17T19:17:46.553113255Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2sxQldVd3RObFk1ZGtwVWQwWnBjVXRsYVU1aFRtYxAB!2m1!1s0x89b7b983fbbfb70b:0xcc9656e04fc1f48b",
+        "source": "google"
+      },
+      {
+        "author": "D B",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a/ACg8ocJH14bpSb9E2tG4mqlOB3EYpayU_tAYe-6CvmN4CdQYzdQ5DA=s128-c0x00000000-cc-rp-mo-ba3",
+        "authorUri": "https://www.google.com/maps/contrib/112770128207873220769/reviews",
+        "rating": 5,
+        "text": "I’m going into my second year living at The Iris, and I’ve truly enjoyed every moment. It’s a quiet, well-maintained building with an incredible team—from security to housekeeping—who are always polite and professional. Being new to the area and anyone that knows the city shows it is definitely different than the countryside but the convenience is awesome. The property is consistently clean and welcoming, and the pricing is perfect, especially for what you get.\nThe location is unbeatable—everything you need is close by, and let’s face it, it’s the city! But what really sets The Iris apart is the team. Kim and her staff go above and beyond to make sure everything is taken care of or my questions. Their dedication makes a huge difference.\nI love the amenities, the stunning views, and the 24-hour concierge service, which has been absolutely amazing. Having lived in different apartments across the coast, I can confidently say The Iris stands out!",
+        "publishTime": "2025-09-05T07:51:11.853205956Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT25aM1ZYbEljMFoyVDJGMExVUjRRMVpNUzBkNFFrRRAB!2m1!1s0x89b7b983fbbfb70b:0xcc9656e04fc1f48b",
+        "source": "google"
+      }
+    ],
+    "reviewsUpdatedAt": "2026-06-25T04:20:20.787Z",
     "priceLevel": "",
     "tags": [
       "dc",
@@ -1215,7 +2116,60 @@ export const SEED_EXTRA: Place[] = [
     "sourceQuotes": [],
     "rating": 3.5,
     "reviewCount": 326,
-    "googleMapsUri": "https://www.google.com/maps/place/?q=place_id:ChIJx8Rfehu4t4kR2O79sGJFvy8",
+    "googleMapsUri": "https://maps.google.com/?cid=3440544930512891608&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "reviews": [
+      {
+        "author": "Jacqueline Wilson",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a/ACg8ocJ11_9F3DtEwYQ13j-wfFZB0kooUpeRJE_JQMTfoTprpdvn9g=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/117529556084327182990/reviews",
+        "rating": 1,
+        "text": "I just recently moved into the gale Eckington Apartments.\nIt's an upgrade from where I've lived in the past three years only due to the quietness on my floor. However, the leasing office is so unprofessional.\nI moved in on 12/01/2025\nThere were so many issues with my unit.\nThe air filter was finally changed after pretty much begging them. The air filter was black and covered with thick smutt.\nThe maintenance guy was embarrassed for me to see it. He tried to hurry out of the door with it, but I stopped him and asked if I could see the filter. It looked as if it had not been changed for years. The dirt from the filter was so thick it's stuck onto the air vents.\nI've asked several times for the two vents to be removed. I was told to put in a ticket. I've put in several tickets for these vents to be replaced since I have moved in 12/01/2026  it's now 3/25/26 those same vents are still in my unit, and it's causing health problems for me. I personally sat down with some guy that's always in his office with the doors closed.  I had to schedule an appointment to see him after putting in a ticket for tge work to be done that never got taken care of. Finally my appointment date came. I spoke to him about the vent, my washing machine and my wall sockets. He told me he would take care of my issues.\nI have less sockets working now than I did before maintenance came to do whatever it was he did. I have not bothered to complain about it because the leasing office acts as if it's bother to them when you have an issue with your unit. The washer machine issue... myself and a friend figured that out because maintenance kept saying nothing was wrong with the machine.\n\nNow there's an issue with someone entering my unit without authorization. I mentioned it to the leasing office 3/21/2026 I was told someone would get back to me on the following Monday, it didn't happen, Tuesday, no word from the office. Today 3/25/2026  I followed up about someone coming in to my unit. I was told it's being investigated and my unit is not the only unit that's being entered without authorization. It's being investigated. The only people that has access to these units are maintenance, and the leasing office.\nI was told by a tenant that some prior tenants still  their key fob to enter the building and to get on the elevator.\n\nWhen I called the police, now all of sudden the leasing office have all of the answers for the police. I called the police because I was told it's under investigation and my unit isn't the only unit. I asked when will they have any information for me I was told they wouldn't know.\n\nMy unit may be an upgrade from the past three years but the Gale Eckington leasing office is rude, disrespectful,  unprofessional and uncaring. However,  I must say in exception of one person in the leasing office.  There's a very nice,  professional, young man that takes the time to listen, without making you feel unimportant. His name is Adam. He always has a pleasant demeanor and willing to help anyway he can. There need to be more people like him in the office with his mannerism.\n\nThere is so much more that is displeasing about this leasing office. Until today I  havent been in the leasing office nor have I put in another ticket for anything, because its a waste of time.\nToday when I went to the leasing office... I was very sick and still is !\nThe only reason I left my unit was because  my son sent me a delivery. I figured I would deal with a leasing issue while I was on that floor. While there after dealing with lease issue that's when I asked about the information pertaining to my unit being entered.\nOnce again they tried to brush me off. I wasn't walking away quietly because I had reached the end of my limit and patience. These people tell you all good things to get you moved in... after that... you're on your own if you ever need something fixed. It may get done but you will be waiting. I'll just leave it there.",
+        "publishTime": "2026-03-26T08:27:05.590827733Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT25jeGVFWmxlRTFGVEZKZlIyRTVjVTVxV21sck9XYxAB!2m1!1s0x89b7b81b7a5fc4c7:0x2fbf4562b0fdeed8",
+        "source": "google"
+      },
+      {
+        "author": "Leadrew Nickens",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a-/ALV-UjX4jBCMFySyL81zsFD76vyUVFqNDLqKfZs8sXEnK4gcv1RagtLq=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/117847077853775148619/reviews",
+        "rating": 5,
+        "text": "Hello, you all let me tell you about Ms. Constant, she is a lovely lady. She’s highly favored with the Lord and she have a year to listen. She will help you in any type of way she can help you that’s reasonable she understand very professional. I love her as a professional and as a friend she helped me in several occasions where I didn’t know what to do where I go or how to deal with some situation when it came to my rent my bills or paperwork itself. I’m giving Ms. constant five stars. Because she deserve it in fact, she deserve a raise from her job. Not only that they need to Give Miss Conant the employee of the month award Good luck, Miss Costa continue to be the person that you are and helping people you know your assignment you know your mission. Your assignment is not over until God says it’s over. Love you always thank you for your help. My name is Leadrew Nickens I am a Residence here At the Gale’s Eckington Here in Washington DC",
+        "publishTime": "2026-05-19T17:35:15.410508570Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2xkWVZFcE9ZbmxYV1VWa2VrWTNOakZZWTNSSFUzYxAB!2m1!1s0x89b7b81b7a5fc4c7:0x2fbf4562b0fdeed8",
+        "source": "google"
+      },
+      {
+        "author": "Regina Renee",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a-/ALV-UjXdzE5mWu9TP9mVfuhHf7mroWv6ke_W6J08Ti-I5Dfxqh3u2TyX=s128-c0x00000000-cc-rp-mo-ba2",
+        "authorUri": "https://www.google.com/maps/contrib/102912406798349209075/reviews",
+        "rating": 1,
+        "text": "Dear Councilman,\n\nI am writing to you on behalf my Mother  resident Ward 5 to formally share several concerns regarding her community.\n\n[I'm writing on behalf of my mother who is elderly and disabled. Not only does she in form me about the mismanagement of the\nnow 3rd turnover of management which is when she says things has turned for the worst but I have seen with my own eyes .\n\nBack in 2023 I believe I was in the process of transferring residence. I toure Gale  Eckgington Apts. when it was still freshly kept and management was professional .\nI have visited recently here since the\nlast 3 years like my mother says and it\nis horrible.\n\nThe smell of urine is thick in the elevators even the garage  elevator.\nthe carpets are filthy in the Halls\nlooks like tenants with dogs are allowing\nthere pet to go right on the carpet.\nmatinance won't don't fill work orders\neven when called about it\nAnd big roach issues,\nmatinance theft of tenants property\nwhen not home.\ndestroying and leaving filthy\ndirt and grime behind.\nBecause if reported the tenant/my\nmother suffers because of the intimidation\nthe rental office inflicted by slighting\nand ignoring right to put in tenant\nwork order request.\nThere was just a merage of Police big\nshut down from what said to me by NG\nArmed shooter  in one of the Eckgton Apts.\n\nshe's now apart of a class action\nlaw suit on Eckgton  Apts\nthat confirms what she's been\nsaying and what I have seen with my own eyes.\n\nmy mother is also dealing with theft that may have taken place in her rental payments with Eckgton property management .\nBecause at one time my mother\nwas told by a rent office assistant\nthat told my mom she  had a\ncredit of $19,000 dollars.\nA rep. from Eckgton  Management\nreached out to my mother told her  he was just as confused about it and he needed to check more into it and get back to her.\nHe never did instead the numbers have\nnow jumped to 24,000 that now they're saying she owes . But it doesn't match her rental ledger.\nshe is now in need of a lawyer assist\nbefore a March date of 2026 concerning\nthis matter. She's reached out pro bono lawyers public defender lawyer to come represent in front the judge. They listen to her case but won't take on the case.\n\nunless the world is really going to a place where we don't care then everything I\njust shared doesn't even matter.\n\nI would appreciate the opportunity to hear your perspective on these matters and learn about any planned actions the city council is taking to address them. Thank you for your time and for your dedication to our ward.\n\nBest regards,",
+        "publishTime": "2026-01-20T07:41:36.239688923Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT25Kc1VqQkRValpSWmxWcWMwbEhiMkp0V0ZBMVduYxAB!2m1!1s0x89b7b81b7a5fc4c7:0x2fbf4562b0fdeed8",
+        "source": "google"
+      },
+      {
+        "author": "queen orato",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVqffOL9KOx70CFTFDNYLfW2e0vLuBw8Q25I75YuFg43B1Sc30T=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/107962319584433284440/reviews",
+        "rating": 5,
+        "text": "I recently moved here from out of state, so naturally the process could have been a bit stressful, but I wanted to give a huge shoutout to Adam on the leasing team for making everything so much easier. When I first came to visit, he gave me a tour of the property, and after I left, he stayed in touch throughout the entire process and addressed all of my questions and concerns. He was professional, communicative, and very accommodating from start to finish.\nI like my unit so far, and the staff and community have been very welcoming. I also want to recognize Monty from maintenance…he has been extremely helpful, especially with helping me get settled during move in. He also checked in on my unit afterward to make sure everything was running smoothly. Really grateful for such a positive move in experience!",
+        "publishTime": "2026-05-09T12:48:11.279984318Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT21aSFdFUjJZMlJMY1hrME5FaHdhMUZGWjJRNVIwRRAB!2m1!1s0x89b7b81b7a5fc4c7:0x2fbf4562b0fdeed8",
+        "source": "google"
+      },
+      {
+        "author": "Monica Diaz",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a/ACg8ocL0wBgJFXywsits6bGU7KvB1WqPS5jHaORtDVUMCwT0koBvsYM=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/117322373315678495184/reviews",
+        "rating": 5,
+        "text": "I've lived at the Gale for about 4 years now and I can definitely say since This new Maitnance man I believe his name is Davon came aboard stuff has being getting done in a timely fashion!! Meaning he gets the job done!! I went almost a whole year without a washer and putting in alot of service request with no response by old management now this new one things is moving much smoother but the best thing was hiring Davon because he definitely gets the work done!!",
+        "publishTime": "2026-05-15T16:32:23.370267567Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2xGdk1VaHBOREpXY2pWaVJDMUpOVkZqWW1SelVYYxAB!2m1!1s0x89b7b81b7a5fc4c7:0x2fbf4562b0fdeed8",
+        "source": "google"
+      }
+    ],
+    "reviewsUpdatedAt": "2026-06-25T04:20:21.392Z",
     "priceLevel": "",
     "tags": [
       "dc",
@@ -1283,7 +2237,60 @@ export const SEED_EXTRA: Place[] = [
     "sourceQuotes": [],
     "rating": 4.3,
     "reviewCount": 289,
-    "googleMapsUri": "https://www.google.com/maps/place/?q=place_id:ChIJMVtFFT24t4kRULstjjLqeHY",
+    "googleMapsUri": "https://maps.google.com/?cid=8536830596535401296&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "reviews": [
+      {
+        "author": "Leslie Turner",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a/ACg8ocKHmN7zlEmsDrBdX2w4isQV7XC5B29kTB1VRKlACaBPOUzNeg=s128-c0x00000000-cc-rp-mo-ba2",
+        "authorUri": "https://www.google.com/maps/contrib/111572517097068657970/reviews",
+        "rating": 5,
+        "text": "I’ve lived here for 6 months - no regrets! Very happy with the building and location. Concierge and maintenance staff are friendly and helpful. The amenities are great - especially the roof with great views and varied environments for calm/relaxation as well as fun. So much to do in the area and incredibly convenient with access to every kind of store/restaurant nearby. Rent is reasonable in comparison to other buildings I toured.",
+        "publishTime": "2025-10-06T23:02:15.419679321Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2xSMU1VRXpSMVZST0ZkMmNGSkZNbEIyY0hocVdXYxAB!2m1!1s0x89b7b83d15455b31:0x7678ea328e2dbb50",
+        "source": "google"
+      },
+      {
+        "author": "Julia Lattarulo",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVDWb491eRUOswmncxCk_JBCFb-lEq8E-hTI4hxtVOKd7plHVNg=s128-c0x00000000-cc-rp-mo-ba4",
+        "authorUri": "https://www.google.com/maps/contrib/102563820470934919790/reviews",
+        "rating": 5,
+        "text": "Stayed in the guest suite while visiting! So cute and close to everything. Bed was extremely comfortable and the studio was decorated nicely. Having the gelato and coffee shop down stairs was a game changer, made the mornings easy and there is a Starbucks right across the street. Whole Foods was right next door, easy to pick up snacks and such.",
+        "publishTime": "2025-10-02T22:14:03.367434615Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT25KMGNXWmlTa0ZJV2t4T2NYTjJaR05KUW5oSFZuYxAB!2m1!1s0x89b7b83d15455b31:0x7678ea328e2dbb50",
+        "source": "google"
+      },
+      {
+        "author": "Julie Johnson",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a-/ALV-UjWGyXi3bGo9_Jmu9UizkyrnzfQ8LfCjipfs-OZgsQkIp9zSKa0=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/110607809067330199756/reviews",
+        "rating": 5,
+        "text": "Delonte has been helping us out since he came to the Apollo. Not only is he very friendly and easy to talk to, he takes care of business. He has fixed numerous things in our apartment as well as problem solving issues that weren't obvious. He is kind, respectful, and REALLY good at his job. We always make sure he knows how much we appreciate him. He represents the Apollo in the best light possible.",
+        "publishTime": "2026-05-14T00:48:29.015179601Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT20xalRHVlBOelJTWm1OaU5XVmhVRzQwYVdOSWFsRRAB!2m1!1s0x89b7b83d15455b31:0x7678ea328e2dbb50",
+        "source": "google"
+      },
+      {
+        "author": "Thomas Holmes",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a/ACg8ocLr3pAk5yNIY1sXPv7K6hp1RlSxWUZqVxzjEG4lZFDj7mYm-g=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/101799730900689537606/reviews",
+        "rating": 5,
+        "text": "I went to view a couple of apartments on a random day no appointment and I was able to see the whole community that day. Front desk was very welcoming and with Jayda. She didn’t even ask if a had a time slot for a visit she went straight to the tour. She was so detailed and very friendly with answering all my questions. Immediately I knew this was the place for me. She didn’t rush my tour at all and I found that very professional giving that I didn’t have a scheduled tour. Since then I have moved in and glad I made this home. It’s very convenient area to be in. Everyone at the front desk no matter who is there is always in a good mood and very helpful with all the chaos going on in the lobby. So far my experience has been an easy 10/10.",
+        "publishTime": "2026-05-11T17:58:06.049982830Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2s4MU5GUXlZMlJxTFY5U05FVjVVRlZoVEdGQmJYYxAB!2m1!1s0x89b7b83d15455b31:0x7678ea328e2dbb50",
+        "source": "google"
+      },
+      {
+        "author": "Bri M",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a/ACg8ocLlHtvdtbHayAwSqo59qwE54cbYy1lnI8hq6vKnTJbHmAjVhw=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/112105943980348317133/reviews",
+        "rating": 5,
+        "text": "Michael and Delontae on the maintenance team are prompt and professional when responding to requests. They are also polite whenever I see them throughout the building. Their work helps keep the Apollo community a wonderful place to live.",
+        "publishTime": "2026-05-27T14:43:27.317982209Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2tRMFNUQnJZbUpIZGxONVVFNW9hVGxxVEdKaFgxRRAB!2m1!1s0x89b7b83d15455b31:0x7678ea328e2dbb50",
+        "source": "google"
+      }
+    ],
+    "reviewsUpdatedAt": "2026-06-25T04:20:22.123Z",
     "priceLevel": "",
     "tags": [
       "dc",
@@ -1352,7 +2359,60 @@ export const SEED_EXTRA: Place[] = [
     "sourceQuotes": [],
     "rating": 4.3,
     "reviewCount": 88,
-    "googleMapsUri": "https://www.google.com/maps/place/?q=place_id:ChIJu1sSFqO5t4kRy1C2LikSSOA",
+    "googleMapsUri": "https://maps.google.com/?cid=16161187230905684171&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "reviews": [
+      {
+        "author": "Antoinette Long",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a/ACg8ocJr_3LJYt9jqxQjH2tKI0xIlYcDM0WmWQL3tA4op_ac99eI2Q=s128-c0x00000000-cc-rp-mo-ba3",
+        "authorUri": "https://www.google.com/maps/contrib/106726898005249573334/reviews",
+        "rating": 5,
+        "text": "Kimeya was absolutely top notch. She is extremely knowledgeable about the community and made the entire experience feel welcoming and effortless. She answered every question with confidence and genuine care which made a huge difference in my decision.\n\nThe property manager was just as helpful and supportive throughout the process. I was especially impressed when the Sales and Marketing Associate called me right away to say congratulations on my new home. The follow up and quick turnaround were incredibly impressive and truly reflected how attentive and responsive the entire team is. Thank you Kimeya!\n\nAll Bozzuto standards were met and the four core values concern creativity  passion and perfection were clearly demonstrated throughout my experience. This was a true five star experience and I am genuinely excited to call this Bozzuto community home. Huge shout out to Team One501.",
+        "publishTime": "2026-01-30T16:23:23.336884147Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2xsWlQzZFhkRXhHUTNNd1EyRnVTVUZ4TnpoSlpWRRAB!2m1!1s0x89b7b9a316125bbb:0xe04812292eb650cb",
+        "source": "google"
+      },
+      {
+        "author": "Danny Martinez",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a/ACg8ocJ-kIFKmUIAQMpKRn3CbR39u-kp5hWihqkevkJVn8zbbci2Zg=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/107252633418267257291/reviews",
+        "rating": 5,
+        "text": "I’ve had a great experience at One501 Apartments. The property is well maintained, the common areas are always clean, and the overall atmosphere is welcoming and peaceful. The management team is professional, responsive, and genuinely cares about the residents, which makes a big difference. Maintenance requests are handled quickly and efficiently. The location is also very convenient, with easy access to shops, restaurants, and major roads. I’m very happy living here and would definitely recommend One501 Apartments to anyone looking for a comfortable and well-managed place to call home.",
+        "publishTime": "2026-01-21T22:14:40.745250647Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2podFUzSTNVMjlFTW1kbldtNXJUVTFKYWpobWJuYxAB!2m1!1s0x89b7b9a316125bbb:0xe04812292eb650cb",
+        "source": "google"
+      },
+      {
+        "author": "Ashley D. Fagan, DDS",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a-/ALV-UjWijeTETaA1imyuugfbWPRPJPgSE_ZZh2Hz8qE2csbsoNxeIu81=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/109501846449869854677/reviews",
+        "rating": 1,
+        "text": "I’ve lived at ONE501 (before it was a Bozzuto property) for a couple years and had no major issues—until I transferred units within the building this summer. Since then, it’s been an incredibly frustrating experience. I haven’t received a response since August regarding my security deposit, rent credits from my previous unit, or the inaccurate charges on my new lease.\n\nOn top of that, our internet was canceled without notice, even though we believed it was included and were paying for it. There has been zero proactive communication, and it’s nearly impossible to get in touch with management. Emails go unanswered, and there’s no clear way to escalate concerns or speak to someone who can actually resolve the issues.\n\nThis has caused unnecessary stress and disappointment—especially after years of being a respectful, on-time tenant. What should’ve been a simple apartment transfer turned into months of silence, confusion, and unresolved problems.\n\nVery disheartening experience.",
+        "publishTime": "2025-12-08T15:36:38.280171547Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2tGTWJUTnRSVXByVVhSdmNFMVpkbEJLY0U1NE5sRRAB!2m1!1s0x89b7b9a316125bbb:0xe04812292eb650cb",
+        "source": "google"
+      },
+      {
+        "author": "Lii",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a/ACg8ocL2LnKWqevNmO2iTXrldOXI5arz8n6UmHJUH3_7RGMhq4yhjQ=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/109183009442374154034/reviews",
+        "rating": 5,
+        "text": "My experience with this complex has been amazing. Ms. Lenita was amazing through the entire process. So much patience and reassurance through the process which I greatly appreciated ! She pushed through to get me moved in and I was able to get my keys! I’m very grateful for her, looking forward to the things this community has to offer!",
+        "publishTime": "2026-02-07T14:31:18.315095017Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT25kWlNURXpiVEJNWVhOaVFVODBTVmh3TW1WVlMwRRAB!2m1!1s0x89b7b9a316125bbb:0xe04812292eb650cb",
+        "source": "google"
+      },
+      {
+        "author": "Alli Penfil",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a-/ALV-UjUlXWhA7XL43gmHE1ZMOQSu7_cV-papuiUnfkOKyZ169X2PzaI=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/110505679990909553778/reviews",
+        "rating": 5,
+        "text": "My partner and I moved into One501 three years ago and LOVE our apartment and the building. We have seen different staff throughout the years, but each person has been super responsive and friendly. Not to mention that our dog loves all the pets and treats they give him.\n\nAmby at the front desk is absolutely fantastic. She knows every single tenants name and apartment number by heart and will remember anything you tell her. I cannot recommend this building enough and I am always trying to get friends to move in!",
+        "publishTime": "2025-06-12T00:47:26.974886Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sChZDSUhNMG9nS0VOdV9qNUxZa2JYMldnEAE!2m1!1s0x89b7b9a316125bbb:0xe04812292eb650cb",
+        "source": "google"
+      }
+    ],
+    "reviewsUpdatedAt": "2026-06-25T04:20:22.782Z",
     "priceLevel": "",
     "tags": [
       "dc",
@@ -1422,7 +2482,60 @@ export const SEED_EXTRA: Place[] = [
     "sourceQuotes": [],
     "rating": 3.9,
     "reviewCount": 181,
-    "googleMapsUri": "https://www.google.com/maps/place/?q=place_id:ChIJq6pqkBm4t4kR76XGvhcdwko",
+    "googleMapsUri": "https://maps.google.com/?cid=5386900092110677487&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "reviews": [
+      {
+        "author": "이기석",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a/ACg8ocIY3_feMSPWukW2tfaPPklnXQ0PbZa4Xb9MJDyLx3i_0QwENg=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/109370324187889644561/reviews",
+        "rating": 5,
+        "text": "I've been living here for a year and Press House is truly a great place to live.\nIt is clean, and all of the staff members are hardworking and kind.\nTwo grocery stores, Trader Joe's and Harris Teeter, are conveniently located nearby, and the subway station is also close, making everyday life very convenient. Union Market is right across the street as well, which is another great advantage.\nOverall, it is an excellent apartment community.",
+        "publishTime": "2026-05-11T15:48:18.644623428Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT21oaU9HODNiVmhoWWpsd05rOTNTRGgxVkV0d2RIYxAB!2m1!1s0x89b7b819906aaaab:0x4ac21d17bec6a5ef",
+        "source": "google"
+      },
+      {
+        "author": "Jay Arc",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a-/ALV-UjWroJfHUecJlRzk4L9ioe0n6K8cj8jcBVVYk8DDAYRv8Yn5NUmg=s128-c0x00000000-cc-rp-mo-ba4",
+        "authorUri": "https://www.google.com/maps/contrib/106114720648883518235/reviews",
+        "rating": 1,
+        "text": "I've Lived In The  Press House Since 2022 And In The Beginning Building Was Clean, All Doors And Elevators Worked, Amenities Were Clean And Safe To Use. NOW It's Shady Characters Standing Outside Each Door, People Smoking By All The Doors, Decor In The Building Is Falling Apart With Stained Rugs. Broken Trash Chutes, Elevators Frequently Broken, Entrance Doors Broken Frequently. Heating System Frequently Has Problems In The Coldest Months, Hot Water Frequently Not Working. AIr Conditioning Frequently Doesn't Work In July And August Hallways Always Smell Like Smoke Cigarette And Marijuana. Constant Banging, Loud Noises In The Halls And On Balconies Of Apartments. Internet Connections Have Frequently Disruptions, I've Had To Call Verizon Plenty Of Time To Fix Connectivity Issues Inside The Building. As A Tenant I'm Am Very Unhappy With The Infrastructure Of This Building Constant HVAC Problems,  Constant Hot Water Problems And Constant Air Conditioning Issues. The Management Threatened Me To Sign A Year Lease Or Charge Me Market Rent And I've Been A Tenant 3 Years Now! I Feel Trapped In A Bad Situation And Getting Worse Daily. My Review Isn't All Negative The Maintenance Team Is Excellent They Are Very Nice And Personable. The Management Team Are Caring And Do Try To Help But None Of Them Can Fix Plumbing, Heating And AC Problems Respectively. Personally I Wouldn't Recommend Someone Moving In The Press House In The Future.",
+        "publishTime": "2025-12-21T18:02:17.067221478Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2xoTlNrSTVhR3hGYW1acldFeDNkVVJxY1hZeWRtYxAB!2m1!1s0x89b7b819906aaaab:0x4ac21d17bec6a5ef",
+        "source": "google"
+      },
+      {
+        "author": "Kamisha Campbell",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a/ACg8ocJj2nDi8BD5SgG-woREnPvfgrDEV6ZW1HpQEKMTcXbc4yJoZg=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/101997131980593438775/reviews",
+        "rating": 5,
+        "text": "Saniya is so professional and has great customer service skills\nAlso Mr.Lard is a great resident manager I have a good experience with him! Continue the great customer service skills and persistent and professional productive work with me living here! I also love my apartment  it is close to my job and I walk to work! It’s so convenient for me and I have been living here less than a year. When I ask for something to be fixed in my apartment it get fixed in a timely manner! Thank you",
+        "publishTime": "2025-11-01T16:30:25.608253083Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT25CRlN6SXdMVGxIZWpWQlpFbzNiMlpuUlhsQkxXYxAB!2m1!1s0x89b7b819906aaaab:0x4ac21d17bec6a5ef",
+        "source": "google"
+      },
+      {
+        "author": "Thomas C",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a/ACg8ocJNBRxyC5y0v7zj3yNbhCpsfYi3-Dh4dSWzMF_fE0MGXd1upQ=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/101774842482238866567/reviews",
+        "rating": 1,
+        "text": "Update: added additional pics (vomit in elevator, broken beer bottles, etc). In total my apartment didn't have heat for the month of February, my fridge stopped cooling, and this morning there's no hot water (again). Building management offers no concessions for the dilapidated conditions.\n\n__\n\nYou do not want to live here. Signing a two year lease was a terrible idea. I've read many reviews while looking for a new place -- there are many good buildings in the area and this is not one of them.\n\nSee the photos attached of just some of the dilapidated conditions. 1) Trash chutes in disrepair, overflowing into a grimy trash room with a stench that fills the entire hallway, 2) trim with nails in the hallways, 3) small space heaters to make up for inoperable in-unit heat and poor insulation, 4) rusty fixtures due to humidity, 5) mystery stains in the elevators, 6) the broken parking garage door stuck open, and so many others not shown such as lukewarm water and cigarette smoke coming through the central heat/ac system.\n\nThe building management recently removed my in-unit hvac system, and offered two tiny space heaters (estimated to cover 300sqft) for a nearly 1000sqft corner apartment. They have no idea when it will be repaired. In fact, they didn't even provide notice this would happen despite the lies by a recently departed staff member.\n\nBuilding access is a mess. The elevators are regularly out of order. The rent-a-cops let strangers wander the building. Recently there was a drunk man shouting slurs in the elevator and the front desk excused his behavior despite my request to call the police.\n\nThe leasing office is incompetent. I was contacted by the leasing office saying my lease was invalid and I urgently needed to sign a new one or risk being locked out. Many days later, I had to ask where the lease was after their threatening message and was told to wait. In another instance, the office contacted me demanding proof of insurance for the wrong unit and addressing me by someone else's name.\n\nI could go on and on. I've seen replies here that the manager would have worked to resolve the concerns, yet my requests to discuss the issues have been ignored.",
+        "publishTime": "2025-03-19T12:12:30.247118Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sChZDSUhNMG9nS0VJQ0FnTUNnOWVQS1FREAE!2m1!1s0x89b7b819906aaaab:0x4ac21d17bec6a5ef",
+        "source": "google"
+      },
+      {
+        "author": "Envy Sweeney",
+        "authorPhotoUri": "https://lh3.googleusercontent.com/a/ACg8ocLerIfsN5JnVc8fjhd2ymYWZjBGs5Np2nA0S7TZe7hQToo7jQ=s128-c0x00000000-cc-rp-mo",
+        "authorUri": "https://www.google.com/maps/contrib/112628154457491803144/reviews",
+        "rating": 1,
+        "text": "I have been a resident at Press House for nearly two years and initially found it to be an outstanding property. However, I have noticed a decline in the level of service provided by the staff. Specifically, the rental office often rushes me when I visit, and it seems that the staff struggle with communicating effectively with certain tenants. I have had interactions with Saniya Taylor, who, despite seeming pleasant, has been rude and occasionally disrespectful. Furthermore, when I request to speak with the property manager, I am often told that they are unavailable or that I need to schedule an appointment. I kindly request that the staff focus on improving their communication skills, particularly in terms of patience and courtesy, and consider whether their role is the best fit for them if they feel otherwise.",
+        "publishTime": "2026-03-16T16:40:06.563258297Z",
+        "reviewUrl": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2xWdFdIazNaV0ppYVZkWlJtWjZSME5STkcxak5FRRAB!2m1!1s0x89b7b819906aaaab:0x4ac21d17bec6a5ef",
+        "source": "google"
+      }
+    ],
+    "reviewsUpdatedAt": "2026-06-25T04:20:23.382Z",
     "priceLevel": "",
     "tags": [
       "dc",

@@ -61,13 +61,29 @@ async function geocode(address) {
   return { lat: top.geometry.location.lat, lng: top.geometry.location.lng, formatted: top.formatted_address };
 }
 
+function mapGoogleReviews(reviews) {
+  if (!Array.isArray(reviews)) return [];
+  return reviews.map((r) => ({
+    author: r.authorAttribution?.displayName ?? "Google user",
+    authorPhotoUri: r.authorAttribution?.photoUri ?? undefined,
+    authorUri: r.authorAttribution?.uri ?? undefined,
+    rating: r.rating ?? 0,
+    text: r.text?.text ?? r.originalText?.text ?? "",
+    relativeTime: r.relativePublishingTimeDescription ?? undefined,
+    publishTime: r.publishTime ?? undefined,
+    reviewUrl: r.googleMapsUri ?? undefined,
+    source: "google",
+  }));
+}
+
 async function findPlace(textQuery) {
   const res = await fetch("https://places.googleapis.com/v1/places:searchText", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
       "X-Goog-Api-Key": PLACES_KEY,
-      "X-Goog-FieldMask": "places.id,places.displayName,places.location,places.rating,places.userRatingCount,places.websiteUri",
+      "X-Goog-FieldMask":
+        "places.id,places.displayName,places.location,places.rating,places.userRatingCount,places.websiteUri,places.reviews,places.googleMapsUri",
     },
     body: JSON.stringify({ textQuery, maxResultCount: 1 }),
   });
@@ -79,6 +95,8 @@ async function findPlace(textQuery) {
     rating: p.rating ?? null,
     reviewCount: p.userRatingCount ?? null,
     website: p.websiteUri ?? null,
+    googleMapsUri: p.googleMapsUri ?? null,
+    reviews: mapGoogleReviews(p.reviews),
     location: p.location ? { lat: p.location.latitude, lng: p.location.longitude } : null,
   };
 }
@@ -192,13 +210,15 @@ async function main() {
     let reviewCount = null;
     let googlePlaceId = undefined;
     let googleMapsUri = undefined;
+    let reviews = [];
     try {
       const fp = await findPlace(`${e.name} ${street} ${e.city} ${e.state}`);
       if (fp) {
         rating = fp.rating;
         reviewCount = fp.reviewCount;
         googlePlaceId = fp.id;
-        googleMapsUri = `https://www.google.com/maps/place/?q=place_id:${fp.id}`;
+        googleMapsUri = fp.googleMapsUri ?? `https://www.google.com/maps/place/?q=place_id:${fp.id}`;
+        reviews = fp.reviews ?? [];
         if ((lat == null || lng == null) && fp.location) {
           lat = fp.location.lat;
           lng = fp.location.lng;
@@ -248,6 +268,8 @@ async function main() {
       rating,
       reviewCount,
       googleMapsUri,
+      reviews,
+      reviewsUpdatedAt: reviews.length ? new Date().toISOString() : undefined,
       priceLevel: "",
       tags: Array.isArray(e.tags) ? e.tags : [],
       imageUrls: [],
@@ -285,7 +307,7 @@ async function main() {
     };
     out.push(place);
     console.log(
-      `  ✓ ${e.id}: ${lat != null ? "geo" : "NOGEO"} · ${rating != null ? `★${rating}(${reviewCount})` : "no-rating"} · ${walkMin != null ? `${walkMin}m walk` : "no-walk"}`
+      `  ✓ ${e.id}: ${lat != null ? "geo" : "NOGEO"} · ${rating != null ? `★${rating}(${reviewCount})` : "no-rating"} · ${walkMin != null ? `${walkMin}m walk` : "no-walk"} · ${reviews.length} reviews`
     );
   }
 

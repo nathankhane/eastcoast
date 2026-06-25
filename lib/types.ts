@@ -71,6 +71,19 @@ export interface SearchProfile {
   amenities: AmenityRequirement[];
 }
 
+// A single user review (Google official, or scraped via Outscraper).
+export interface PlaceReview {
+  author: string;
+  authorPhotoUri?: string;
+  authorUri?: string;
+  rating: number; // 1-5
+  text: string;
+  relativeTime?: string; // "2 months ago"
+  publishTime?: string; // ISO timestamp (for sorting newest)
+  reviewUrl?: string;
+  source: "google" | "outscraper";
+}
+
 // Result of a Routes API commute lookup from a place to one anchor.
 export interface CommuteResult {
   anchorId: string;
@@ -149,6 +162,9 @@ export interface Place {
   rating: number | null; // generic 0-5 (for restaurants etc.)
   reviewCount?: number | null; // Google review count (from Places enrichment)
   googleMapsUri?: string; // canonical Google Maps URL (from Places enrichment)
+  reviews?: PlaceReview[]; // sampled reviews (Google official + Outscraper)
+  reviewsPerScore?: Record<string, number>; // star distribution {"1":9,...,"5":595}
+  reviewsUpdatedAt?: string; // ISO timestamp of last review fetch
   priceLevel: string; // generic "$$" style (for restaurants etc.)
   tags: string[];
   imageUrls: string[];

@@ -135,6 +135,18 @@ export default function Home() {
     setSelectedId(place.id);
   }
 
+  function updatePlace(id: string, patch: Partial<Place>) {
+    let updated: Place | null = null;
+    setPlaces((prev) =>
+      prev.map((p) => {
+        if (p.id !== id) return p;
+        updated = { ...p, ...patch };
+        return updated;
+      })
+    );
+    if (updated) upsertPlaces([updated]);
+  }
+
   function resetData() {
     if (!confirm("Reset this city to its default dataset? Your notes/status are kept.")) return;
     const base = activeCityId === "dmv" ? SEED_PLACES : [];
@@ -369,6 +381,7 @@ export default function Home() {
           profile={activeProfile}
           onClose={() => setSelectedId(null)}
           onMetaChange={updateMeta}
+          onPlaceChange={updatePlace}
         />
       )}
     </main>

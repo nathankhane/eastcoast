@@ -182,6 +182,63 @@ export async function placeDetails(placeId: string): Promise<PlacesPlace & {
 }
 
 // ---------------------------------------------------------------------------
+// Places API (New) — Reviews (official, relevance-sorted, max 5)
+// ---------------------------------------------------------------------------
+
+import { PlaceReview } from "@/lib/types";
+
+interface GoogleReview {
+  rating?: number;
+  text?: { text?: string };
+  originalText?: { text?: string };
+  relativePublishingTimeDescription?: string;
+  publishTime?: string;
+  googleMapsUri?: string;
+  authorAttribution?: { displayName?: string; uri?: string; photoUri?: string };
+}
+
+function mapGoogleReviews(reviews?: GoogleReview[]): PlaceReview[] {
+  if (!Array.isArray(reviews)) return [];
+  return reviews.map((r) => ({
+    author: r.authorAttribution?.displayName ?? "Google user",
+    authorPhotoUri: r.authorAttribution?.photoUri,
+    authorUri: r.authorAttribution?.uri,
+    rating: r.rating ?? 0,
+    text: r.text?.text ?? r.originalText?.text ?? "",
+    relativeTime: r.relativePublishingTimeDescription,
+    publishTime: r.publishTime,
+    reviewUrl: r.googleMapsUri,
+    source: "google" as const,
+  }));
+}
+
+// Up to 5 relevance-sorted reviews from the official Places API (New).
+// `reviews` is a higher-cost SKU, so this is a dedicated call rather than part
+// of the default place-details mask.
+export async function placeReviews(
+  placeId: string
+): Promise<{ rating: number | null; reviewCount: number | null; reviews: PlaceReview[] }> {
+  const key = PLACES_KEY();
+  if (!key) throw new GoogleApiError("places", "GOOGLE_PLACES_API_KEY not set");
+
+  const res = await fetch(`https://places.googleapis.com/v1/places/${encodeURIComponent(placeId)}`, {
+    headers: {
+      "X-Goog-Api-Key": key,
+      "X-Goog-FieldMask": "id,rating,userRatingCount,reviews",
+    },
+  });
+  const data = await res.json();
+  if (!res.ok) {
+    throw new GoogleApiError("places", data?.error?.message || "placeReviews failed", res.status);
+  }
+  return {
+    rating: data.rating ?? null,
+    reviewCount: data.userRatingCount ?? null,
+    reviews: mapGoogleReviews(data.reviews),
+  };
+}
+
+// ---------------------------------------------------------------------------
 // Routes API — computeRouteMatrix (replaces legacy Distance Matrix)
 // ---------------------------------------------------------------------------
 

@@ -1,5 +1,6 @@
 import { Place } from "@/lib/types";
 import { SEED_EXTRA } from "./seed-extra";
+import { CURATED_ENRICHMENT } from "./curated-enrichment";
 
 // ============================================================================
 // Verified apartment dataset — research last verified 2026-06-24.
@@ -12,7 +13,7 @@ import { SEED_EXTRA } from "./seed-extra";
 // The two are merged (by id) into SEED_PLACES below.
 // ============================================================================
 
-const CURATED_SEED_PLACES: Place[] = [
+const CURATED_RAW: Place[] = [
   {
     id: "halstead-square",
     name: "Halstead Square – Lotus & Lofts",
@@ -722,6 +723,14 @@ const CURATED_SEED_PLACES: Place[] = [
     },
   },
 ];
+
+// Overlay the Google enrichment (rating, review count, Maps URL, reviews,
+// place id) onto each curated place. Only Google-derived fields are set, so the
+// hand-curated pricing/commute/basketball/notes are preserved.
+const CURATED_SEED_PLACES: Place[] = CURATED_RAW.map((p) => ({
+  ...p,
+  ...(CURATED_ENRICHMENT[p.id] ?? {}),
+}));
 
 // Merge curated + enriched seed by id (curated wins on collision; there are no
 // id collisions after de-duplicating the 5 overlaps in the enrichment script).

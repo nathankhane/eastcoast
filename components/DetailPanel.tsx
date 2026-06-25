@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Place, SearchProfile, UserMeta } from "@/lib/types";
+import { Place, PlaceReview, SearchProfile, UserMeta } from "@/lib/types";
 import { computeFit, fitTier, TIER_COLOR, lowestPrice, commuteMinutes } from "@/lib/scoring";
 
 interface Props {
@@ -10,11 +10,14 @@ interface Props {
   profile: SearchProfile | null;
   onClose: () => void;
   onMetaChange: (patch: Partial<UserMeta>) => void;
+  onPlaceChange?: (id: string, patch: Partial<Place>) => void;
 }
 
-export default function DetailPanel({ place, meta, profile, onClose, onMetaChange }: Props) {
+export default function DetailPanel({ place, meta, profile, onClose, onMetaChange, onPlaceChange }: Props) {
   const [liveDist, setLiveDist] = useState<string | null>(null);
   const [liveLoading, setLiveLoading] = useState(false);
+  const [reviewLoading, setReviewLoading] = useState(false);
+  const [reviewNote, setReviewNote] = useState<string | null>(null);
 
   if (!place) return null;
   const d = place.apartmentDetails;
@@ -62,6 +65,42 @@ export default function DetailPanel({ place, meta, profile, onClose, onMetaChang
       setLiveDist("Could not fetch live commute.");
     } finally {
       setLiveLoading(false);
+    }
+  }
+
+  async function fetchReviews() {
+    if (!place) return;
+    setReviewLoading(true);
+    setReviewNote(null);
+    try {
+      const res = await fetch("/api/reviews", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          googlePlaceId: place.googlePlaceId,
+          name: place.name,
+          city: place.city,
+          state: place.state,
+        }),
+      });
+      const data = await res.json();
+      if (data.error) {
+        setReviewNote(data.error);
+        return;
+      }
+      onPlaceChange?.(place.id, {
+        reviews: data.reviews ?? place.reviews,
+        reviewsPerScore: data.reviewsPerScore ?? place.reviewsPerScore,
+        rating: data.rating ?? place.rating,
+        reviewCount: data.reviewCount ?? place.reviewCount,
+        reviewsUpdatedAt: data.updatedAt,
+      });
+      if (Array.isArray(data.notes) && data.notes.length) setReviewNote(data.notes.join(" "));
+      else if (!data.outscraperEnabled) setReviewNote("Showing Google's relevance-sorted reviews (add Outscraper key for recent 1★/5★).");
+    } catch {
+      setReviewNote("Could not fetch reviews.");
+    } finally {
+      setReviewLoading(false);
     }
   }
 
@@ -163,6 +202,13 @@ export default function DetailPanel({ place, meta, profile, onClose, onMetaChang
             />
           </Section>
         )}
+
+        <ReviewsSection
+          place={place}
+          loading={reviewLoading}
+          note={reviewNote}
+          onFetch={fetchReviews}
+        />
 
         <Section title="Pros & cons">
           <div className="grid grid-cols-2 gap-3">
@@ -323,6 +369,156 @@ function Check({ label, checked, onChange }: { label: string; checked: boolean; 
       {label}
     </label>
   );
+}
+
+function byNewest(a: PlaceReview, b: PlaceReview): number {
+  const ta = a.publishTime ? Date.parse(a.publishTime) : 0;
+  const tb = b.publishTime ? Date.parse(b.publishTime) : 0;
+  return tb - ta;
+}
+
+function ReviewsSection({
+  place,
+  loading,
+  note,
+  onFetch,
+}: {
+  place: Place;
+  loading: boolean;
+  note: string | null;
+  onFetch: () => void;
+}) {
+  const reviews = place.reviews ?? [];
+  const sorted = [...reviews].sort(byNewest);
+  // "Most recent" overall, plus the most recent low (1–2★) and high (5★).
+  const recent = sorted.slice(0, 2);
+  const recentLow =
+    sorted.find((r) => r.rating > 0 && r.rating <= 2) ??
+    [...reviews].sort((a, b) => a.rating - b.rating).find((r) => r.rating > 0);
+  const recentHigh =
+    sorted.find((r) => r.rating >= 5) ??
+    [...reviews].sort((a, b) => b.rating - a.rating).find((r) => r.rating > 0);
+  const dist = place.reviewsPerScore;
+
+  return (
+    <Section title="Google reviews">
+      <div className="mb-3 flex items-center justify-between">
+        <div className="flex items-baseline gap-2">
+          <span className="text-2xl font-bold text-slate-900">
+            {place.rating != null ? place.rating.toFixed(1) : "—"}
+          </span>
+          <span className="text-amber-500">★</span>
+          <span className="text-xs text-slate-500">
+            {place.reviewCount != null ? `${place.reviewCount.toLocaleString()} reviews` : "no count"}
+          </span>
+        </div>
+        <button
+          onClick={onFetch}
+          disabled={loading}
+          className="rounded-lg border border-slate-300 px-3 py-1.5 text-xs font-medium hover:border-slate-400 disabled:opacity-50"
+        >
+          {loading ? "Loading…" : reviews.length ? "Refresh reviews" : "Load reviews"}
+        </button>
+      </div>
+
+      {dist && <RatingBars dist={dist} />}
+
+      {reviews.length === 0 && !loading && (
+        <p className="text-xs text-slate-500">No reviews loaded yet. Tap “Load reviews”.</p>
+      )}
+
+      {(recentLow || recentHigh) && (
+        <div className="mt-3 space-y-3">
+          {recentHigh && <ReviewCard label="Most recent high" review={recentHigh} accent="green" />}
+          {recentLow && <ReviewCard label="Most recent low" review={recentLow} accent="red" />}
+        </div>
+      )}
+
+      {recent.length > 0 && (
+        <div className="mt-3">
+          <div className="mb-1 text-[11px] font-semibold uppercase tracking-wide text-slate-400">
+            Latest reviews
+          </div>
+          <div className="space-y-3">
+            {recent.map((r, i) => (
+              <ReviewCard key={i} review={r} />
+            ))}
+          </div>
+        </div>
+      )}
+
+      {note && <p className="mt-2 text-[11px] text-slate-400">{note}</p>}
+    </Section>
+  );
+}
+
+function RatingBars({ dist }: { dist: Record<string, number> }) {
+  const total = Object.values(dist).reduce((s, n) => s + (n || 0), 0) || 1;
+  return (
+    <div className="mb-1 space-y-1">
+      {["5", "4", "3", "2", "1"].map((star) => {
+        const n = dist[star] ?? 0;
+        const pct = Math.round((n / total) * 100);
+        return (
+          <div key={star} className="flex items-center gap-2 text-[11px] text-slate-500">
+            <span className="w-3 text-right">{star}</span>
+            <span className="text-amber-400">★</span>
+            <div className="h-1.5 flex-1 overflow-hidden rounded-full bg-slate-100">
+              <div
+                className={star === "1" || star === "2" ? "h-full bg-red-400" : "h-full bg-brand-400"}
+                style={{ width: `${pct}%` }}
+              />
+            </div>
+            <span className="w-8 text-right tabular-nums">{n.toLocaleString()}</span>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
+function ReviewCard({
+  review,
+  label,
+  accent,
+}: {
+  review: PlaceReview;
+  label?: string;
+  accent?: "green" | "red";
+}) {
+  const border =
+    accent === "green" ? "border-green-200 bg-green-50" : accent === "red" ? "border-red-200 bg-red-50" : "border-slate-200 bg-slate-50";
+  return (
+    <div className={`rounded-lg border p-2.5 ${border}`}>
+      <div className="mb-1 flex items-center justify-between gap-2">
+        <div className="flex items-center gap-1.5 text-xs font-medium text-slate-700">
+          <span className="text-amber-500">{"★".repeat(Math.max(0, Math.round(review.rating)))}</span>
+          {label && <span className="text-[10px] font-semibold uppercase tracking-wide text-slate-400">{label}</span>}
+        </div>
+        <span className="shrink-0 text-[11px] text-slate-400">{review.relativeTime ?? relTime(review.publishTime)}</span>
+      </div>
+      <p className="line-clamp-4 text-xs text-slate-700">{review.text || "(no text)"}</p>
+      <div className="mt-1 flex items-center justify-between text-[11px] text-slate-400">
+        <span>{review.author}</span>
+        {review.reviewUrl && (
+          <a href={review.reviewUrl} target="_blank" rel="noopener" className="text-brand-600 hover:underline">
+            View →
+          </a>
+        )}
+      </div>
+    </div>
+  );
+}
+
+function relTime(iso?: string): string {
+  if (!iso) return "";
+  const then = Date.parse(iso);
+  if (Number.isNaN(then)) return "";
+  const days = Math.round((Date.now() - then) / 86_400_000);
+  if (days < 31) return `${days}d ago`;
+  const months = Math.round(days / 30);
+  if (months < 12) return `${months}mo ago`;
+  return `${Math.round(months / 12)}y ago`;
 }
 
 function Facts({ rows }: { rows: [string, string][] }) {
