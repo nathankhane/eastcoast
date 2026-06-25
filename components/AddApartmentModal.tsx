@@ -39,10 +39,33 @@ export default function AddApartmentModal({ city, profile, onAdd, onClose }: Pro
       const res = await fetch("/api/extract", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ url: website }),
+        body: JSON.stringify({ url: website, name, address }),
       });
       const data = await res.json();
-      if (!data.implemented) setMsg(data.reason || "Auto-fill not available yet — enter details manually.");
+      if (!data.implemented) {
+        setMsg(data.reason || "Auto-fill not available yet — enter details manually.");
+        return;
+      }
+      if (!data.ok) {
+        setMsg(data.reason || "Couldn't read that page — enter details manually.");
+        return;
+      }
+      const f = data.fields ?? {};
+      if (f.priceLow != null) setRent(String(f.priceLow));
+      if (typeof f.has2br2ba === "boolean") setHas2br2ba(f.has2br2ba);
+      setAmenityKeys((prev) => {
+        const next = new Set(prev);
+        if (f.hasGym) next.add("gym");
+        if (f.hasCoffee) next.add("coffee");
+        if (f.hasBeerOrTap) next.add("beer");
+        if (f.hasBasketballCourt) next.add(f.basketballCourtType === "indoor" ? "indoor_basketball" : "basketball");
+        return [...next];
+      });
+      if (data.summary) setNotes((prev) => prev || data.summary);
+      const pct = Math.round((data.confidence ?? 0) * 100);
+      setMsg(
+        `Auto-filled from website (${pct}% confidence${data.thinPage ? "; page was JS-heavy, double-check" : ""}). Review before saving.`
+      );
     } catch {
       setMsg("Auto-fill failed — enter details manually.");
     } finally {
@@ -186,7 +209,7 @@ export default function AddApartmentModal({ city, profile, onAdd, onClose }: Pro
                 onClick={autofillFromLink}
                 disabled={autofilling}
                 className="shrink-0 rounded-lg border border-brand-300 bg-brand-50 px-3 py-1.5 text-xs font-semibold text-brand-700 hover:bg-brand-100 disabled:opacity-50"
-                title="Coming soon — will extract details from the listing"
+                title="Read the listing page and fill in rent + amenities"
               >
                 {autofilling ? "…" : "Auto-fill"}
               </button>

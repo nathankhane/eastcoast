@@ -46,6 +46,7 @@ export default function Home() {
   const [showAddApartment, setShowAddApartment] = useState(false);
   const [discovering, setDiscovering] = useState(false);
   const [computing, setComputing] = useState(false);
+  const [autofilling, setAutofilling] = useState(false);
 
   const hasMapKey = !!process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
   const cloud = isCloud();
@@ -133,6 +134,64 @@ export default function Home() {
       await upsertPlaces([place]);
     })();
     setSelectedId(place.id);
+  }
+
+  // Places worth auto-filling: have a link to read and no confirmed rent yet.
+  function needsAutofill(p: Place): boolean {
+    const hasLink = Boolean(p.website || p.primarySourceUrl || p.googlePlaceId);
+    return hasLink && (p.apartmentDetails?.priceLow == null);
+  }
+
+  async function autofillAll() {
+    const targets = places.filter(needsAutofill);
+    if (!targets.length) return;
+    if (
+      !confirm(
+        `Read ${targets.length} websites and auto-fill rent + amenities with the LLM? This makes ${targets.length} model calls.`
+      )
+    )
+      return;
+    setAutofilling(true);
+    let ok = 0;
+    let failed = 0;
+    try {
+      for (const p of targets) {
+        try {
+          const res = await fetch("/api/extract", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              url: p.website || p.primarySourceUrl,
+              googlePlaceId: p.googlePlaceId,
+              name: p.name,
+              address: `${p.streetAddress}, ${p.city}, ${p.state}`,
+            }),
+          });
+          const data = await res.json();
+          if (!data.implemented) {
+            alert(data.reason || "Auto-fill needs an LLM key.");
+            break;
+          }
+          if (data.ok && data.fields) {
+            const prev = p.apartmentDetails;
+            updatePlace(p.id, {
+              website: p.website || data.url,
+              apartmentDetails: prev
+                ? { ...prev, ...data.fields, availableDateManual: prev.availableDateManual }
+                : data.fields,
+            });
+            ok++;
+          } else {
+            failed++;
+          }
+        } catch {
+          failed++;
+        }
+      }
+      alert(`Auto-fill done: ${ok} filled, ${failed} skipped/failed.`);
+    } finally {
+      setAutofilling(false);
+    }
   }
 
   function updatePlace(id: string, patch: Partial<Place>) {
@@ -309,6 +368,9 @@ export default function Home() {
         anchorCount={activeProfile?.anchors.length ?? 0}
         onToggleProfileEditor={() => setShowProfileEditor((v) => !v)}
         onAddApartment={() => setShowAddApartment(true)}
+        onAutofillAll={autofillAll}
+        autofilling={autofilling}
+        autofillCount={places.filter(needsAutofill).length}
         cloud={cloud}
       />
 

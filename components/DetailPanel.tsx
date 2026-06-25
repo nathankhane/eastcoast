@@ -18,6 +18,8 @@ export default function DetailPanel({ place, meta, profile, onClose, onMetaChang
   const [liveLoading, setLiveLoading] = useState(false);
   const [reviewLoading, setReviewLoading] = useState(false);
   const [reviewNote, setReviewNote] = useState<string | null>(null);
+  const [autofillLoading, setAutofillLoading] = useState(false);
+  const [autofillNote, setAutofillNote] = useState<string | null>(null);
 
   if (!place) return null;
   const d = place.apartmentDetails;
@@ -101,6 +103,49 @@ export default function DetailPanel({ place, meta, profile, onClose, onMetaChang
       setReviewNote("Could not fetch reviews.");
     } finally {
       setReviewLoading(false);
+    }
+  }
+
+  async function autofillFromWebsite() {
+    if (!place) return;
+    setAutofillLoading(true);
+    setAutofillNote(null);
+    try {
+      const res = await fetch("/api/extract", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          url: place.website || place.primarySourceUrl,
+          googlePlaceId: place.googlePlaceId,
+          name: place.name,
+          address: `${place.streetAddress}, ${place.city}, ${place.state}`,
+        }),
+      });
+      const data = await res.json();
+      if (!data.implemented) {
+        setAutofillNote(data.reason || "Auto-fill needs an LLM key.");
+        return;
+      }
+      if (!data.ok) {
+        setAutofillNote(data.reason || "Couldn't read the website.");
+        return;
+      }
+      const patch = data.fields ?? {};
+      const prev = place.apartmentDetails;
+      onPlaceChange?.(place.id, {
+        website: place.website || data.url,
+        apartmentDetails: prev
+          ? { ...prev, ...patch, availableDateManual: prev.availableDateManual }
+          : (patch as Place["apartmentDetails"]),
+      });
+      const pct = Math.round((data.confidence ?? 0) * 100);
+      setAutofillNote(
+        `Filled rent & amenities from the website (${pct}% confidence${data.thinPage ? "; JS-heavy page, verify" : ""}).`
+      );
+    } catch {
+      setAutofillNote("Auto-fill failed.");
+    } finally {
+      setAutofillLoading(false);
     }
   }
 
@@ -200,6 +245,17 @@ export default function DetailPanel({ place, meta, profile, onClose, onMetaChang
                 ["Availability", d.availabilityStatus],
               ]}
             />
+            <div className="mt-3">
+              <button
+                onClick={autofillFromWebsite}
+                disabled={autofillLoading}
+                className="rounded-lg border border-brand-300 bg-brand-50 px-3 py-1.5 text-xs font-semibold text-brand-700 hover:bg-brand-100 disabled:opacity-50"
+                title="Read the property website and fill rent + amenities"
+              >
+                {autofillLoading ? "Reading website…" : "Auto-fill rent & amenities from website"}
+              </button>
+              {autofillNote && <p className="mt-1.5 text-xs text-slate-600">{autofillNote}</p>}
+            </div>
           </Section>
         )}
 

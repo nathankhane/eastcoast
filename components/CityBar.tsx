@@ -20,6 +20,9 @@ interface Props {
 
   onToggleProfileEditor: () => void;
   onAddApartment: () => void;
+  onAutofillAll: () => void;
+  autofilling: boolean;
+  autofillCount: number;
   cloud: boolean;
 }
 
@@ -38,6 +41,9 @@ export default function CityBar({
   anchorCount,
   onToggleProfileEditor,
   onAddApartment,
+  onAutofillAll,
+  autofilling,
+  autofillCount,
   cloud,
 }: Props) {
   const select = "rounded-lg border border-slate-300 bg-white px-3 py-1.5 text-sm focus:border-brand-400 focus:outline-none";
@@ -84,6 +90,14 @@ export default function CityBar({
       <button onClick={onAddApartment} className={btn}>+ Add apartment</button>
       <button onClick={onComputeCommutes} disabled={computing || anchorCount === 0} className={btn} title={anchorCount === 0 ? "Add an anchor first" : ""}>
         {computing ? "Computing…" : `Compute commutes (${anchorCount})`}
+      </button>
+      <button
+        onClick={onAutofillAll}
+        disabled={autofilling || autofillCount === 0}
+        className={btn}
+        title={autofillCount === 0 ? "No places with a website need filling" : "Read each website and fill rent + amenities"}
+      >
+        {autofilling ? "Auto-filling…" : `Auto-fill rent & amenities (${autofillCount})`}
       </button>
 
       <span className={`ml-auto flex items-center gap-1.5 rounded-full px-2.5 py-1 text-[11px] font-medium ${cloud ? "bg-brand-50 text-brand-700" : "bg-slate-100 text-slate-400"}`}>
