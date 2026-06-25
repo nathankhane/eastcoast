@@ -38,6 +38,7 @@ import {
   ConfirmOptions,
   PromptModal,
   EmptyState,
+  Spinner,
 } from "@/components/ui";
 
 const MapView = dynamic(() => import("@/components/MapView"), { ssr: false });
@@ -69,6 +70,7 @@ function AppShell() {
   const [discovering, setDiscovering] = useState(false);
   const [computing, setComputing] = useState(false);
   const [autofilling, setAutofilling] = useState(false);
+  const [placesLoading, setPlacesLoading] = useState(true);
 
   // App-native dialogs (replacing window.alert/confirm/prompt).
   const [confirm, setConfirm] = useState<ConfirmOptions | null>(null);
@@ -100,8 +102,23 @@ function AppShell() {
   // Load profiles + places whenever the active city changes.
   useEffect(() => {
     if (!hydrated) return;
+    let cancelled = false;
+    setPlacesLoading(true);
+    setSelectedId(null);
+    setFilters(DEFAULT_FILTERS);
+
+    // Show the shipped seed for the default city immediately so first paint has
+    // real data while the cloud copy loads/reconciles in the background.
+    if (activeCityId === "dmv") {
+      setPlaces(SEED_PLACES);
+      setPlacesLoading(false);
+    } else {
+      setPlaces([]);
+    }
+
     (async () => {
       const [ps, pl] = await Promise.all([getProfiles(activeCityId), getPlaces(activeCityId)]);
+      if (cancelled) return;
       const profs = ps.length ? ps : [makeDefaultProfile(activeCityId)];
       setProfiles(profs);
       setActiveProfileId(profs[0]?.id ?? null);
@@ -116,10 +133,14 @@ function AppShell() {
           await upsertPlaces(missing);
         }
       }
+      if (cancelled) return;
       setPlaces(list);
-      setSelectedId(null);
-      setFilters(DEFAULT_FILTERS);
+      setPlacesLoading(false);
     })();
+
+    return () => {
+      cancelled = true;
+    };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeCityId, hydrated]);
 
@@ -552,7 +573,9 @@ function AppShell() {
 
       {view === "present" ? (
         <PresentationView places={places} profile={activeProfile} city={activeCity} onSelect={selectPlace} />
-      ) : hydrated && placeCount === 0 ? (
+      ) : !hydrated || placesLoading ? (
+        <LoadingPanel city={activeCity} />
+      ) : placeCount === 0 ? (
         <EmptyState
           icon="🏙️"
           title={`No places in ${activeCity?.name ?? "this city"} yet`}
@@ -663,6 +686,15 @@ function slugify(s: string): string {
       .replace(/[^a-z0-9]+/g, "-")
       .replace(/(^-|-$)/g, "")
       .slice(0, 40) || `city-${Date.now()}`
+  );
+}
+
+function LoadingPanel({ city }: { city: City | null }) {
+  return (
+    <div className="flex h-[420px] w-full flex-col items-center justify-center gap-3 rounded-xl border border-warm bg-white lg:h-[560px]">
+      <Spinner className="h-6 w-6 text-blue-600" />
+      <p className="text-sm font-medium text-ink/70">Loading {city?.name ?? "apartments"}…</p>
+    </div>
   );
 }
 
