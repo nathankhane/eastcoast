@@ -173,7 +173,7 @@ export function Modal({
         role="dialog"
         aria-modal="true"
         aria-labelledby={labelledById}
-        className={`max-h-[88vh] w-full ${maxWidthClass} overflow-y-auto rounded-2xl border border-warm bg-white p-5 shadow-2xl`}
+        className={`max-h-[88vh] w-full ${maxWidthClass} overflow-y-auto rounded-2xl border border-warm bg-white p-4 shadow-2xl sm:p-5`}
         onClick={(e) => e.stopPropagation()}
       >
         {children}

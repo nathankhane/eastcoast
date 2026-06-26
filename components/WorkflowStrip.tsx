@@ -56,7 +56,7 @@ export default function WorkflowStrip({
         <div key={s.key} className="flex items-stretch">
           <button
             onClick={s.onClick}
-            className={`group flex min-w-[112px] flex-col rounded-lg px-3 py-1.5 text-left transition ${
+            className={`group flex min-w-[92px] flex-col rounded-lg px-3 py-1.5 text-left transition sm:min-w-[112px] ${
               s.active ? "bg-blue-50" : "hover:bg-cream"
             }`}
           >
@@ -76,7 +76,7 @@ export default function WorkflowStrip({
                 </span>
               )}
             </span>
-            <span className="mt-0.5 text-[11px] text-tan-ink">{s.hint}</span>
+            <span className="mt-0.5 hidden text-[11px] text-tan-ink sm:block">{s.hint}</span>
           </button>
           {i < steps.length - 1 && (
             <span aria-hidden="true" className="flex items-center px-0.5 text-tan">

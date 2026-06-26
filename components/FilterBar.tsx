@@ -49,12 +49,12 @@ export default function FilterBar({ filters, profile, onChange, onReset, count, 
           value={filters.search}
           onChange={(e) => set({ search: e.target.value })}
           placeholder="Search name, neighborhood, tag…"
-          className="w-56 rounded-lg border border-warm px-3 py-1.5 text-sm focus:border-blue-500 focus:outline-none"
+          className="w-full rounded-lg border border-warm px-3 py-2 text-sm focus:border-blue-500 focus:outline-none sm:w-56 sm:py-1.5"
         />
         <select
           value={filters.maxPrice ?? ""}
           onChange={(e) => set({ maxPrice: e.target.value === "" ? null : Number(e.target.value) })}
-          className="rounded-lg border border-warm px-3 py-1.5 text-sm"
+          className="flex-1 rounded-lg border border-warm px-3 py-2 text-sm sm:flex-none sm:py-1.5"
         >
           {PRICE_OPTIONS.map((o) => (
             <option key={o.label} value={o.value ?? ""}>
@@ -66,7 +66,7 @@ export default function FilterBar({ filters, profile, onChange, onReset, count, 
           <select
             value={filters.maxCommuteMinutes ?? ""}
             onChange={(e) => set({ maxCommuteMinutes: e.target.value === "" ? null : Number(e.target.value) })}
-            className="rounded-lg border border-warm px-3 py-1.5 text-sm"
+            className="flex-1 rounded-lg border border-warm px-3 py-2 text-sm sm:flex-none sm:py-1.5"
           >
             {COMMUTE_OPTIONS.map((o) => (
               <option key={o.label} value={o.value ?? ""}>
@@ -128,7 +128,7 @@ function Toggle({ active, label, onClick }: { active: boolean; label: string; on
   return (
     <button
       onClick={onClick}
-      className={`rounded-full border px-3 py-1 text-xs font-medium transition ${
+      className={`rounded-full border px-3 py-1.5 text-xs font-medium transition sm:py-1 ${
         active
           ? "border-blue-600 bg-blue-600 text-white"
           : "border-warm bg-white text-ink hover:border-blue-300"

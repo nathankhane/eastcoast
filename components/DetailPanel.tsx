@@ -224,7 +224,7 @@ export default function DetailPanel({
 
       <div className="flex-1 space-y-5 overflow-y-auto p-4 text-sm">
         {/* ---- Summary strip ---- */}
-        <div className="grid grid-cols-4 gap-2">
+        <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
           <Stat label="Rent" value={price ? `$${(price / 1000).toFixed(1)}k` : "—"} title={price ? `$${price.toLocaleString()}/mo` : "Confirm with leasing"} />
           <Stat label="Fit" value={`${fit.score}`} />
           <Stat label="Metro" value={d?.walkingMinutesToMetro != null ? `${d.walkingMinutesToMetro}m` : "—"} title={metroSummary} />

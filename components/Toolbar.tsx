@@ -35,14 +35,14 @@ export default function Toolbar({ places, onImport, onResetData, view, onToggleV
     e.target.value = "";
   }
 
-  const btn = "rounded-lg border border-warm bg-white px-3 py-1.5 text-xs font-medium text-ink hover:border-tan";
+  const btn = "rounded-lg border border-warm bg-white px-3 py-2 text-xs font-medium text-ink hover:border-tan sm:py-1.5";
 
   return (
     <div className="no-print flex flex-wrap items-center gap-2">
-      <button onClick={onToggleView} className="rounded-lg bg-ink px-3 py-1.5 text-xs font-semibold text-white hover:bg-ink/85">
+      <button onClick={onToggleView} className="rounded-lg bg-ink px-3 py-2 text-xs font-semibold text-white hover:bg-ink/85 sm:py-1.5">
         {view === "explore" ? "Roommate view →" : "← Back to explore"}
       </button>
-      <span className="mx-1 h-5 w-px bg-warm" />
+      <span className="mx-1 hidden h-5 w-px bg-warm sm:block" />
       <button onClick={() => downloadJSON(places)} className={btn}>Export JSON</button>
       <button onClick={() => downloadCSV(places)} className={btn}>Export CSV</button>
       <button onClick={() => fileRef.current?.click()} className={btn}>Import JSON/CSV</button>

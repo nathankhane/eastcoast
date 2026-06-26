@@ -477,7 +477,7 @@ function AppShell() {
 
   return (
     <main className="mx-auto max-w-7xl space-y-4 p-4 md:p-6">
-      <header className="no-print flex flex-wrap items-center justify-between gap-3">
+      <header className="no-print flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
         <div className="flex items-center gap-3">
           <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-blue-600 text-white shadow-sm">
             <MapPinHouse className="h-5 w-5" strokeWidth={2.25} aria-hidden="true" />

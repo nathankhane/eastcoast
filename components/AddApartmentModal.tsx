@@ -196,7 +196,7 @@ export default function AddApartmentModal({ city, profile, onAdd, onClose }: Pro
         role="dialog"
         aria-modal="true"
         aria-labelledby="add-apartment-title"
-        className="max-h-[88vh] w-full max-w-lg overflow-y-auto rounded-2xl border border-warm bg-white p-5 shadow-2xl"
+        className="max-h-[88vh] w-full max-w-lg overflow-y-auto rounded-2xl border border-warm bg-white p-4 shadow-2xl sm:p-5"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="mb-4 flex items-center justify-between">
@@ -233,7 +233,7 @@ export default function AddApartmentModal({ city, profile, onAdd, onClose }: Pro
             <input value={address} onChange={(e) => setAddress(e.target.value)} placeholder="123 Main St, City, ST" className={input} />
           </Field>
 
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
             <Field label="Name">
               <input value={name} onChange={(e) => setName(e.target.value)} placeholder="Community name" className={input} />
             </Field>
@@ -242,7 +242,7 @@ export default function AddApartmentModal({ city, profile, onAdd, onClose }: Pro
             </Field>
           </div>
 
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
             <Field label="Rent ($/mo)">
               <input type="number" value={rent} onChange={(e) => setRent(e.target.value)} placeholder="3000" className={input} />
             </Field>

@@ -54,12 +54,12 @@ export default function TableView({
   const missingCommute =
     hasAnchors && places.some((p) => p.latitude != null && p.longitude != null && bestCommuteMinutes(p, profile!) === null);
 
-  function header(key: SortKey, label: string, srLabel?: string) {
+  function header(key: SortKey, label: string, srLabel?: string, thClass = "") {
     const active = sortKey === key;
     return (
       <th
         aria-sort={active ? (asc ? "ascending" : "descending") : "none"}
-        className="bg-cream px-3 py-2 text-left font-semibold"
+        className={`bg-cream px-3 py-2 text-left font-semibold ${thClass}`}
       >
         <button
           onClick={() => {
@@ -103,14 +103,14 @@ export default function TableView({
         <thead className="sticky top-0 z-10 border-b border-warm">
           <tr>
             {header("name", "Name")}
-            {header("city", "Area")}
+            {header("city", "Area", undefined, "hidden md:table-cell")}
             {header("price", "Rent")}
             {header("rating", "★", "Rating")}
-            {header("walk", "Metro")}
+            {header("walk", "Metro", undefined, "hidden md:table-cell")}
             {header("commute", "Commute")}
-            {header("gym", "Gym")}
-            {header("bball", "🏀", "Basketball")}
-            <th className="bg-cream px-3 py-2 text-left font-semibold text-ink/70">Avail</th>
+            {header("gym", "Gym", undefined, "hidden md:table-cell")}
+            {header("bball", "🏀", "Basketball", "hidden md:table-cell")}
+            <th className="hidden bg-cream px-3 py-2 text-left font-semibold text-ink/70 md:table-cell">Avail</th>
             {header("fit", "Fit")}
             <th className="bg-cream px-3 py-2 text-left font-semibold text-ink/70">Status</th>
           </tr>
@@ -149,7 +149,7 @@ export default function TableView({
                     : "border-l-transparent hover:bg-blue-50"
                 }`}
               >
-                <td className="px-3 py-2 font-medium text-ink">
+                <td className="px-3 py-2.5 font-medium text-ink sm:py-2">
                   {p.name}
                   {d?.needsPriceConfirmation && (
                     <span title="Price/2BA needs confirmation" className="ml-1 text-amber-500">
@@ -157,13 +157,13 @@ export default function TableView({
                     </span>
                   )}
                 </td>
-                <td className="px-3 py-2 text-ink/70">{p.neighborhood || p.city}</td>
-                <td className="px-3 py-2 text-ink">{price ? "$" + price.toLocaleString() : "confirm"}</td>
-                <td className="px-3 py-2 text-ink/70">{p.rating != null ? `${p.rating}★` : "—"}</td>
-                <td className="px-3 py-2 text-ink/70">
+                <td className="hidden px-3 py-2.5 text-ink/70 sm:py-2 md:table-cell">{p.neighborhood || p.city}</td>
+                <td className="px-3 py-2.5 text-ink sm:py-2">{price ? "$" + price.toLocaleString() : "confirm"}</td>
+                <td className="px-3 py-2.5 text-ink/70 sm:py-2">{p.rating != null ? `${p.rating}★` : "—"}</td>
+                <td className="hidden px-3 py-2.5 text-ink/70 sm:py-2 md:table-cell">
                   {d?.walkingMinutesToMetro != null ? `${d.walkingMinutesToMetro}m` : "—"}
                 </td>
-                <td className="px-3 py-2 text-ink/70">
+                <td className="px-3 py-2.5 text-ink/70 sm:py-2">
                   {commute != null ? (
                     `${commute}m`
                   ) : hasAnchors ? (
@@ -172,8 +172,8 @@ export default function TableView({
                     "—"
                   )}
                 </td>
-                <td className="px-3 py-2">{d?.hasGym ? "✓" : "—"}</td>
-                <td className="px-3 py-2">
+                <td className="hidden px-3 py-2.5 sm:py-2 md:table-cell">{d?.hasGym ? "✓" : "—"}</td>
+                <td className="hidden px-3 py-2.5 sm:py-2 md:table-cell">
                   {d?.hasBasketballCourt
                     ? d.basketballCourtType === "indoor"
                       ? "indoor"
@@ -182,16 +182,16 @@ export default function TableView({
                       : "yes"
                     : "—"}
                 </td>
-                <td className="max-w-[140px] truncate px-3 py-2 text-tan-ink" title={String(avail)}>
+                <td className="hidden max-w-[140px] truncate px-3 py-2.5 text-tan-ink sm:py-2 md:table-cell" title={String(avail)}>
                   {String(avail)}
                 </td>
-                <td className="px-3 py-2">
+                <td className="px-3 py-2.5 sm:py-2">
                   <span className="inline-flex items-center gap-1.5 font-semibold">
                     <span className={`inline-block h-2 w-2 rounded-full ${TIER_DOT[fitTier(fit)]}`} />
                     {fit}
                   </span>
                 </td>
-                <td className="px-3 py-2">
+                <td className="px-3 py-2.5 sm:py-2">
                   <StatusBadges meta={m} needsPrice={!!d?.needsPriceConfirmation} />
                 </td>
               </tr>
